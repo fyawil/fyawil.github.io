@@ -1,8 +1,13 @@
-@media screen and (min-width: 415px) {
 #mainpage {
     display: grid;
     grid-template-areas: "generator motivation"
                          "schedulecontainer schedulecontainer";
+@media screen and (max-width: 414px){
+    grid-template-areas: 
+                         "motivation"
+                         "generator"
+                         "schedulecontainer";
+}
     text-align: center;
     gap: 5px;
     width:calc(100vw - (100vw - 100%));
@@ -34,6 +39,9 @@ button {
     grid-area: motivation;
     color: rgb(41, 20, 2);
     font-size: 4.9em;
+@media screen and (max-width: 414px){
+    font-size: 1.4em;
+}
     padding: 10px;
     background-color: rgb(228, 137, 53);
     border-radius: 5px;
@@ -54,295 +62,9 @@ button {
 "monslot5 	tueslot5 	wedslot5 	thuslot5 	frislot5 	satslot5 	sunslot5"
 "monslot6 	tueslot6 	wedslot6 	thuslot6 	frislot6 	satslot6 	sunslot6"
     ;
-    text-align: center;
-    border-radius: 5px;
-}
-
-    #monslot1 {
-    grid-area: monslot1;
-    color: rgb(228, 137, 53);
-    background-color: rgb(41, 20, 2);
-    padding: 2px;
-    width: 1fr;
-    border-radius: 10px 0px 0px 0px;
-    }
-    #monslot2 {
-    grid-area: monslot2;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #monslot3 {
-    grid-area: monslot3;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #monslot4 {
-    grid-area: monslot4;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #monslot5 {
-    grid-area: monslot5;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #monslot6 {
-    grid-area: monslot6;   
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #tueslot1 {
-    grid-area: tueslot1;
-    color: rgb(228, 137, 53);    
-    background-color: rgb(41, 20, 2);
-    width: 1fr;
-    padding: 2px;
-    }
-    #tueslot2 {
-    grid-area: tueslot2;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #tueslot3 {
-    grid-area: tueslot3;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #tueslot4 {
-    grid-area: tueslot4;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #tueslot5 {
-    grid-area: tueslot5;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #tueslot6 {
-    grid-area: tueslot6;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #wedslot1 {
-    grid-area: wedslot1;
-    color: rgb(228, 137, 53);    
-    background-color: rgb(41, 20, 2);
-    width: 1fr;
-    padding: 2px;
-    }
-    #wedslot2 {
-    grid-area: wedslot2;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #wedslot3 {
-    grid-area: wedslot3;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #wedslot4 {
-    grid-area: wedslot4;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #wedslot5 {
-    grid-area: wedslot5;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #wedslot6 {
-    grid-area: wedslot6;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #thuslot1 {
-    grid-area: thuslot1;
-    color: rgb(228, 137, 53);    
-    background-color: rgb(41, 20, 2);
-    width: 1fr;
-    padding: 2px;
-    }
-    #thuslot2 {
-    grid-area: thuslot2;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #thuslot3 {
-    grid-area: thuslot3;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #thuslot4 {
-    grid-area: thuslot4;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #thuslot5 {
-    grid-area: thuslot5;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-    #thuslot6 {
-    grid-area: thuslot6;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #frislot1 {
-    grid-area: frislot1;
-    color: rgb(228, 137, 53);    
-    background-color: rgb(41, 20, 2);
-    width: 1fr;
-    padding: 2px;
-    }
-    #frislot2 {
-    grid-area: frislot2;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #frislot3 {
-    grid-area: frislot3;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #frislot4 {
-    grid-area: frislot4;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #frislot5 {
-    grid-area: frislot5;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #frislot6 {
-    grid-area: frislot6;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #satslot1 {
-    grid-area: satslot1;
-    color: rgb(228, 137, 53);    
-    background-color: rgb(41, 20, 2);
-    width: 1fr;
-    padding: 2px;
-    }
-    #satslot2 {
-    grid-area: satslot2;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #satslot3 {
-    grid-area: satslot3;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #satslot4 {
-    grid-area: satslot4;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #satslot5 {
-    grid-area: satslot5;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #satslot6 {
-    grid-area: satslot6;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-    #sunslot1 {
-    grid-area: sunslot1;
-    color: rgb(228, 137, 53);    
-    background-color: rgb(41, 20, 2);
-    width: 1fr;
-    padding: 2px;
-    border-radius: 0px 10px 0px 0px;
-    }
-    #sunslot2 {
-     grid-area: sunslot2;
-     color:rgb(41, 20, 2);
-     background-color:rgb(228, 137, 53)
-     }
-    #sunslot3 {
-     grid-area: sunslot3;
-     color:rgb(41, 20, 2);
-     background-color:rgb(228, 137, 53)
-     }
-    #sunslot4 {
-     grid-area: sunslot4;
-     color:rgb(41, 20, 2);
-     background-color:rgb(228, 137, 53)
-     }
-    #sunslot5 {
-     grid-area: sunslot5;
-     color:rgb(41, 20, 2);
-     background-color:rgb(228, 137, 53)
-     }
-    #sunslot6 {
-     grid-area: sunslot6;
-     color:rgb(41, 20, 2);
-     background-color:rgb(228, 137, 53)
-}
-     
-    p {
-     font-weight: bold;
-    }
-}
-
-@media screen and (max-width: 414px) {
-
-#mainpage {
-    display: grid;
+@media screen and (max-width: 414px){
     grid-template-areas: 
-                         "motivation"
-                         "generator"
-                         "schedulecontainer";
-    text-align: center;
-    gap: 5px;
-    width:calc(100vw - (100vw - 100%));
-}
-
-#generator {
-    grid-area: generator; 
-    padding: 10px; 
-    color: rgb(228, 137, 53);
-    background-color: rgb(41, 20, 2);    
-    border-radius: 5px;
-}
-
-h1 {
-    font-size: medium;
-    color:rgb(41, 20, 2);
-    background-color: rgb(228, 137, 53);
-    border-radius: 5px 5px 0px 0px;
-}
-
-button {
-    color: rgb(41, 20, 2);
-    background-color: rgb(228, 137, 53); 
-    border-radius: 5px;  
-    font-weight: bold;  
-}
-
-#motivation {
-    grid-area: motivation;
-    color: rgb(41, 20, 2);
-    font-size: 1.4em;
-    padding: 10px;
-    background-color: rgb(228, 137, 53);
-    border-radius: 5px;
-}
-
-#message {
-    vertical-align: middle;
-}
-
-#schedulecontainer {
-    grid-area: schedulecontainer;
-    display: grid;
-    grid-template-areas: 
-        "monslot1"
+"monslot1"
         "monslot2"
         "monslot3"
         "monslot4"
@@ -385,6 +107,7 @@ button {
         "sunslot5"
         "sunslot6"
     ;
+}
     text-align: center;
     border-radius: 5px;
 }
@@ -394,6 +117,7 @@ button {
     color: rgb(228, 137, 53);
     background-color: rgb(41, 20, 2);
     padding: 2px;
+    width: 1fr;
     border-radius: 10px 0px 0px 0px;
     }
     #monslot2 {
@@ -425,6 +149,7 @@ button {
     grid-area: tueslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
+    width: 1fr;
     padding: 2px;
     }
     #tueslot2 {
@@ -456,6 +181,7 @@ button {
     grid-area: wedslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
+    width: 1fr;
     padding: 2px;
     }
     #wedslot2 {
@@ -487,6 +213,7 @@ button {
     grid-area: thuslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
+    width: 1fr;
     padding: 2px;
     }
     #thuslot2 {
@@ -518,6 +245,7 @@ button {
     grid-area: frislot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
+    width: 1fr;
     padding: 2px;
     }
     #frislot2 {
@@ -549,6 +277,7 @@ button {
     grid-area: satslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
+    width: 1fr;
     padding: 2px;
     }
     #satslot2 {
@@ -580,6 +309,7 @@ button {
     grid-area: sunslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
+    width: 1fr;
     padding: 2px;
     border-radius: 0px 10px 0px 0px;
     }
@@ -612,6 +342,3 @@ button {
     p {
      font-weight: bold;
     }
-}
-
-   
