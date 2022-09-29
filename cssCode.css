@@ -2,12 +2,7 @@
     display: grid;
     grid-template-areas: "generator motivation"
                          "schedulecontainer schedulecontainer";
-@media screen and (max-width: 414px){
-    grid-template-areas: 
-                         "motivation"
-                         "generator"
-                         "schedulecontainer";
-}
+
     text-align: center;
     gap: 5px;
     width:calc(100vw - (100vw - 100%));
@@ -39,9 +34,6 @@ button {
     grid-area: motivation;
     color: rgb(41, 20, 2);
     font-size: 4.9em;
-@media screen and (max-width: 414px){
-    font-size: 1.4em;
-}
     padding: 10px;
     background-color: rgb(228, 137, 53);
     border-radius: 5px;
@@ -62,52 +54,6 @@ button {
 "monslot5 	tueslot5 	wedslot5 	thuslot5 	frislot5 	satslot5 	sunslot5"
 "monslot6 	tueslot6 	wedslot6 	thuslot6 	frislot6 	satslot6 	sunslot6"
     ;
-@media screen and (max-width: 414px){
-    grid-template-areas: 
-"monslot1"
-        "monslot2"
-        "monslot3"
-        "monslot4"
-        "monslot5"
-        "monslot6"
-        "tueslot1" 
-        "tueslot2"
-        "tueslot3"
-        "tueslot4"
-        "tueslot5"
-        "tueslot6"
-        "wedslot1" 
-        "wedslot2"
-        "wedslot3"
-        "wedslot4"
-        "wedslot5"
-        "wedslot6"
-        "thuslot1" 
-        "thuslot2"
-        "thuslot3"
-        "thuslot4"
-        "thuslot5"
-        "thuslot6"
-        "frislot1" 
-        "frislot2"
-        "frislot3"
-        "frislot4"
-        "frislot5"
-        "frislot6"
-        "satslot1" 
-        "satslot2"
-        "satslot3"
-        "satslot4"
-        "satslot5"
-        "satslot6"
-        "sunslot1" 
-        "sunslot2"
-        "sunslot3"
-        "sunslot4"
-        "sunslot5"
-        "sunslot6"
-    ;
-}
     text-align: center;
     border-radius: 5px;
 }
@@ -342,3 +288,70 @@ button {
     p {
      font-weight: bold;
     }
+
+@media screen and (max-width: 414px){
+    #mainpage {
+    grid-template-areas: 
+                         "motivation"
+                         "generator"
+                         "schedulecontainer";
+}
+    #motivation {
+    font-size: 1.4em;
+}
+    #schedulecontainer {
+    grid-template-areas: 
+        "monslot1"
+        "monslot2"
+        "monslot3"
+        "monslot4"
+        "monslot5"
+        "monslot6"
+        "tueslot1" 
+        "tueslot2"
+        "tueslot3"
+        "tueslot4"
+        "tueslot5"
+        "tueslot6"
+        "wedslot1" 
+        "wedslot2"
+        "wedslot3"
+        "wedslot4"
+        "wedslot5"
+        "wedslot6"
+        "thuslot1" 
+        "thuslot2"
+        "thuslot3"
+        "thuslot4"
+        "thuslot5"
+        "thuslot6"
+        "frislot1" 
+        "frislot2"
+        "frislot3"
+        "frislot4"
+        "frislot5"
+        "frislot6"
+        "satslot1" 
+        "satslot2"
+        "satslot3"
+        "satslot4"
+        "satslot5"
+        "satslot6"
+        "sunslot1" 
+        "sunslot2"
+        "sunslot3"
+        "sunslot4"
+        "sunslot5"
+        "sunslot6"
+    ;
+}
+    #monslot1 {
+    border-radius: 10px 10px 0px 0px;
+    }
+    #sunslot1 {
+    border-radius: 0px 0px 0px 0px;
+    }
+    #sunslot6 {
+    border-radius: 0px 0px 10px 10px;
+    }
+}
