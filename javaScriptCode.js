@@ -258,6 +258,10 @@ let pull2Index = 0;
 let legs0Index = 0;
 let legs1Index = 0;
 let legs2Index = 0;
+
+let abs0Index = 0;
+let abs1Index = 0;
+let abs2Index = 0;
   
 for(let i = 0;i<availableDays;i++){
 
@@ -382,15 +386,135 @@ template.push(
 break;
 
     case "is60mins":  
+    switch(movementIndex){
+      case 0:
     template.push(
-      [
-        exercises[this.state.isStrength][this.state.isWeights]["Push"]["Hard"][0/*Math.floor(Math.random()*exercises[this.state.isStrength][this.state.isWeights]["Push"]["Hard"].length)*/],
-        exercises[this.state.isStrength][this.state.isWeights]["Pull"]["Hard"][0/*Math.floor(Math.random()*exercises[this.state.isStrength][this.state.isWeights]["Pull"]["Hard"].length)*/],
-        exercises[this.state.isStrength][this.state.isWeights]["Legs"]["Hard"][0/*Math.floor(Math.random()*exercises[this.state.isStrength][this.state.isWeights]["Legs"]["Hard"].length)*/],
-      exercises[this.state.isStrength][this.state.isWeights]["Abs"]["Hard"][0/*Math.floor(Math.random()*exercises[this.state.isStrength][this.state.isWeights]["Abs"]["Hard"].length)*/],
-        ""
-      ]
-    );
+          [
+            exercises[this.state.isStrength][this.state.isWeights]["Push"][`${0}`][
+            push0Index<exercises[this.state.isStrength][this.state.isWeights]["Push"][`${0}`].length?
+            push0Index:
+            push0Index%exercises[this.state.isStrength][this.state.isWeights]["Push"][`${0}`].length 
+          ],
+            exercises[this.state.isStrength][this.state.isWeights]["Pull"][`${1}`][
+              pull1Index<exercises[this.state.isStrength][this.state.isWeights]["Pull"][`${1}`].length?
+              pull1Index:
+              pull1Index%exercises[this.state.isStrength][this.state.isWeights]["Pull"][`${1}`].length 
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Legs"][`${2}`][
+              legs2Index<exercises[this.state.isStrength][this.state.isWeights]["Legs"][`${2}`].length?
+              legs2Index:
+              legs2Index%exercises[this.state.isStrength][this.state.isWeights]["Legs"][`${2}`].length
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${0}`][
+              abs0Index<exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${0}`].length?
+              abs0Index:
+              abs0Index%exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${0}`].length
+            ],
+            ""
+          ]
+        );
+        push0Index++;
+        pull1Index++;
+        legs2Index++;
+        abs0Index++;
+        movementIndex++;
+        break;
+       case 1:
+    template.push(
+          [
+            exercises[this.state.isStrength][this.state.isWeights]["Legs"]["0"][
+              legs0Index<exercises[this.state.isStrength][this.state.isWeights]["Legs"]["0"].length?
+              legs0Index:
+              legs0Index%exercises[this.state.isStrength][this.state.isWeights]["Legs"]["0"].length 
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Push"]["1"][
+              push1Index<exercises[this.state.isStrength][this.state.isWeights]["Push"]["1"].length?
+              push1Index:
+              push1Index%exercises[this.state.isStrength][this.state.isWeights]["Push"]["1"].length 
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Pull"]["2"][
+              pull2Index<exercises[this.state.isStrength][this.state.isWeights]["Pull"]["2"].length?
+              pull2Index:
+              pull2Index%exercises[this.state.isStrength][this.state.isWeights]["Pull"]["2"].length 
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${1}`][
+              abs1Index<exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${1}`].length?
+              abs1Index:
+              abs1Index%exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${1}`].length
+            ],
+            ""
+          ]
+        );
+        legs0Index++;
+        push1Index++;
+        pull2Index++;
+        abs1Index++;
+        movementIndex++;
+        break;
+        case 2:
+    template.push(
+          [
+            exercises[this.state.isStrength][this.state.isWeights]["Pull"]["0"][
+              pull0Index<exercises[this.state.isStrength][this.state.isWeights]["Pull"]["0"].length?
+              pull0Index:
+              pull0Index%exercises[this.state.isStrength][this.state.isWeights]["Pull"]["0"].length
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Legs"]["1"][
+              legs1Index<exercises[this.state.isStrength][this.state.isWeights]["Legs"]["1"].length?
+              legs1Index:
+              legs1Index%exercises[this.state.isStrength][this.state.isWeights]["Legs"]["1"].length 
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Push"]["2"][
+              push2Index<exercises[this.state.isStrength][this.state.isWeights]["Push"]["2"].length?
+              push2Index:
+              push2Index%exercises[this.state.isStrength][this.state.isWeights]["Push"]["2"].length 
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${0}`][
+              abs0Index<exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${0}`].length?
+              abs0Index:
+              abs0Index%exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${0}`].length
+            ],""
+          ]
+        );
+        pull0Index++;
+        legs1Index++;
+        push2Index++;
+        abs0Index++;
+        movementIndex++;
+        break;
+        case 3:
+        template.push(
+          [
+            exercises[this.state.isStrength][this.state.isWeights]["Legs"]["0"][
+              legs0Index<exercises[this.state.isStrength][this.state.isWeights]["Legs"]["0"].length?
+              legs0Index:
+              legs0Index%exercises[this.state.isStrength][this.state.isWeights]["Legs"]["0"].length
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Push"]["1"][
+              push1Index<exercises[this.state.isStrength][this.state.isWeights]["Push"]["1"].length?
+              push1Index:
+              push1Index%exercises[this.state.isStrength][this.state.isWeights]["Push"]["1"].length 
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Pull"]["2"][
+              pull2Index<exercises[this.state.isStrength][this.state.isWeights]["Pull"]["2"].length?
+              pull2Index:
+              pull2Index%exercises[this.state.isStrength][this.state.isWeights]["Pull"]["2"].length 
+            ],
+            exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${1}`][
+              abs1Index<exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${1}`].length?
+              abs1Index:
+              abs1Index%exercises[this.state.isStrength][this.state.isWeights]["Abs"][`${1}`].length
+            ],
+            ""
+          ]
+        );
+        legs0Index++;
+        push1Index++;
+        pull2Index++;
+        abs1Index++;
+        movementIndex = 0;
+        break;
+    };
     break;
 
     case "is75mins":
