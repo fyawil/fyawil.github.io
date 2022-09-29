@@ -33,7 +33,6 @@ button {
 #motivation {
     grid-area: motivation;
     color: rgb(41, 20, 2);
-    font-size: 4.9em;
     padding: 10px;
     background-color: rgb(228, 137, 53);
     border-radius: 5px;
@@ -295,9 +294,6 @@ button {
                          "motivation"
                          "generator"
                          "schedulecontainer";
-}
-    #motivation {
-    font-size: 1.4em;
 }
     #schedulecontainer {
     grid-template-areas: 
