@@ -1,4 +1,4 @@
-@media (min-width: 415px) {
+@media screen and (min-width: 415px) {
 #mainpage {
     display: grid;
     grid-template-areas: "generator motivation"
@@ -290,7 +290,8 @@ button {
     }
 }
 
-@media (max-width: 414px) {
+@media screen and (max-width: 414px) {
+
 #mainpage {
     display: grid;
     grid-template-areas: 
