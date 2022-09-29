@@ -394,7 +394,6 @@ button {
     color: rgb(228, 137, 53);
     background-color: rgb(41, 20, 2);
     padding: 2px;
-    width: 1fr;
     border-radius: 10px 0px 0px 0px;
     }
     #monslot2 {
@@ -426,7 +425,6 @@ button {
     grid-area: tueslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
-    width: 1fr;
     padding: 2px;
     }
     #tueslot2 {
@@ -458,7 +456,6 @@ button {
     grid-area: wedslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
-    width: 1fr;
     padding: 2px;
     }
     #wedslot2 {
@@ -490,7 +487,6 @@ button {
     grid-area: thuslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
-    width: 1fr;
     padding: 2px;
     }
     #thuslot2 {
@@ -522,7 +518,6 @@ button {
     grid-area: frislot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
-    width: 1fr;
     padding: 2px;
     }
     #frislot2 {
@@ -554,7 +549,6 @@ button {
     grid-area: satslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
-    width: 1fr;
     padding: 2px;
     }
     #satslot2 {
@@ -586,7 +580,6 @@ button {
     grid-area: sunslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
-    width: 1fr;
     padding: 2px;
     border-radius: 0px 10px 0px 0px;
     }
