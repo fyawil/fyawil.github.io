@@ -288,4 +288,85 @@ button {
      font-weight: bold;
     }
     
+    @media (max-width: 414px) {
+        #mainpage {
+            display: grid;
+            grid-template-areas:
+            "motivation"
+            "generator"
+            "schedulecontainer";
+            text-align: center;
+            gap: 5px;
+            width:calc(100vw - (100vw - 100%));
+        }
 
+        #motivation {
+            grid-area: motivation;
+            color: rgb(41, 20, 2);
+            font-size: 1.4em;
+            padding: 10px;
+            background-color: rgb(228, 137, 53);
+            border-radius: 5px;
+        }
+
+        #generator {
+            grid-area: generator; 
+            padding: 10px; 
+            color: rgb(228, 137, 53);
+            background-color: rgb(41, 20, 2);    
+            border-radius: 5px;
+        }
+
+        #schedulecontainer {
+            grid-area: schedulecontainer;
+            display: grid;
+            grid-template-areas: 
+        "monslot1"
+        "monslot2"
+        "monslot3"
+        "monslot4"
+        "monslot5"
+        "monslot6"
+        "tueslot1" 
+        "tueslot2"
+        "tueslot3"
+        "tueslot4"
+        "tueslot5"
+        "tueslot6"
+        "wedslot1" 
+        "wedslot2"
+        "wedslot3"
+        "wedslot4"
+        "wedslot5"
+        "wedslot6"
+        "thuslot1" 
+        "thuslot2"
+        "thuslot3"
+        "thuslot4"
+        "thuslot5"
+        "thuslot6"
+        "frislot1" 
+        "frislot2"
+        "frislot3"
+        "frislot4"
+        "frislot5"
+        "frislot6"
+        "satslot1" 
+        "satslot2"
+        "satslot3"
+        "satslot4"
+        "satslot5"
+        "satslot6"
+        "sunslot1" 
+        "sunslot2"
+        "sunslot3"
+        "sunslot4"
+        "sunslot5"
+        "sunslot6"
+
+
+            ;
+            text-align: center;
+            border-radius: 5px;
+        }
+      }
