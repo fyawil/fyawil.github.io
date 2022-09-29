@@ -36,6 +36,7 @@ button {
     padding: 10px;
     background-color: rgb(228, 137, 53);
     border-radius: 5px;
+    font-size: 4.9em;
 }
 
 #message {
@@ -288,13 +289,19 @@ button {
      font-weight: bold;
     }
 
-@media screen and (max-width: 414px){
+@media screen and (max-device-width: 414px){
+    
     #mainpage {
     grid-template-areas: 
                          "motivation"
                          "generator"
                          "schedulecontainer";
 }
+    
+    #motivation {
+    font-size: 1.4em;
+}
+
     #schedulecontainer {
     grid-template-areas: 
         "monslot1"
