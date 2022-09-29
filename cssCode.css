@@ -288,7 +288,7 @@ button {
      font-weight: bold;
     }
     
-    @media (max-width: 480px) {
+    @media not (min-width: 414px) {
         #mainpage {
             display: grid;
             grid-template-areas:
