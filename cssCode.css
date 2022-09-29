@@ -13,7 +13,6 @@
     color: rgb(228, 137, 53);
     background-color: rgb(41, 20, 2);    
     border-radius: 5px;
-    width: 200px;
 }
 
 h1 {
@@ -289,38 +288,19 @@ button {
      font-weight: bold;
     }
     
-    @media not (min-width: 414px) {
+    @media (max-width: 414px) {
         #mainpage {
-            display: grid;
             grid-template-areas:
             "motivation"
             "generator"
             "schedulecontainer";
-            text-align: center;
-            gap: 5px;
-            width:calc(100vw - (100vw - 100%));
         }
 
         #motivation {
-            grid-area: motivation;
-            color: rgb(41, 20, 2);
             font-size: 1.4em;
-            padding: 10px;
-            background-color: rgb(228, 137, 53);
-            border-radius: 5px;
-        }
-
-        #generator {
-            grid-area: generator; 
-            padding: 10px; 
-            color: rgb(228, 137, 53);
-            background-color: rgb(41, 20, 2);    
-            border-radius: 5px;
         }
 
         #schedulecontainer {
-            grid-area: schedulecontainer;
-            display: grid;
             grid-template-areas: 
         "monslot1"
         "monslot2"
@@ -363,11 +343,6 @@ button {
         "sunslot3"
         "sunslot4"
         "sunslot5"
-        "sunslot6"
-
-
-            ;
-            text-align: center;
-            border-radius: 5px;
+        "sunslot6";
         }
       }
