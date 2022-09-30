@@ -357,7 +357,7 @@ button {
     #sunslot6 {
     border-radius: 0px 0px 10px 10px;
     }
-    #mainpage {
+    #mainpage, input, button {
     font-size: 5em;
 }
 }
