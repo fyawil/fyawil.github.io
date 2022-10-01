@@ -136,48 +136,52 @@ class App extends React.Component {
       Cardio: { 
         Weighted:{
           FullBody: {
-            Hard:["Clean & Jerk", "Squat Press", "Clean & Squat"],
-            Easy:["Ground To Overhead"]
+            0:["Clean & Jerk", "Snatch", "Squat To Press", "Ground To Overhead"]
           },
           Push: {
-            Hard:[],
-            Easy:[]
+            0:["Weighted Bench",  "Incline Bench"],
+            1:["Shoulder Press", "Rear Delt Flys", "Lateral Raises"],
+            2:["Weighted Skullcrushers", "Weighted Skullcrushers 2", "Weighted Skullcrushers 3"]
           },
           Pull: {
-            Hard:[],
-            Easy:[]
+            0:["Weighted Pull Up", "Weighted Chin Up"],
+            1:["Pentlay Row", "Bent Over Row"],
+            2:["Bicep Curl", "DB Curl", "Preacher Curl"]
           },
           Legs: {
-           Hard:[],
-           Easy:[]
+           0:["Squat", "Pause Squat", "ATG Squat"],
+           1:["Deadlifts", "Lunges"],
+           2:["Calf Raises", "Calf Raises 2", "Calf Raises 3"]
           },
           Abs: {
-            Hard:[],
-            Easy:[]
+            0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches", "Hitting Tyres", "Medball Sidetoss"],
+            1:["SidePlank", "Russian Twist", "Lateral Crunches", "Rotating Sit Ups"]
           }
-          },
-        UnWeighted:{
-          FullBody: {
-            Hard:[],
-            Easy:[]
-          },
-          Push: {
-            Hard:[],
-            Easy:[]
-          },
-          Pull: {
-            Hard:[],
-            Easy:[]
-          },
-          Legs: {
-           Hard:[],
-           Easy:[]
-          },
-          Abs: {
-            Hard:[],
-            Easy:[]
-          }
-          }
+            },
+            UnWeighted:{
+              FullBody: {
+                0: ["Burpee","Monkeycrawl", "Shoot & Sprawl"]
+              },
+              Push: {
+                0:["Push Ups", "Straight Bar Dips"],
+                1:["HSPU","Pike Push ups"],
+                2:["Skullcrushers", "Dips"]
+              },
+              Pull: {
+                0:["Pull Up","Chin Up", "Pause Chin Up"],
+                1:["Australian Pull up"],
+                2:["Bicep Row", "Close Grip Chin Up"]
+              },
+              Legs: {
+                0:["Squat", "Pause Squat"],
+                1:["Lunges", "Bridges", "ATG Squat"],
+                2:["Calf Raises"]
+              },
+              Abs: {
+                0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches","SidePlank", "Russian Twist", "Lateral Crunches"],
+                1:["Rotating Sit Ups", "Hitting Tyres", "Medball Sidetoss"]
+              }
+                }
       },
       
       Strength: {
@@ -207,24 +211,26 @@ class App extends React.Component {
             },
             UnWeighted:{
               FullBody: {
-                Hard:["Burpee"],
-                Easy:["Monkeycrawl", "Shoot & Sprawl"]
+                0: ["Burpee","Monkeycrawl", "Shoot & Sprawl"]
               },
               Push: {
-                Hard:["Push Ups", "HSPU", "Straight Bar Dips", "Pike Push ups"],
-                Easy:["Skullcrushers", "Dips"]
+                0:["Push Ups", "Straight Bar Dips"],
+                1:["HSPU","Pike Push ups"],
+                2:["Skullcrushers", "Dips"]
               },
               Pull: {
-                Hard:["Pull Up", "Chin Up", "Pause Chin Up", "Australian Pull up"],
-                Easy:["Bicep Row", "Close Grip Chin Up"]
+                0:["Pull Up","Chin Up", "Pause Chin Up"],
+                1:["Australian Pull up"],
+                2:["Bicep Row", "Close Grip Chin Up"]
               },
               Legs: {
-                Hard:["Squat", "Lunges", "Pause Squat", "Bridges", "ATG Squat"],
-                Easy:["Calf Raises"]
+                0:["Squat", "Pause Squat"],
+                1:["Lunges", "Bridges", "ATG Squat"],
+                2:["Calf Raises"]
               },
               Abs: {
-                Hard:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches","SidePlank", "Russian Twist", "Lateral Crunches"],
-                Easy:["Rotating Sit Ups", "Hitting Tyres", "Medball Sidetoss"]
+                0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches","SidePlank", "Russian Twist", "Lateral Crunches"],
+                1:["Rotating Sit Ups", "Hitting Tyres", "Medball Sidetoss"]
               }
                 }
       }
