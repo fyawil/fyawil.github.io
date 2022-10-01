@@ -155,7 +155,7 @@ class App extends React.Component {
           },
           Abs: {
             0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches", "Hitting Tyres", "Medball Sidetoss"],
-            1:["SidePlank", "Russian Twist", "Lateral Crunches", "Rotating Sit Ups"]
+            1:["Side Plank", "Russian Twist", "Lateral Crunches", "Rotating Sit Ups"]
           }
             },
             UnWeighted:{
@@ -178,7 +178,7 @@ class App extends React.Component {
                 2:["Calf Raises"]
               },
               Abs: {
-                0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches","SidePlank", "Russian Twist", "Lateral Crunches"],
+                0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches","Side Plank", "Russian Twist", "Lateral Crunches"],
                 1:["Rotating Sit Ups", "Hitting Tyres", "Medball Sidetoss"]
               }
                 }
@@ -206,7 +206,7 @@ class App extends React.Component {
           },
           Abs: {
             0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches", "Hitting Tyres", "Medball Sidetoss"],
-            1:["SidePlank", "Russian Twist", "Lateral Crunches", "Rotating Sit Ups"]
+            1:["Side Plank", "Russian Twist", "Lateral Crunches", "Rotating Sit Ups"]
           }
             },
             UnWeighted:{
@@ -229,7 +229,7 @@ class App extends React.Component {
                 2:["Calf Raises"]
               },
               Abs: {
-                0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches","SidePlank", "Russian Twist", "Lateral Crunches"],
+                0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches","Side Plank", "Russian Twist", "Lateral Crunches"],
                 1:["Rotating Sit Ups", "Hitting Tyres", "Medball Sidetoss"]
               }
                 }
@@ -306,6 +306,15 @@ for(let i = 0;i<availableDays;i++){
         )
         fullBodyIndex=2;
     };
+
+
+    for(let j=0;j<template[i].length;j++){
+      template[i][j]= [template[i][j],0]
+    }
+
+
+
+
       break;
 
       case "is45mins":
@@ -389,6 +398,17 @@ template.push(
     movementIndex = 0;
     break;
 };
+
+
+for(let j=0;j<template[i].length;j++){
+  template[i][j]= [template[i][j],0]
+}
+
+
+
+
+
+
 break;
 
     case "is60mins":  
@@ -521,6 +541,16 @@ break;
         movementIndex = 0;
         break;
     };
+
+
+    for(let j=0;j<template[i].length;j++){
+      template[i][j]= [template[i][j],0]
+    }
+
+
+
+
+
     break;
 
     case "is75mins":  
@@ -711,6 +741,16 @@ break;
         movementIndex = 0;
         break;
     };
+
+    for(let j=0;j<template[i].length;j++){
+      template[i][j]= [template[i][j],0]
+    }
+
+
+
+
+
+
     break;
   }
 
@@ -900,49 +940,90 @@ onChange={this.handleChangeTime}></input>75 mins
             
 <div id="schedulecontainer">
 <div id="monslot1"><p>{`${this.state.monslot}`=="Monday"?`${this.state.monslot}`:"Monday"}</p></div>
-<div id="monslot2"><p>{`${this.state.workout["Monday"][0]}`}</p></div>
-<div id="monslot3"><p>{`${this.state.workout["Monday"][1]}`}</p></div>
-<div id="monslot4"><p>{`${this.state.workout["Monday"][2]}`}</p></div>
-<div id="monslot5"><p>{`${this.state.workout["Monday"][3]}`}</p></div>
-<div id="monslot6"><p>{`${this.state.workout["Monday"][4]}`}</p></div>
+<div id="monslot2"><p>{`${this.state.workout["Monday"][0][0]}`=="undefined"?"":`${this.state.workout["Monday"][0][0]}`}</p></div>
+<div id="monslot3"><p>{`${this.state.workout["Monday"][1][0]}`=="undefined"?"":`${this.state.workout["Monday"][1][0]}`}</p></div>
+<div id="monslot4"><p>{`${this.state.workout["Monday"][2][0]}`=="undefined"?"":`${this.state.workout["Monday"][2][0]}`}</p></div>
+<div id="monslot5"><p>{`${this.state.workout["Monday"][3][0]}`=="undefined"?"":`${this.state.workout["Monday"][3][0]}`}</p></div>
+<div id="monslot6"><p>{`${this.state.workout["Monday"][4][0]}`=="undefined"?"":`${this.state.workout["Monday"][4][0]}`}</p></div>
+<div id="monslot2repscheme"><p>{`${this.state.workout["Monday"][0][1]}`=="undefined"?"":`${this.state.workout["Monday"][0][1]}`}</p></div>
+<div id="monslot3repscheme"><p>{`${this.state.workout["Monday"][1][1]}`=="undefined"?"":`${this.state.workout["Monday"][1][1]}`}</p></div>
+<div id="monslot4repscheme"><p>{`${this.state.workout["Monday"][2][1]}`=="undefined"?"":`${this.state.workout["Monday"][2][1]}`}</p></div>
+<div id="monslot5repscheme"><p>{`${this.state.workout["Monday"][3][1]}`=="undefined"?"":`${this.state.workout["Monday"][3][1]}`}</p></div>
+<div id="monslot6repscheme"><p>{`${this.state.workout["Monday"][4][1]}`=="undefined"?"":`${this.state.workout["Monday"][4][1]}`}</p></div>
+
 <div id="tueslot1"><p>{`${this.state.tueslot}`=="Tuesday"?`${this.state.tueslot}`:"Tuesday"}</p></div>
-<div id="tueslot2"><p>{`${this.state.workout["Tuesday"][0]}`}</p></div>
-<div id="tueslot3"><p>{`${this.state.workout["Tuesday"][1]}`}</p></div>
-<div id="tueslot4"><p>{`${this.state.workout["Tuesday"][2]}`}</p></div>
-<div id="tueslot5"><p>{`${this.state.workout["Tuesday"][3]}`}</p></div>
-<div id="tueslot6"><p>{`${this.state.workout["Tuesday"][4]}`}</p></div>
+<div id="tueslot2"><p>{`${this.state.workout["Tuesday"][0][0]}`=="undefined"?"":`${this.state.workout["Tuesday"][0][0]}`}</p></div>
+<div id="tueslot3"><p>{`${this.state.workout["Tuesday"][1][0]}`=="undefined"?"":`${this.state.workout["Tuesday"][1][0]}`}</p></div>
+<div id="tueslot4"><p>{`${this.state.workout["Tuesday"][2][0]}`=="undefined"?"":`${this.state.workout["Tuesday"][2][0]}`}</p></div>
+<div id="tueslot5"><p>{`${this.state.workout["Tuesday"][3][0]}`=="undefined"?"":`${this.state.workout["Tuesday"][3][0]}`}</p></div>
+<div id="tueslot6"><p>{`${this.state.workout["Tuesday"][4][0]}`=="undefined"?"":`${this.state.workout["Tuesday"][4][0]}`}</p></div>
+<div id="tueslot2repscheme"><p>{`${this.state.workout["Tuesday"][0][1]}`=="undefined"?"":`${this.state.workout["Tuesday"][0][1]}`}</p></div>
+<div id="tueslot3repscheme"><p>{`${this.state.workout["Tuesday"][1][1]}`=="undefined"?"":`${this.state.workout["Tuesday"][1][1]}`}</p></div>
+<div id="tueslot4repscheme"><p>{`${this.state.workout["Tuesday"][2][1]}`=="undefined"?"":`${this.state.workout["Tuesday"][2][1]}`}</p></div>
+<div id="tueslot5repscheme"><p>{`${this.state.workout["Tuesday"][3][1]}`=="undefined"?"":`${this.state.workout["Tuesday"][3][1]}`}</p></div>
+<div id="tueslot6repscheme"><p>{`${this.state.workout["Tuesday"][4][1]}`=="undefined"?"":`${this.state.workout["Tuesday"][4][1]}`}</p></div>
+
 <div id="wedslot1"><p>{`${this.state.wedslot}`=="Wednesday"?`${this.state.wedslot}`:"Wednesday"}</p></div>
-<div id="wedslot2"><p>{`${this.state.workout["Wednesday"][0]}`}</p></div>
-<div id="wedslot3"><p>{`${this.state.workout["Wednesday"][1]}`}</p></div>
-<div id="wedslot4"><p>{`${this.state.workout["Wednesday"][2]}`}</p></div>
-<div id="wedslot5"><p>{`${this.state.workout["Wednesday"][3]}`}</p></div>
-<div id="wedslot6"><p>{`${this.state.workout["Wednesday"][4]}`}</p></div>
+<div id="wedslot2"><p>{`${this.state.workout["Wednesday"][0][0]}`=="undefined"?"":`${this.state.workout["Wednesday"][0][0]}`}</p></div>
+<div id="wedslot3"><p>{`${this.state.workout["Wednesday"][1][0]}`=="undefined"?"":`${this.state.workout["Wednesday"][1][0]}`}</p></div>
+<div id="wedslot4"><p>{`${this.state.workout["Wednesday"][2][0]}`=="undefined"?"":`${this.state.workout["Wednesday"][2][0]}`}</p></div>
+<div id="wedslot5"><p>{`${this.state.workout["Wednesday"][3][0]}`=="undefined"?"":`${this.state.workout["Wednesday"][3][0]}`}</p></div>
+<div id="wedslot6"><p>{`${this.state.workout["Wednesday"][4][0]}`=="undefined"?"":`${this.state.workout["Wednesday"][4][0]}`}</p></div>
+<div id="wedslot2repscheme"><p>{`${this.state.workout["Wednesday"][0][1]}`=="undefined"?"":`${this.state.workout["Wednesday"][0][1]}`}</p></div>
+<div id="wedslot3repscheme"><p>{`${this.state.workout["Wednesday"][1][1]}`=="undefined"?"":`${this.state.workout["Wednesday"][1][1]}`}</p></div>
+<div id="wedslot4repscheme"><p>{`${this.state.workout["Wednesday"][2][1]}`=="undefined"?"":`${this.state.workout["Wednesday"][2][1]}`}</p></div>
+<div id="wedslot5repscheme"><p>{`${this.state.workout["Wednesday"][3][1]}`=="undefined"?"":`${this.state.workout["Wednesday"][3][1]}`}</p></div>
+<div id="wedslot6repscheme"><p>{`${this.state.workout["Wednesday"][4][1]}`=="undefined"?"":`${this.state.workout["Wednesday"][4][1]}`}</p></div>
+
 <div id="thuslot1"><p>{`${this.state.thuslot}`=="Thursday"?`${this.state.thuslot}`:"Thursday"}</p></div>
-<div id="thuslot2"><p>{`${this.state.workout["Thursday"][0]}`}</p></div>
-<div id="thuslot3"><p>{`${this.state.workout["Thursday"][1]}`}</p></div>
-<div id="thuslot4"><p>{`${this.state.workout["Thursday"][2]}`}</p></div>
-<div id="thuslot5"><p>{`${this.state.workout["Thursday"][3]}`}</p></div>
-<div id="thuslot6"><p>{`${this.state.workout["Thursday"][4]}`}</p></div>
+<div id="thuslot2"><p>{`${this.state.workout["Thursday"][0][0]}`=="undefined"?"":`${this.state.workout["Thursday"][0][0]}`}</p></div>
+<div id="thuslot3"><p>{`${this.state.workout["Thursday"][1][0]}`=="undefined"?"":`${this.state.workout["Thursday"][1][0]}`}</p></div>
+<div id="thuslot4"><p>{`${this.state.workout["Thursday"][2][0]}`=="undefined"?"":`${this.state.workout["Thursday"][2][0]}`}</p></div>
+<div id="thuslot5"><p>{`${this.state.workout["Thursday"][3][0]}`=="undefined"?"":`${this.state.workout["Thursday"][3][0]}`}</p></div>
+<div id="thuslot6"><p>{`${this.state.workout["Thursday"][4][0]}`=="undefined"?"":`${this.state.workout["Thursday"][4][0]}`}</p></div>
+<div id="thuslot2repscheme"><p>{`${this.state.workout["Thursday"][0][1]}`=="undefined"?"":`${this.state.workout["Thursday"][0][1]}`}</p></div>
+<div id="thuslot3repscheme"><p>{`${this.state.workout["Thursday"][1][1]}`=="undefined"?"":`${this.state.workout["Thursday"][1][1]}`}</p></div>
+<div id="thuslot4repscheme"><p>{`${this.state.workout["Thursday"][2][1]}`=="undefined"?"":`${this.state.workout["Thursday"][2][1]}`}</p></div>
+<div id="thuslot5repscheme"><p>{`${this.state.workout["Thursday"][3][1]}`=="undefined"?"":`${this.state.workout["Thursday"][3][1]}`}</p></div>
+<div id="thuslot6repscheme"><p>{`${this.state.workout["Thursday"][4][1]}`=="undefined"?"":`${this.state.workout["Thursday"][4][1]}`}</p></div>
+
 <div id="frislot1"><p>{`${this.state.frislot}`=="Friday"?`${this.state.frislot}`:"Friday"}</p></div>
-<div id="frislot2"><p>{`${this.state.workout["Friday"][0]}`}</p></div>
-<div id="frislot3"><p>{`${this.state.workout["Friday"][1]}`}</p></div>
-<div id="frislot4"><p>{`${this.state.workout["Friday"][2]}`}</p></div>
-<div id="frislot5"><p>{`${this.state.workout["Friday"][3]}`}</p></div>
-<div id="frislot6"><p>{`${this.state.workout["Friday"][4]}`}</p></div>
+<div id="frislot2"><p>{`${this.state.workout["Friday"][0][0]}`=="undefined"?"":`${this.state.workout["Friday"][0][0]}`}</p></div>
+<div id="frislot3"><p>{`${this.state.workout["Friday"][1][0]}`=="undefined"?"":`${this.state.workout["Friday"][1][0]}`}</p></div>
+<div id="frislot4"><p>{`${this.state.workout["Friday"][2][0]}`=="undefined"?"":`${this.state.workout["Friday"][2][0]}`}</p></div>
+<div id="frislot5"><p>{`${this.state.workout["Friday"][3][0]}`=="undefined"?"":`${this.state.workout["Friday"][3][0]}`}</p></div>
+<div id="frislot6"><p>{`${this.state.workout["Friday"][4][0]}`=="undefined"?"":`${this.state.workout["Friday"][4][0]}`}</p></div>
+<div id="frislot2repscheme"><p>{`${this.state.workout["Friday"][0][1]}`=="undefined"?"":`${this.state.workout["Friday"][0][1]}`}</p></div>
+<div id="frislot3repscheme"><p>{`${this.state.workout["Friday"][1][1]}`=="undefined"?"":`${this.state.workout["Friday"][1][1]}`}</p></div>
+<div id="frislot4repscheme"><p>{`${this.state.workout["Friday"][2][1]}`=="undefined"?"":`${this.state.workout["Friday"][2][1]}`}</p></div>
+<div id="frislot5repscheme"><p>{`${this.state.workout["Friday"][3][1]}`=="undefined"?"":`${this.state.workout["Friday"][3][1]}`}</p></div>
+<div id="frislot6repscheme"><p>{`${this.state.workout["Friday"][4][1]}`=="undefined"?"":`${this.state.workout["Friday"][4][1]}`}</p></div>
+
 <div id="satslot1"><p>{`${this.state.satslot}`=="Saturday"?`${this.state.satslot}`:"Saturday"}</p></div>
-<div id="satslot2"><p>{`${this.state.workout["Saturday"][0]}`}</p></div>
-<div id="satslot3"><p>{`${this.state.workout["Saturday"][1]}`}</p></div>
-<div id="satslot4"><p>{`${this.state.workout["Saturday"][2]}`}</p></div>
-<div id="satslot5"><p>{`${this.state.workout["Saturday"][3]}`}</p></div>
-<div id="satslot6"><p>{`${this.state.workout["Saturday"][4]}`}</p></div>
+<div id="satslot2"><p>{`${this.state.workout["Saturday"][0][0]}`=="undefined"?"":`${this.state.workout["Saturday"][0][0]}`}</p></div>
+<div id="satslot3"><p>{`${this.state.workout["Saturday"][1][0]}`=="undefined"?"":`${this.state.workout["Saturday"][1][0]}`}</p></div>
+<div id="satslot4"><p>{`${this.state.workout["Saturday"][2][0]}`=="undefined"?"":`${this.state.workout["Saturday"][2][0]}`}</p></div>
+<div id="satslot5"><p>{`${this.state.workout["Saturday"][3][0]}`=="undefined"?"":`${this.state.workout["Saturday"][3][0]}`}</p></div>
+<div id="satslot6"><p>{`${this.state.workout["Saturday"][4][0]}`=="undefined"?"":`${this.state.workout["Saturday"][4][0]}`}</p></div>
+<div id="satslot2repscheme"><p>{`${this.state.workout["Saturday"][0][1]}`=="undefined"?"":`${this.state.workout["Saturday"][0][1]}`}</p></div>
+<div id="satslot3repscheme"><p>{`${this.state.workout["Saturday"][1][1]}`=="undefined"?"":`${this.state.workout["Saturday"][1][1]}`}</p></div>
+<div id="satslot4repscheme"><p>{`${this.state.workout["Saturday"][2][1]}`=="undefined"?"":`${this.state.workout["Saturday"][2][1]}`}</p></div>
+<div id="satslot5repscheme"><p>{`${this.state.workout["Saturday"][3][1]}`=="undefined"?"":`${this.state.workout["Saturday"][3][1]}`}</p></div>
+<div id="satslot6repscheme"><p>{`${this.state.workout["Saturday"][4][1]}`=="undefined"?"":`${this.state.workout["Saturday"][4][1]}`}</p></div>
+
 <div id="sunslot1"><p>{`${this.state.sunslot}`=="Sunday"?`${this.state.sunslot}`:"Sunday"}</p></div>
-<div id="sunslot2"><p>{`${this.state.workout["Sunday"][0]}`}</p></div>
-<div id="sunslot3"><p>{`${this.state.workout["Sunday"][1]}`}</p></div>
-<div id="sunslot4"><p>{`${this.state.workout["Sunday"][2]}`}</p></div>
-<div id="sunslot5"><p>{`${this.state.workout["Sunday"][3]}`}</p></div>
-<div id="sunslot6"><p>{`${this.state.workout["Sunday"][4]}`}</p></div>
-</div>
-          
+<div id="sunslot2"><p>{`${this.state.workout["Sunday"][0][0]}`=="undefined"?"":`${this.state.workout["Sunday"][0][0]}`}</p></div>
+<div id="sunslot3"><p>{`${this.state.workout["Sunday"][1][0]}`=="undefined"?"":`${this.state.workout["Sunday"][1][0]}`}</p></div>
+<div id="sunslot4"><p>{`${this.state.workout["Sunday"][2][0]}`=="undefined"?"":`${this.state.workout["Sunday"][2][0]}`}</p></div>
+<div id="sunslot5"><p>{`${this.state.workout["Sunday"][3][0]}`=="undefined"?"":`${this.state.workout["Sunday"][3][0]}`}</p></div>
+<div id="sunslot6"><p>{`${this.state.workout["Sunday"][4][0]}`=="undefined"?"":`${this.state.workout["Sunday"][4][0]}`}</p></div>
+<div id="sunslot2repscheme"><p>{`${this.state.workout["Sunday"][0][1]}`=="undefined"?"":`${this.state.workout["Sunday"][0][1]}`}</p></div>
+<div id="sunslot3repscheme"><p>{`${this.state.workout["Sunday"][1][1]}`=="undefined"?"":`${this.state.workout["Sunday"][1][1]}`}</p></div>
+<div id="sunslot4repscheme"><p>{`${this.state.workout["Sunday"][2][1]}`=="undefined"?"":`${this.state.workout["Sunday"][2][1]}`}</p></div>
+<div id="sunslot5repscheme"><p>{`${this.state.workout["Sunday"][3][1]}`=="undefined"?"":`${this.state.workout["Sunday"][3][1]}`}</p></div>
+<div id="sunslot6repscheme"><p>{`${this.state.workout["Sunday"][4][1]}`=="undefined"?"":`${this.state.workout["Sunday"][4][1]}`}</p></div>
+
+</div>     
           </div>
 );
     }
