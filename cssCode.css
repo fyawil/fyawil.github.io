@@ -287,9 +287,10 @@ button {
      
     p {
      font-weight: bold;
+     ;
     }
 
-@media screen and (max-device-width: 414px){
+@media screen and (max-width: 414px){
     
     #mainpage {
     grid-template-areas: 
@@ -357,4 +358,5 @@ button {
     #sunslot6 {
     border-radius: 0px 0px 10px 10px;
     }
+
 }
