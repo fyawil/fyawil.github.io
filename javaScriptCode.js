@@ -136,8 +136,8 @@ class App extends React.Component {
       Cardio: { 
         Weighted:{
           FullBody: {
-            0:["Clean & Jerk", "Snatch", "Squat To Press", "Ground To Overhead"]
-          },
+          0:["Clean & Jerk", "Snatch", "Squat To Press", "Ground To Overhead"]
+        },
           Push: {
             0:["Weighted Bench",  "Incline Bench"],
             1:["Shoulder Press", "Rear Delt Flys", "Lateral Raises"],
@@ -187,8 +187,9 @@ class App extends React.Component {
       Strength: {
         Weighted:{
           FullBody: {
-            0:["Clean & Jerk", "Snatch", "Squat To Press", "Ground To Overhead"]
-          },
+          0:["Clean & Jerk", "Snatch", "Squat To Press", "Ground To Overhead"]
+        // name illustrations same as exercises  0:["stickman","stickman","stickman"]  
+        },
           Push: {
             0:["Weighted Bench",  "Incline Bench"],
             1:["Shoulder Press", "Rear Delt Flys", "Lateral Raises"],
@@ -309,12 +310,10 @@ for(let i = 0;i<availableDays;i++){
 
 
     for(let j=0;j<template[i].length;j++){
-      template[i][j]= [template[i][j],0]
+      if(template[i][j]!==""){
+        template[i][j]= [template[i][j],0]
+      }
     }
-
-
-
-
       break;
 
       case "is45mins":
@@ -401,14 +400,10 @@ template.push(
 
 
 for(let j=0;j<template[i].length;j++){
-  template[i][j]= [template[i][j],0]
+  if(template[i][j]!==""){
+    template[i][j]= [template[i][j],0]
+  }
 }
-
-
-
-
-
-
 break;
 
     case "is60mins":  
@@ -544,13 +539,10 @@ break;
 
 
     for(let j=0;j<template[i].length;j++){
-      template[i][j]= [template[i][j],0]
+      if(template[i][j]!==""){
+        template[i][j]= [template[i][j],0]
+      }
     }
-
-
-
-
-
     break;
 
     case "is75mins":  
@@ -743,14 +735,10 @@ break;
     };
 
     for(let j=0;j<template[i].length;j++){
-      template[i][j]= [template[i][j],0]
+      if(template[i][j]!==""){
+        template[i][j]= [template[i][j],0]
+      }
     }
-
-
-
-
-
-
     break;
   }
 
@@ -950,6 +938,9 @@ onChange={this.handleChangeTime}></input>75 mins
 <div id="monslot4repscheme"><p>{`${this.state.workout["Monday"][2][1]}`=="undefined"?"":`${this.state.workout["Monday"][2][1]}`}</p></div>
 <div id="monslot5repscheme"><p>{`${this.state.workout["Monday"][3][1]}`=="undefined"?"":`${this.state.workout["Monday"][3][1]}`}</p></div>
 <div id="monslot6repscheme"><p>{`${this.state.workout["Monday"][4][1]}`=="undefined"?"":`${this.state.workout["Monday"][4][1]}`}</p></div>
+{/* make one for each slot and make css selectors and conditionally render this like the above
+<img id="monslot2stickman" src={`./${this.state.workout["Monday"][0][0]}.png`}></img>*/
+} 
 
 <div id="tueslot1"><p>{`${this.state.tueslot}`=="Tuesday"?`${this.state.tueslot}`:"Tuesday"}</p></div>
 <div id="tueslot2"><p>{`${this.state.workout["Tuesday"][0][0]}`=="undefined"?"":`${this.state.workout["Tuesday"][0][0]}`}</p></div>
@@ -1022,7 +1013,7 @@ onChange={this.handleChangeTime}></input>75 mins
 <div id="sunslot4repscheme"><p>{`${this.state.workout["Sunday"][2][1]}`=="undefined"?"":`${this.state.workout["Sunday"][2][1]}`}</p></div>
 <div id="sunslot5repscheme"><p>{`${this.state.workout["Sunday"][3][1]}`=="undefined"?"":`${this.state.workout["Sunday"][3][1]}`}</p></div>
 <div id="sunslot6repscheme"><p>{`${this.state.workout["Sunday"][4][1]}`=="undefined"?"":`${this.state.workout["Sunday"][4][1]}`}</p></div>
-
+{/*<img id="stickman" src="./stickman.png"></img>*/}
 </div>     
           </div>
 );

@@ -47,17 +47,17 @@ button {
     grid-area: schedulecontainer;
     display: grid;
     grid-template-areas: 
-"monslot1 tueslot1 wedslot1 thuslot1 frislot1 satslot1 sunslot1"							
-"monslot2 tueslot2 wedslot2 thuslot2 frislot2 satslot2 sunslot2"							
-"monslot2repscheme tueslot2repscheme wedslot2repscheme thuslot2repscheme frislot2repscheme satslot2repscheme sunslot2repscheme"
-"monslot3 tueslot3 wedslot3 thuslot3 frislot3 satslot3 sunslot3"							
-"monslot3repscheme tueslot3repscheme wedslot3repscheme thuslot3repscheme frislot3repscheme satslot3repscheme sunslot3repscheme"
-"monslot4 tueslot4 wedslot4 thuslot4 frislot4 satslot4 sunslot4"							
-"monslot4repscheme tueslot4repscheme wedslot4repscheme thuslot4repscheme frislot4repscheme satslot4repscheme sunslot4repscheme"
-"monslot5 tueslot5 wedslot5 thuslot5 frislot5 satslot5 sunslot5"							
-"monslot5repscheme tueslot5repscheme wedslot5repscheme thuslot5repscheme frislot5repscheme satslot5repscheme sunslot5repscheme"
-"monslot6 tueslot6 wedslot6 thuslot6 frislot6 satslot6 sunslot6"							
-"monslot6repscheme tueslot6repscheme wedslot6repscheme thuslot6repscheme frislot6repscheme satslot6repscheme sunslot6repscheme"
+    "monslot1 tueslot1 wedslot1 thuslot1 frislot1 satslot1 sunslot1"							
+    "monslot2 tueslot2 wedslot2 thuslot2 frislot2 satslot2 sunslot2"							
+    "monslot2repscheme tueslot2repscheme wedslot2repscheme thuslot2repscheme frislot2repscheme satslot2repscheme sunslot2repscheme"
+    "monslot3 tueslot3 wedslot3 thuslot3 frislot3 satslot3 sunslot3"							
+    "monslot3repscheme tueslot3repscheme wedslot3repscheme thuslot3repscheme frislot3repscheme satslot3repscheme sunslot3repscheme"
+    "monslot4 tueslot4 wedslot4 thuslot4 frislot4 satslot4 sunslot4"							
+    "monslot4repscheme tueslot4repscheme wedslot4repscheme thuslot4repscheme frislot4repscheme satslot4repscheme sunslot4repscheme"
+    "monslot5 tueslot5 wedslot5 thuslot5 frislot5 satslot5 sunslot5"							
+    "monslot5repscheme tueslot5repscheme wedslot5repscheme thuslot5repscheme frislot5repscheme satslot5repscheme sunslot5repscheme"
+    "monslot6 tueslot6 wedslot6 thuslot6 frislot6 satslot6 sunslot6"							
+    "monslot6repscheme tueslot6repscheme wedslot6repscheme thuslot6repscheme frislot6repscheme satslot6repscheme sunslot6repscheme"
     ;
     text-align: center;
     border-radius: 5px;
@@ -462,9 +462,9 @@ button {
    #sunslot6repscheme {
     grid-area: sunslot6repscheme;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-}
-     
+    background-color:rgb(228, 137, 53);
+
+} 
     p {
      font-weight: bold;
      ;
@@ -485,48 +485,48 @@ button {
 
     #schedulecontainer {
     grid-template-areas: 
-"monslot1 monslot1"
-"monslot2 monslot2repscheme"
-"monslot3 monslot3repscheme"
-"monslot4 monslot4repscheme"
-"monslot5 monslot5repscheme"
-"monslot6 monslot6repscheme"
-"tueslot1 tueslot1"
-"tueslot2 tueslot2repscheme"
-"tueslot3 tueslot3repscheme"
-"tueslot4 tueslot4repscheme"
-"tueslot5 tueslot5repscheme"
-"tueslot6 tueslot6repscheme"
-"wedslot1 wedslot1"
-"wedslot2 wedslot2repscheme"
-"wedslot3 wedslot3repscheme"
-"wedslot4 wedslot4repscheme"
-"wedslot5 wedslot5repscheme"
-"wedslot6 wedslot6repscheme"
-"thuslot1 thuslot1"
-"thuslot2 thuslot2repscheme"
-"thuslot3 thuslot3repscheme"
-"thuslot4 thuslot4repscheme"
-"thuslot5 thuslot5repscheme"
-"thuslot6 thuslot6repscheme"
-"frislot1 frislot1"
-"frislot2 frislot2repscheme"
-"frislot3 frislot3repscheme"
-"frislot4 frislot4repscheme"
-"frislot5 frislot5repscheme"
-"frislot6 frislot6repscheme"
-"satslot1 satslot1"
-"satslot2 satslot2repscheme"
-"satslot3 satslot3repscheme"
-"satslot4 satslot4repscheme"
-"satslot5 satslot5repscheme"
-"satslot6 satslot6repscheme"
-"sunslot1 sunslot1"
-"sunslot2 sunslot2repscheme"
-"sunslot3 sunslot3repscheme"
-"sunslot4 sunslot4repscheme"
-"sunslot5 sunslot5repscheme"
-"sunslot6 sunslot6repscheme"
+    "monslot1 monslot1"
+    "monslot2 monslot2repscheme"
+    "monslot3 monslot3repscheme"
+    "monslot4 monslot4repscheme"
+    "monslot5 monslot5repscheme"
+    "monslot6 monslot6repscheme"
+    "tueslot1 tueslot1"
+    "tueslot2 tueslot2repscheme"
+    "tueslot3 tueslot3repscheme"
+    "tueslot4 tueslot4repscheme"
+    "tueslot5 tueslot5repscheme"
+    "tueslot6 tueslot6repscheme"
+    "wedslot1 wedslot1"
+    "wedslot2 wedslot2repscheme"
+    "wedslot3 wedslot3repscheme"
+    "wedslot4 wedslot4repscheme"
+    "wedslot5 wedslot5repscheme"
+    "wedslot6 wedslot6repscheme"
+    "thuslot1 thuslot1"
+    "thuslot2 thuslot2repscheme"
+    "thuslot3 thuslot3repscheme"
+    "thuslot4 thuslot4repscheme"
+    "thuslot5 thuslot5repscheme"
+    "thuslot6 thuslot6repscheme"
+    "frislot1 frislot1"
+    "frislot2 frislot2repscheme"
+    "frislot3 frislot3repscheme"
+    "frislot4 frislot4repscheme"
+    "frislot5 frislot5repscheme"
+    "frislot6 frislot6repscheme"
+    "satslot1 satslot1"
+    "satslot2 satslot2repscheme"
+    "satslot3 satslot3repscheme"
+    "satslot4 satslot4repscheme"
+    "satslot5 satslot5repscheme"
+    "satslot6 satslot6repscheme"
+    "sunslot1 sunslot1"
+    "sunslot2 sunslot2repscheme"
+    "sunslot3 sunslot3repscheme"
+    "sunslot4 sunslot4repscheme"
+    "sunslot5 sunslot5repscheme"
+    "sunslot6 sunslot6repscheme"
     ;
 }
     #monslot1 {
