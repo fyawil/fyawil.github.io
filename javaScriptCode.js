@@ -932,7 +932,7 @@ onChange={this.handleChangeTime}></input>75 mins
    </div>
             <br></br>
             <br></br>
-            <div id="motivation"><p id="message">وَأَعِدُّوا۟ لَهُم مَّا ٱسْتَطَعْتُم مِّن قُوَّةٍۢ</p></div>
+            <div id="motivation"><p id="message">لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِٱللَّٰهِ</p></div>
             
 <div id="schedulecontainer">
 <div id="monslot1"><p>{`${this.state.monslot}`=="Monday"?`${this.state.monslot}`:"Monday"}</p></div>
