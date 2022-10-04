@@ -312,7 +312,9 @@ for(let i = 0;i<availableDays;i++){
     for(let j=0;j<template[i].length;j++){
       if(template[i][j]!==""){
         template[i][j]= [template[i][j],
-        this.state.isStrength=="Strength"?`${4}x${j==0?5:10}`:`15 x 1min`
+        this.state.isStrength=="Strength"?`${4} sets x ${j==0?5:10} reps`:
+        `${j==0?"30 rds x":
+                "30 secs on | 30 secs off"}`
       ]
       }
     }
@@ -404,7 +406,10 @@ template.push(
 for(let j=0;j<template[i].length;j++){
   if(template[i][j]!==""){
     template[i][j]= [template[i][j],
-    this.state.isStrength=="Strength"?`${4}x${j==0?5:j==1?10:10}`:`10 x 1min`
+    this.state.isStrength=="Strength"?`${4} sets x ${j==0?5:j==1?10:10} reps`:
+    `${j==0?"2 x":
+       j==1?"21 rds x":
+       "30 secs on | 30 secs off"}`
   ]
   }
 }
@@ -545,7 +550,11 @@ break;
     for(let j=0;j<template[i].length;j++){
       if(template[i][j]!==""){
         template[i][j]= [template[i][j],
-        this.state.isStrength=="Strength"?`${4}x${j==0?5:j==1?10:j==2?10:20}`:`10 x 1min`
+        this.state.isStrength=="Strength"?`${4} sets x ${j==0?5:j==1?10:j==2?10:20} reps`:
+        `${j==0?"3 x":
+           j==1?"15 rds x":
+           j==2?"30 secs on":
+                "30 secs off"}`
       ]
       }
     }
@@ -743,7 +752,12 @@ break;
     for(let j=0;j<template[i].length;j++){
       if(template[i][j]!==""){
         template[i][j]= [template[i][j],
-        this.state.isStrength=="Strength"?`${4}x${j==0?5:j==1?10:j==2?10:j==3?10:20}`:`10 x 1min`
+        this.state.isStrength=="Strength"?`${4} sets x ${j==0?5:j==1?10:j==2?10:j==3?10:20} reps`:
+        `${j==0?"4 x":
+        j==1?"20 rds x":
+        j==2?"•":
+        j==3?"20 secs on":
+            "40 secs off"}`  
       ]
       }
     }
