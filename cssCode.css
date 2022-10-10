@@ -46,6 +46,7 @@ button {
 #schedulecontainer {
     grid-area: schedulecontainer;
     display: grid;
+    background-color: rgb(41, 20, 2);
     grid-template-areas: 
     "monslot1 tueslot1 wedslot1 thuslot1 frislot1 satslot1 sunslot1"							
     "monslot2 tueslot2 wedslot2 thuslot2 frislot2 satslot2 sunslot2"							
@@ -59,6 +60,7 @@ button {
     "monslot6 tueslot6 wedslot6 thuslot6 frislot6 satslot6 sunslot6"							
     "monslot6repscheme tueslot6repscheme wedslot6repscheme thuslot6repscheme frislot6repscheme satslot6repscheme sunslot6repscheme"
     ;
+    gap: 0px 3px;
     text-align: center;
     border-radius: 5px;
 }

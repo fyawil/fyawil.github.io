@@ -134,83 +134,28 @@ class App extends React.Component {
 
     let exercises = {
       Cardio: { 
-        Hard:{
-          FullBody: {
-          0:["Clean & Jerk", "Snatch", "Squat To Press", "Ground To Overhead"]
-        },
-          Push: {
-            0:["hard Bench",  "Incline Bench"],
-            1:["Shoulder Press", "Rear Delt Flys", "Lateral Raises"],
-            2:["hard Skullcrushers", "hard Skullcrushers 2", "hard Skullcrushers 3"]
-          },
-          Pull: {
-            0:["hard Pull Up", "hard Chin Up"],
-            1:["Pentlay Row", "Bent Over Row"],
-            2:["Bicep Curl", "DB Curl", "Preacher Curl"]
-          },
-          Legs: {
-           0:["Squat", "Pause Squat", "ATG Squat"],
-           1:["Deadlifts", "Lunges"],
-           2:["Calf Raises", "Calf Raises 2", "Calf Raises 3"]
-          },
-          Abs: {
-            0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches", "Hitting Tyres", "Medball Sidetoss"],
-            1:["Side Plank", "Russian Twist", "Lateral Crunches", "Rotating Sit Ups"]
-          }
-            },
-            Easy:{
-              FullBody: {
-                0: ["Burpee","Monkeycrawl", "Shoot & Sprawl"]
-              },
-              Push: {
-                0:["Push Ups", "Straight Bar Dips"],
-                1:["HSPU","Pike Push ups"],
-                2:["Skullcrushers", "Dips"]
-              },
-              Pull: {
-                0:["Pull Up","Chin Up", "Pause Chin Up"],
-                1:["Australian Pull up"],
-                2:["Bicep Row", "Close Grip Chin Up"]
-              },
-              Legs: {
-                0:["Squat", "Pause Squat"],
-                1:["Lunges", "Bridges", "ATG Squat"],
-                2:["Calf Raises"]
-              },
-              Abs: {
-                0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches","Side Plank", "Russian Twist", "Lateral Crunches"],
-                1:["Rotating Sit Ups", "Hitting Tyres", "Medball Sidetoss"]
-              }
-                }
+        HIIT:["Med Ball Toss", "Burpee", "Jump Squat", "V Up", "Shoot & Sprawl", "Jump Rope", "Clean", "Sprint", "Sandbag Lift", "Broad Jump", "Switch Lunge"]
       },
       
       Strength: {
         Hard:{
           FullBody: {
-          0:[
-          "Clean & Jerk","Burpee","Squat & Press"]
+          0:["Clean & Jerk", "Squat & Press", "Farmers Carry"	,	"Sandbag Lift"]
         // name illustrations same as exercises  0:["stickman","stickman","stickman"]  
         },
           Push: {
-            0:["	Bench	"	,	"	Incline Bench	"	,	"	Push Up	"	,	"	Straight Bar Dip	"
-          ],
-            1:["	Press	"	,	"	Rear Delt Fly	"	,	"	HSPU	"	,	"	Pike Push Up	"
-          ],
-            2:["	French Press	"	,	"	Skull Crusher	"	,	"	Dip	"]
+            0:["Bench"	,	"Incline Bench"	,	"Push Up"	,	"Straight Bar Dip"],
+            1:["Overhead Press"	,	"Rear Delt Fly"	,	"HSPU"	,	"Pike Push Up"],
+            2:["French Press"	,	"Skull Crusher"	,	"Dip"]
           },
           Pull: {
-            0:["	W. Pull Up	"	,	"	Chin Up	"	,	"	W. Chin Up	"	,	"	Pull Up	"
-          ],
-            1:["	Bent Over Row	"	,	"	Ring Row	"	,	"	Front Lever	"
-          ],
-            2:["	Bicep Curl	"	,	"	Preacher Curl	"	,	"	Close Grip Chin Up	"
-          ]
+            0:["Weighted Pull Up"	,	"Chin Up"	,	"Weighted Chin Up"	,	"Pull Up"],
+            1:["Bent Over Row"	,	"Ring Row"	,	"Front Lever"],
+            2:["Bicep Curl"	,	"Preacher Curl"	,	"Close Grip Chin Up"]
           },
           Legs: {
-           0:["	Squat	"	,	"	Pause Squat	"	,	"	ATG Squat	"
-          ],
-           1:["	Dead Lift	"	,	"	Bridge	"	,	"	Lunge	"
-          ],
+           0:["Squat"	,	"Pause Squat"	,	"ATG Squat"],
+           1:["Dead Lift"	,	"Bridge"	,	"Lunge"],
            2:["Calf Raises"]
           },
           Abs: {
@@ -220,25 +165,25 @@ class App extends React.Component {
             },
             Easy:{
               FullBody: {
-                0: ["Burpee","Monkeycrawl", "Shoot & Sprawl"]
+                0: ["Burpee",	"8 Count Body Builder",	"Squat & Press",	"Farmers Carry",	"Sandbag Lift"]
               },
               Push: {
-                0:["Push Ups", "Straight Bar Dips"],
-                1:["HSPU","Pike Push ups"],
-                2:["Skullcrushers", "Dips"]
+                0:["DB Bench",	"Incline DB Bench",	"Push Up"],
+                1:["DB Overhead Press",	"Rear Delt Fly",	"Pike Push Up"],
+                2:["Skull Crusher",	"Tricep Extension",	"Bench Dip"]
               },
               Pull: {
-                0:["Pull Up","Chin Up", "Pause Chin Up"],
-                1:["Australian Pull up"],
-                2:["Bicep Row", "Close Grip Chin Up"]
+                0:["Pull Up",	"Chin Up Hold",	"Chin Up",	"Pull Up Hold"],
+                1:["Australian Pull Up",	"Bench Row",	"Back Raise"],
+                2:["Bicep Curl",	"Close Grip Chin Up",	"Close Grip Chin Up Hold"]
               },
               Legs: {
-                0:["Squat", "Pause Squat"],
-                1:["Lunges", "Bridges", "ATG Squat"],
+                0:["Squat",	"Pause Squat"],
+                1:["Bridge",	"Lunge"],
                 2:["Calf Raises"]
               },
               Abs: {
-                0:["Leg Raises", "Front Lever Raises", "Deadbugs","Crunches","Side Plank", "Russian Twist", "Lateral Crunches"],
+                0:["Knee Raises", "Deadbugs","Crunches","Side Plank", "Russian Twist", "Lateral Crunches"],
                 1:["Rotating Sit Ups", "Hitting Tyres", "Medball Sidetoss"]
               }
                 }
@@ -276,7 +221,8 @@ let legs2Index = 0;
 
 let abs0Index = 0;
 let abs1Index = 0;
-let abs2Index = 0;
+
+if(this.state.isStrength=="Strength"){
   
 for(let i = 0;i<availableDays;i++){
 
@@ -320,9 +266,7 @@ for(let i = 0;i<availableDays;i++){
     for(let j=0;j<template[i].length;j++){
       if(template[i][j]!==""){
         template[i][j]= [template[i][j],
-        this.state.isStrength=="Strength"?`${4} sets x ${j==0?5:10} reps`:
-        `${j==0?"30 rds x":
-                "30 secs on | 30 secs off"}`
+        `${4} sets x ${j==0?5:10} reps`
       ]
       }
     }
@@ -414,10 +358,7 @@ template.push(
 for(let j=0;j<template[i].length;j++){
   if(template[i][j]!==""){
     template[i][j]= [template[i][j],
-    this.state.isStrength=="Strength"?`${4} sets x ${j==0?5:j==1?10:10} reps`:
-    `${j==0?"2 x":
-       j==1?"21 rds x":
-       "30 secs on | 30 secs off"}`
+    `${4} sets x ${j==0?5:j==1?10:10} reps`
   ]
   }
 }
@@ -558,11 +499,7 @@ break;
     for(let j=0;j<template[i].length;j++){
       if(template[i][j]!==""){
         template[i][j]= [template[i][j],
-        this.state.isStrength=="Strength"?`${4} sets x ${j==0?5:j==1?10:j==2?10:20} reps`:
-        `${j==0?"3 x":
-           j==1?"15 rds x":
-           j==2?"30 secs on":
-                "30 secs off"}`
+        `${4} sets x ${j==0?5:j==1?10:j==2?10:20} reps`
       ]
       }
     }
@@ -760,20 +697,93 @@ break;
     for(let j=0;j<template[i].length;j++){
       if(template[i][j]!==""){
         template[i][j]= [template[i][j],
-        this.state.isStrength=="Strength"?`${4} sets x ${j==0?5:j==1?10:j==2?10:j==3?10:20} reps`:
-        `${j==0?"4 x":
-        j==1?"20 rds x":
-        j==2?"•":
-        j==3?"20 secs on":
-            "40 secs off"}`  
+        `${4} sets x ${j==0?5:j==1?10:j==2?10:j==3?10:20} reps` 
       ]
       }
     }
     break;
-  }
+  }}
 
 
 // resulting in template becoming [["Pushup","PullUp"],["Squat","Triext"],["Dip","Yalla"],.......]
+  }
+
+  else {for(let i = 0;i<availableDays;i++){
+
+    switch(this.state.availableTime){
+  
+        case "is30mins": 
+        template.push([
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          "", "", ""
+        ])
+        for(let j=0;j<template[i].length;j++){
+          if(template[i][j]!==""){
+            template[i][j]= [template[i][j],
+            `${j==0?"15 rds":
+                    this.state.isHard == "Hard"? "30 secs on | 30 secs off": "20 secs on | 40 secs off" }`
+          ]
+          }
+        }
+        break;
+        case "is45mins":
+        template.push([
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+            "", ""
+          ])
+        for(let j=0;j<template[i].length;j++){
+          if(template[i][j]!==""){
+            template[i][j]= [template[i][j],
+            `${j==0?"2 x":
+               j==1?"20 rds":
+               this.state.isHard == "Hard"? "30 secs on | 30 secs off": "20 secs on | 40 secs off" }`
+            ]
+            }
+          }
+        break;
+        case "is60mins":  
+        template.push([
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          ""
+        ])
+        for(let j=0;j<template[i].length;j++){
+          if(template[i][j]!==""){
+            template[i][j]= [template[i][j],
+            `${j==0?"3 x":
+               j==1?"15 rds":
+               j==2? this.state.isHard == "Hard"? "30 secs on" : "20 secs on":
+               this.state.isHard == "Hard"? "30 secs off": "40 secs off" }`
+            ]
+            }
+          }
+        break;
+        case "is75mins": 
+        template.push([
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)],
+          exercises["Cardio"]["HIIT"][Math.floor(Math.random()*exercises["Cardio"]["HIIT"].length)]
+        ]) 
+        for(let j=0;j<template[i].length;j++){
+          if(template[i][j]!==""){
+            template[i][j]= [template[i][j],
+            `${j==0?"4 x":
+               j==1?"20 rds":
+               j==2?"•":
+               j==3? this.state.isHard == "Hard"? "30 secs on" : "20 secs on":
+               this.state.isHard == "Hard"? "30 secs off": "40 secs off" }`
+            ]
+            }
+          }
+        break;
+    }}
   }
 
   if(this.state.monslot !== ""){
