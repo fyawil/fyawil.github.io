@@ -165,7 +165,7 @@ class App extends React.Component {
             },
             Easy:{
               FullBody: {
-                0: ["Burpee",	"8 Count Body Builder",	"Squat & Press",	"Farmers Carry",	"Sandbag Lift"]
+                0: ["Burpee",	"Squat & Press",	"Farmers Carry",	"Sandbag Lift"]
               },
               Push: {
                 0:["DB Bench",	"Incline DB Bench",	"Push Up"],
