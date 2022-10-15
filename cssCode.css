@@ -63,6 +63,9 @@ button {
     background-color: rgb(228, 137, 53);
     border-radius: 10px;
 }
+    img {
+        border:0;
+    }
 
     #monslot1 {
     grid-area: monslot1;
@@ -121,32 +124,41 @@ button {
     grid-area: monslot6repscheme ;   
     color:rgb(41, 20, 2);
     background-color:rgb(228, 137, 53)
-}
-
+    }
     #monslot2stickman {
     grid-area: monslot2stickman ;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #monslot3stickman  {
     grid-area: monslot3stickman ;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #monslot4stickman  {
     grid-area: monslot4stickman ;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #monslot5stickman  {
     grid-area: monslot5stickman ;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #monslot6stickman  {
     grid-area: monslot6stickman ;   
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
 }
     #tueslot1 {
     grid-area: tueslot1;
@@ -203,32 +215,42 @@ button {
     #tueslot6repscheme {
     grid-area: tueslot6repscheme;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
 }
     #tueslot2stickman {
     grid-area: tueslot2stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
 }
     #tueslot3stickman {
     grid-area: tueslot3stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
 }
     #tueslot4stickman {
     grid-area: tueslot4stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #tueslot5stickman {
     grid-area: tueslot5stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #tueslot6stickman {
     grid-area: tueslot6stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
 }
     #wedslot1 {
     grid-area: wedslot1;
@@ -290,27 +312,37 @@ button {
     #wedslot2stickman {
     grid-area: wedslot2stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #wedslot3stickman {
     grid-area: wedslot3stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #wedslot4stickman {
     grid-area: wedslot4stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #wedslot5stickman {
     grid-area: wedslot5stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #wedslot6stickman {
     grid-area: wedslot6stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
 }
     #thuslot1 {
     grid-area: thuslot1;
@@ -372,27 +404,37 @@ button {
     #thuslot2stickman {
     grid-area: thuslot2stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #thuslot3stickman {
     grid-area: thuslot3stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #thuslot4stickman {
     grid-area: thuslot4stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #thuslot5stickman {
     grid-area: thuslot5stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #thuslot6stickman {
     grid-area: thuslot6stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
 }
     #frislot1 {
     grid-area: frislot1;
@@ -454,27 +496,37 @@ button {
     #frislot2stickman {
     grid-area: frislot2stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #frislot3stickman {
     grid-area: frislot3stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #frislot4stickman {
     grid-area: frislot4stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #frislot5stickman {
     grid-area: frislot5stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #frislot6stickman {
     grid-area: frislot6stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
 }
     #satslot1 {
     grid-area: satslot1;
@@ -536,27 +588,37 @@ button {
     #satslot2stickman {
     grid-area: satslot2stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #satslot3stickman {
     grid-area: satslot3stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #satslot4stickman {
     grid-area: satslot4stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #satslot5stickman {
     grid-area: satslot5stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #satslot6stickman {
     grid-area: satslot6stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
 }
     #sunslot1 {
     grid-area: sunslot1;
@@ -619,17 +681,10 @@ button {
     #sunslot2stickman {
     grid-area: sunslot2stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
-
-
-
-
-
-
-
-
-
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;    
+}
     #sunslot3stickman {
     grid-area: sunslot3stickman;
     color:rgb(41, 20, 2);
@@ -637,62 +692,280 @@ button {
     width: 7vw;
     height: 9vh;
     }
-
-
-
-
-
-
-
-
-
-
-
     #sunslot4stickman {
     grid-area: sunslot4stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
     #sunslot5stickman {
     grid-area: sunslot5stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
-    }
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
+}
     #sunslot6stickman {
     grid-area: sunslot6stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
 }
 
-
-
-
-
-
-
-    #sunslot3stickman:hover {
-    grid-area: sunslot3stickman;
-    grid-area: sunslot3repscheme;
-    grid-area: sunslot3;
+    #monslot2stickman:hover {
+    grid-area: monslot2stickman;
+    grid-area: monslot2repscheme;
+    grid-area: monslot2;
     width:14vw;
     height: 18vh;
     }
-    p {
-     font-weight: bold;
-     ;
+    #monslot3stickman:hover {
+    grid-area: monslot3stickman;
+    grid-area: monslot3repscheme;
+    grid-area: monslot3;
+    width:14vw;
+    height: 18vh;
+    }
+    #monslot4stickman:hover {
+    grid-area: monslot4stickman;
+    grid-area: monslot4repscheme;
+    grid-area: monslot4;
+    width:14vw;
+    height: 18vh;
+    }
+    #monslot5stickman:hover {
+    grid-area: monslot5stickman;
+    grid-area: monslot5repscheme;
+    grid-area: monslot5;
+    width:15vw;
+    height: 18vh;
+    }
+    #monslot6stickman:hover {
+    grid-area: monslot6stickman;
+    grid-area: monslot6repscheme;
+    grid-area: monslot6;
+    width:16vw;
+    height: 18vh;
     }
 
+    #tueslot2stickman:hover {
+    grid-area: tueslot2stickman;
+    grid-area: tueslot2repscheme;
+    grid-area: tueslot2;
+    width:14vw;
+    height: 18vh;
+    }
+    #tueslot3stickman:hover {
+    grid-area: tueslot3stickman;
+    grid-area: tueslot3repscheme;
+    grid-area: tueslot3;
+    width:14vw;
+    height: 18vh;
+    }
+    #tueslot4stickman:hover {
+    grid-area: tueslot4stickman;
+    grid-area: tueslot4repscheme;
+    grid-area: tueslot4;
+    width:14vw;
+    height: 18vh;
+    }
+    #tueslot5stickman:hover {
+    grid-area: tueslot5stickman;
+    grid-area: tueslot5repscheme;
+    grid-area: tueslot5;
+    width:15vw;
+    height: 18vh;
+    }
+    #tueslot6stickman:hover {
+    grid-area: tueslot6stickman;
+    grid-area: tueslot6repscheme;
+    grid-area: tueslot6;
+    width:16vw;
+    height: 18vh;
+    }
 
+    #wedslot2stickman:hover {
+    grid-area: wedslot2stickman;
+    grid-area: wedslot2repscheme;
+    grid-area: wedslot2;
+    width:14vw;
+    height: 18vh;
+    }
+    #wedslot3stickman:hover {
+    grid-area: wedslot3stickman;
+    grid-area: wedslot3repscheme;
+    grid-area: wedslot3;
+    width:14vw;
+    height: 18vh;
+    }
+    #wedslot4stickman:hover {
+    grid-area: wedslot4stickman;
+    grid-area: wedslot4repscheme;
+    grid-area: wedslot4;
+    width:14vw;
+    height: 18vh;
+    }
+    #wedslot5stickman:hover {
+    grid-area: wedslot5stickman;
+    grid-area: wedslot5repscheme;
+    grid-area: wedslot5;
+    width:15vw;
+    height: 18vh;
+    }
+    #wedslot6stickman:hover {
+    grid-area: wedslot6stickman;
+    grid-area: wedslot6repscheme;
+    grid-area: wedslot6;
+    width:16vw;
+    height: 18vh;
+    }
 
+    #thuslot2stickman:hover {
+        grid-area: thuslot2stickman;
+        grid-area: thuslot2repscheme;
+        grid-area: thuslot2;
+        width:14vw;
+        height: 18vh;
+        }
+        #thuslot3stickman:hover {
+        grid-area: thuslot3stickman;
+        grid-area: thuslot3repscheme;
+        grid-area: thuslot3;
+        width:14vw;
+        height: 18vh;
+        }
+        #thuslot4stickman:hover {
+        grid-area: thuslot4stickman;
+        grid-area: thuslot4repscheme;
+        grid-area: thuslot4;
+        width:14vw;
+        height: 18vh;
+        }
+        #thuslot5stickman:hover {
+        grid-area: thuslot5stickman;
+        grid-area: thuslot5repscheme;
+        grid-area: thuslot5;
+        width:15vw;
+        height: 18vh;
+        }
+        #thuslot6stickman:hover {
+        grid-area: thuslot6stickman;
+        grid-area: thuslot6repscheme;
+        grid-area: thuslot6;
+        width:16vw;
+        height: 18vh;
+        }
 
+        #frislot2stickman:hover {
+            grid-area: frislot2stickman;
+            grid-area: frislot2repscheme;
+            grid-area: frislot2;
+            width:14vw;
+            height: 18vh;
+            }
+            #frislot3stickman:hover {
+            grid-area: frislot3stickman;
+            grid-area: frislot3repscheme;
+            grid-area: frislot3;
+            width:14vw;
+            height: 18vh;
+            }
+            #frislot4stickman:hover {
+            grid-area: frislot4stickman;
+            grid-area: frislot4repscheme;
+            grid-area: frislot4;
+            width:14vw;
+            height: 18vh;
+            }
+            #frislot5stickman:hover {
+            grid-area: frislot5stickman;
+            grid-area: frislot5repscheme;
+            grid-area: frislot5;
+            width:15vw;
+            height: 18vh;
+            }
+            #frislot6stickman:hover {
+            grid-area: frislot6stickman;
+            grid-area: frislot6repscheme;
+            grid-area: frislot6;
+            width:16vw;
+            height: 18vh;
+            }
+                
+            #satslot2stickman:hover {
+                grid-area: satslot2stickman;
+                grid-area: satslot2repscheme;
+                grid-area: satslot2;
+                width:14vw;
+                height: 18vh;
+                }
+                #satslot3stickman:hover {
+                grid-area: satslot3stickman;
+                grid-area: satslot3repscheme;
+                grid-area: satslot3;
+                width:14vw;
+                height: 18vh;
+                }
+                #satslot4stickman:hover {
+                grid-area: satslot4stickman;
+                grid-area: satslot4repscheme;
+                grid-area: satslot4;
+                width:14vw;
+                height: 18vh;
+                }
+                #satslot5stickman:hover {
+                grid-area: satslot5stickman;
+                grid-area: satslot5repscheme;
+                grid-area: satslot5;
+                width:15vw;
+                height: 18vh;
+                }
+                #satslot6stickman:hover {
+                grid-area: satslot6stickman;
+                grid-area: satslot6repscheme;
+                grid-area: satslot6;
+                width:16vw;
+                height: 18vh;
+                }
 
-
-
-
-
-
-
-
+                #sunslot2stickman:hover {
+                    grid-area: sunslot2stickman;
+                    grid-area: sunslot2repscheme;
+                    grid-area: sunslot2;
+                    width:14vw;
+                    height: 18vh;
+                    }
+                    #sunslot3stickman:hover {
+                    grid-area: sunslot3stickman;
+                    grid-area: sunslot3repscheme;
+                    grid-area: sunslot3;
+                    width:14vw;
+                    height: 18vh;
+                    }
+                    #sunslot4stickman:hover {
+                    grid-area: sunslot4stickman;
+                    grid-area: sunslot4repscheme;
+                    grid-area: sunslot4;
+                    width:14vw;
+                    height: 18vh;
+                    }
+                    #sunslot5stickman:hover {
+                    grid-area: sunslot5stickman;
+                    grid-area: sunslot5repscheme;
+                    grid-area: sunslot5;
+                    width:15vw;
+                    height: 18vh;
+                    }
+                    #sunslot6stickman:hover {
+                    grid-area: sunslot6stickman;
+                    grid-area: sunslot6repscheme;
+                    grid-area: sunslot6;
+                    width:16vw;
+                    height: 18vh;
+                    }
+                    
 
 @media screen and (max-width: 414px){
     
@@ -804,9 +1077,42 @@ button {
 
 
 
-
-
-    #sunslot3stickman {
+    #monslot2stickman,
+    #monslot3stickman,
+    #monslot4stickman,
+    #monslot5stickman,
+    #monslot6stickman,
+    #tueslot2stickman,
+    #tueslot3stickman,
+    #tueslot4stickman,
+    #tueslot5stickman,
+    #tueslot6stickman,
+    #wedslot2stickman, 
+    #wedslot3stickman,
+    #wedslot4stickman,
+    #wedslot5stickman,
+    #wedslot6stickman,
+    #thuslot2stickman,
+    #thuslot3stickman,
+    #thuslot4stickman,
+    #thuslot5stickman,
+    #thuslot6stickman,
+    #frislot2stickman,
+    #frislot3stickman,
+    #frislot4stickman,
+    #frislot5stickman,
+    #frislot6stickman,
+    #satslot2stickman,
+    #satslot3stickman,
+    #satslot4stickman,
+    #satslot5stickman,
+    #satslot6stickman,    
+    #sunslot2stickman,
+    #sunslot3stickman,
+    #sunslot4stickman,
+    #sunslot5stickman,
+    #sunslot6stickman
+     {
     width: 100vw;
     height: 10vh;
     }
