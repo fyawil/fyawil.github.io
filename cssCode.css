@@ -48,20 +48,20 @@ button {
     display: grid;
     grid-template-areas: 
     "monslot1 monslot1 tueslot1 tueslot1 wedslot1 wedslot1 thuslot1 thuslot1 frislot1 frislot1 satslot1 satslot1 sunslot1 sunslot1"							
-    "monslot2 monslot2stickman tueslot2 tueslot2stickman wedslot2 wedslot2stickman thuslot2 thuslot2stickman frislot2 frislot2stickman satslot2 satslot2stickman sunslot2 sunslot2stickman"							
-    "monslot2repscheme monslot2repscheme tueslot2repscheme tueslot2repscheme wedslot2repscheme wedslot2repscheme thuslot2repscheme thuslot2repscheme frislot2repscheme frislot2repscheme satslot2repscheme satslot2repscheme sunslot2repscheme sunslot2repscheme"
-    "monslot3 monslot3stickman tueslot3 tueslot3stickman wedslot3 wedslot3stickman thuslot3 thuslot3stickman frislot3 frislot3stickman satslot3 satslot3stickman sunslot3 sunslot3stickman"
-    "monslot3repscheme monslot3repscheme tueslot3repscheme tueslot3repscheme wedslot3repscheme wedslot3repscheme thuslot3repscheme thuslot3repscheme frislot3repscheme frislot3repscheme satslot3repscheme satslot3repscheme sunslot3repscheme sunslot3repscheme"
-    "monslot4 monslot4stickman tueslot4 tueslot4stickman wedslot4 wedslot4stickman thuslot4 thuslot4stickman frislot4 frislot4stickman satslot4 satslot4stickman sunslot4 sunslot4stickman"
-    "monslot4repscheme monslot4repscheme tueslot4repscheme tueslot4repscheme wedslot4repscheme wedslot4repscheme thuslot4repscheme thuslot4repscheme frislot4repscheme frislot4repscheme satslot4repscheme satslot4repscheme sunslot4repscheme sunslot4repscheme"
-    "monslot5 monslot5stickman tueslot5 tueslot5stickman wedslot5 wedslot5stickman thuslot5 thuslot5stickman frislot5 frislot5stickman satslot5 satslot5stickman sunslot5 sunslot5stickman"
-    "monslot5repscheme monslot5repscheme tueslot5repscheme tueslot5repscheme wedslot5repscheme wedslot5repscheme thuslot5repscheme thuslot5repscheme frislot5repscheme frislot5repscheme satslot5repscheme satslot5repscheme sunslot5repscheme sunslot5repscheme"
-    "monslot6 monslot6stickman tueslot6 tueslot6stickman wedslot6 wedslot6stickman thuslot6 thuslot6stickman frislot6 frislot6stickman satslot6 satslot6stickman sunslot6 sunslot6stickman"
-    "monslot6repscheme monslot6repscheme tueslot6repscheme tueslot6repscheme wedslot6repscheme wedslot6repscheme thuslot6repscheme thuslot6repscheme frislot6repscheme frislot6repscheme satslot6repscheme satslot6repscheme sunslot6repscheme sunslot6repscheme"
+    "monslot2 monslot2 tueslot2 tueslot2 wedslot2 wedslot2 thuslot2 thuslot2 frislot2 frislot2 satslot2 satslot2 sunslot2 sunslot2"							
+    "monslot2repscheme monslot2stickman tueslot2repscheme tueslot2stickman wedslot2repscheme wedslot2stickman thuslot2repscheme thuslot2stickman frislot2repscheme frislot2stickman satslot2repscheme satslot2stickman sunslot2repscheme sunslot2stickman"
+    "monslot3 monslot3 tueslot3 tueslot3 wedslot3 wedslot3 thuslot3 thuslot3 frislot3 frislot3 satslot3 satslot3 sunslot3 sunslot3"
+    "monslot3repscheme monslot3stickman tueslot3repscheme tueslot3stickman wedslot3repscheme wedslot3stickman thuslot3repscheme thuslot3stickman frislot3repscheme frislot3stickman satslot3repscheme satslot3stickman sunslot3repscheme sunslot3stickman"
+    "monslot4 monslot4 tueslot4 tueslot4 wedslot4 wedslot4 thuslot4 thuslot4 frislot4 frislot4 satslot4 satslot4 sunslot4 sunslot4"
+    "monslot4repscheme monslot4stickman tueslot4repscheme tueslot4stickman wedslot4repscheme wedslot4stickman thuslot4repscheme thuslot4stickman frislot4repscheme frislot4stickman satslot4repscheme satslot4stickman sunslot4repscheme sunslot4stickman"
+    "monslot5 monslot5 tueslot5 tueslot5 wedslot5 wedslot5 thuslot5 thuslot5 frislot5 frislot5 satslot5 satslot5 sunslot5 sunslot5"
+    "monslot5repscheme monslot5stickman tueslot5repscheme tueslot5stickman wedslot5repscheme wedslot5stickman thuslot5repscheme thuslot5stickman frislot5repscheme frislot5stickman satslot5repscheme satslot5stickman sunslot5repscheme sunslot5stickman"
+    "monslot6 monslot6 tueslot6 tueslot6 wedslot6 wedslot6 thuslot6 thuslot6 frislot6 frislot6 satslot6 satslot6 sunslot6 sunslot6"
+    "monslot6repscheme monslot6stickman tueslot6repscheme tueslot6stickman wedslot6repscheme wedslot6stickman thuslot6repscheme thuslot6stickman frislot6repscheme frislot6stickman satslot6repscheme satslot6stickman sunslot6repscheme sunslot6stickman"
+
     ;
     background-color: rgb(228, 137, 53);
-    text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
     #monslot1 {
@@ -599,7 +599,7 @@ button {
    #sunslot3repscheme {
     grid-area: sunslot3repscheme;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
     }
    #sunslot4repscheme {
     grid-area: sunslot4repscheme;
@@ -621,11 +621,33 @@ button {
     color:rgb(41, 20, 2);
     background-color:rgb(228, 137, 53)
     }
+
+
+
+
+
+
+
+
+
     #sunslot3stickman {
     grid-area: sunslot3stickman;
     color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53)
+    background-color:rgb(228, 137, 53);
+    width: 7vw;
+    height: 9vh;
     }
+
+
+
+
+
+
+
+
+
+
+
     #sunslot4stickman {
     grid-area: sunslot4stickman;
     color:rgb(41, 20, 2);
@@ -641,10 +663,36 @@ button {
     color:rgb(41, 20, 2);
     background-color:rgb(228, 137, 53)
 }
+
+
+
+
+
+
+
+    #sunslot3stickman:hover {
+    grid-area: sunslot3stickman;
+    grid-area: sunslot3repscheme;
+    grid-area: sunslot3;
+    width:14vw;
+    height: 18vh;
+    }
     p {
      font-weight: bold;
      ;
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 414px){
     
@@ -663,81 +711,81 @@ button {
     grid-template-areas: 
     "monslot1 monslot1"
     "monslot2 monslot2repscheme"
-    "monslot2stickman monslot2repscheme"
+    "monslot2stickman monslot2stickman"
     "monslot3 monslot3repscheme"
-    "monslot3stickman monslot3repscheme"
+    "monslot3stickman monslot3stickman"
     "monslot4 monslot4repscheme"
-    "monslot4stickman monslot4repscheme"
+    "monslot4stickman monslot4stickman"
     "monslot5 monslot5repscheme"
-    "monslot5stickman monslot5repscheme"
+    "monslot5stickman monslot5stickman"
     "monslot6 monslot6repscheme"
-    "monslot6stickman monslot6repscheme"
+    "monslot6stickman monslot6stickman"
     "tueslot1 tueslot1"
     "tueslot2 tueslot2repscheme"
-    "tueslot2stickman tueslot2repscheme"
+    "tueslot2stickman tueslot2stickman"
     "tueslot3 tueslot3repscheme"
-    "tueslot3stickman tueslot3repscheme"
+    "tueslot3stickman tueslot3stickman"
     "tueslot4 tueslot4repscheme"
-    "tueslot4stickman tueslot4repscheme"
+    "tueslot4stickman tueslot4stickman"
     "tueslot5 tueslot5repscheme"
-    "tueslot5stickman tueslot5repscheme"
+    "tueslot5stickman tueslot5stickman"
     "tueslot6 tueslot6repscheme"
-    "tueslot6stickman tueslot6repscheme"
+    "tueslot6stickman tueslot6stickman"
     "wedslot1 wedslot1"
     "wedslot2 wedslot2repscheme"
-    "wedslot2stickman wedslot2repscheme"
+    "wedslot2stickman wedslot2stickman"
     "wedslot3 wedslot3repscheme"
-    "wedslot3stickman wedslot3repscheme"
+    "wedslot3stickman wedslot3stickman"
     "wedslot4 wedslot4repscheme"
-    "wedslot4stickman wedslot4repscheme"
+    "wedslot4stickman wedslot4stickman"
     "wedslot5 wedslot5repscheme"
-    "wedslot5stickman wedslot5repscheme"
+    "wedslot5stickman wedslot5stickman"
     "wedslot6 wedslot6repscheme"
-    "wedslot6stickman wedslot6repscheme"
+    "wedslot6stickman wedslot6stickman"
     "thuslot1 thuslot1"
     "thuslot2 thuslot2repscheme" 
-    "thuslot2stickman thuslot2repscheme"
+    "thuslot2stickman thuslot2stickman"
     "thuslot3 thuslot3repscheme"
-    "thuslot3stickman thuslot3repscheme"
+    "thuslot3stickman thuslot3stickman"
     "thuslot4 thuslot4repscheme"
-    "thuslot4stickman thuslot4repscheme"
+    "thuslot4stickman thuslot4stickman"
     "thuslot5 thuslot5repscheme"
-    "thuslot5stickman thuslot5repscheme"
+    "thuslot5stickman thuslot5stickman"
     "thuslot6 thuslot6repscheme"
-    "thuslot6stickman thuslot6repscheme"
+    "thuslot6stickman thuslot6stickman"
     "frislot1 frislot1"
     "frislot2 frislot2repscheme"
-    "frislot2stickman frislot2repscheme"
+    "frislot2stickman frislot2stickman"
     "frislot3 frislot3repscheme"
-    "frislot3stickman frislot3repscheme"
+    "frislot3stickman frislot3stickman"
     "frislot4 frislot4repscheme"
-    "frislot4stickman frislot4repscheme"
+    "frislot4stickman frislot4stickman"
     "frislot5 frislot5repscheme"
-    "frislot5stickman frislot5repscheme"
+    "frislot5stickman frislot5stickman"
     "frislot6 frislot6repscheme"
-    "frislot6stickman frislot6repscheme"
+    "frislot6stickman frislot6stickman"
     "satslot1 satslot1"
     "satslot2 satslot2repscheme"
-    "satslot2stickman satslot2repscheme"
+    "satslot2stickman satslot2stickman"
     "satslot3 satslot3repscheme"
-    "satslot3stickman satslot3repscheme"
+    "satslot3stickman satslot3stickman"
     "satslot4 satslot4repscheme"
-    "satslot4stickman satslot4repscheme"
+    "satslot4stickman satslot4stickman"
     "satslot5 satslot5repscheme"
-    "satslot5stickman satslot5repscheme"
+    "satslot5stickman satslot5stickman"
     "satslot6 satslot6repscheme"
-    "satslot6stickman satslot6repscheme"
+    "satslot6stickman satslot6stickman"
     "sunslot1 sunslot1"
     "sunslot2 sunslot2repscheme"
-    "sunslot2stickman sunslot2repscheme"
+    "sunslot2stickman sunslot2stickman"
     "sunslot3 sunslot3repscheme"
-    "sunslot3stickman sunslot3repscheme"
+    "sunslot3stickman sunslot3stickman"
     "sunslot4 sunslot4repscheme"
-    "sunslot4stickman sunslot4repscheme"
+    "sunslot4stickman sunslot4stickman"
     "sunslot5 sunslot5repscheme"
-    "sunslot5stickman sunslot5repscheme"
+    "sunslot5stickman sunslot5stickman"
     "sunslot6 sunslot6repscheme"
-    "sunslot6stickman sunslot6repscheme"
+    "sunslot6stickman sunslot6stickman"
     
     ;
 }
@@ -752,6 +800,15 @@ button {
     }
     #sunslot6repscheme {
     border-radius: 0px 0px 10px 0px;
+    }
+
+
+
+
+
+    #sunslot3stickman {
+    width: 100vw;
+    height: 10vh;
     }
 
 }

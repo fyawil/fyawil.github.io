@@ -1094,11 +1094,11 @@ onChange={this.handleChangeTime}></input>75 mins
 <div id="sunslot6repscheme"><p>{`${this.state.workout["Sunday"][4][1]}`=="undefined"?"":`${this.state.workout["Sunday"][4][1]}`}</p></div>
 {/* make one for each slot and make css selectors and conditionally render this like the above*/
 } 
-<img id="sunslot2stickman" src={`./${this.state.workout["Saturday"][0][0]}.png`} alt=""></img>
-<img id="sunslot3stickman" src={`./${this.state.workout["Saturday"][1][0]}.png`} alt=""></img>
-<img id="sunslot4stickman" src={`./${this.state.workout["Saturday"][2][0]}.png`} alt=""></img>
-<img id="sunslot5stickman" src={`./${this.state.workout["Saturday"][3][0]}.png`} alt=""></img>
-<img id="sunslot6stickman" src={`./${this.state.workout["Saturday"][4][0]}.png`} alt=""></img>
+<img id="sunslot2stickman" src={`./${this.state.workout["Sunday"][0][0]}.png`} alt=""></img>
+<img id="sunslot3stickman" src={`./${this.state.workout["Sunday"][1][0]}.png`} alt=""></img>
+<img id="sunslot4stickman" src={`./${this.state.workout["Sunday"][2][0]}.png`} alt=""></img>
+<img id="sunslot5stickman" src={`./${this.state.workout["Sunday"][3][0]}.png`} alt=""></img>
+<img id="sunslot6stickman" src={`./${this.state.workout["Sunday"][4][0]}.png`} alt=""></img>
 </div>     
           </div>
 );
