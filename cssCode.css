@@ -1,7 +1,8 @@
 #mainpage {
     display: grid;
     grid-template-areas: "generator motivation"
-                         "schedulecontainer schedulecontainer";
+                         "schedulecontainer schedulecontainer"
+                         "timer timer";
 
     text-align: center;
     gap: 5px;
@@ -713,6 +714,16 @@ button {
     width: 7vw;
     height: 9vh;
 }
+
+#timer {
+    grid-area: timer;
+    width: 100vw;
+    background-color:rgb(41, 20, 2);
+    color:rgb(228, 137, 53);
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;  
+}
                     
 
 @media screen and (max-width: 414px){
@@ -721,7 +732,8 @@ button {
     grid-template-areas: 
                          "motivation"
                          "generator"
-                         "schedulecontainer";
+                         "schedulecontainer"
+                         "timer";
 }
     
     #motivation {
@@ -807,7 +819,6 @@ button {
     "sunslot5stickman sunslot5stickman"
     "sunslot6 sunslot6repscheme"
     "sunslot6stickman sunslot6stickman"
-    
     ;
 }
     #monslot1 {
