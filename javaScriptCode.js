@@ -984,6 +984,10 @@ onChange={this.handleChangeTime}></input>75 mins
 <img id="monslot5stickman" src={this.state.workout["Monday"][3][0] == undefined?`./blank.png`:`./${this.state.workout["Monday"][3][0]}.png`}></img>
 <img id="monslot6stickman" src={this.state.workout["Monday"][4][0] == undefined?`./blank.png`:`./${this.state.workout["Monday"][4][0]}.png`}></img>
 
+
+
+
+
 <div id="tueslot1"><p>{`${this.state.tueslot}`=="Tuesday"?`${this.state.tueslot}`:"Tuesday"}</p></div>
 <div id="tueslot2"><p>{`${this.state.workout["Tuesday"][0][0]}`=="undefined"?"":`${this.state.workout["Tuesday"][0][0]}`}</p></div>
 <div id="tueslot3"><p>{`${this.state.workout["Tuesday"][1][0]}`=="undefined"?"":`${this.state.workout["Tuesday"][1][0]}`}</p></div>
