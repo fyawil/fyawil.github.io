@@ -1,3 +1,8 @@
+body {
+    width: calc(100vw - (100vw - 100%));
+    margin: 0px;
+  }
+
 #mainpage {
     display: grid;
     grid-template-areas: "generator motivation"
@@ -6,7 +11,6 @@
 
     text-align: center;
     gap: 5px;
-    width:calc(100vw - (100vw - 100%));
 }
 
 #generator {
@@ -48,31 +52,26 @@ button {
     grid-area: schedulecontainer;
     display: grid;
     grid-template-areas: 
-    "monslot1 monslot1 tueslot1 tueslot1 wedslot1 wedslot1 thuslot1 thuslot1 frislot1 frislot1 satslot1 satslot1 sunslot1 sunslot1"							
-    "monslot2 monslot2 tueslot2 tueslot2 wedslot2 wedslot2 thuslot2 thuslot2 frislot2 frislot2 satslot2 satslot2 sunslot2 sunslot2"							
-    "monslot2repscheme monslot2stickman tueslot2repscheme tueslot2stickman wedslot2repscheme wedslot2stickman thuslot2repscheme thuslot2stickman frislot2repscheme frislot2stickman satslot2repscheme satslot2stickman sunslot2repscheme sunslot2stickman"
-    "monslot3 monslot3 tueslot3 tueslot3 wedslot3 wedslot3 thuslot3 thuslot3 frislot3 frislot3 satslot3 satslot3 sunslot3 sunslot3"
-    "monslot3repscheme monslot3stickman tueslot3repscheme tueslot3stickman wedslot3repscheme wedslot3stickman thuslot3repscheme thuslot3stickman frislot3repscheme frislot3stickman satslot3repscheme satslot3stickman sunslot3repscheme sunslot3stickman"
-    "monslot4 monslot4 tueslot4 tueslot4 wedslot4 wedslot4 thuslot4 thuslot4 frislot4 frislot4 satslot4 satslot4 sunslot4 sunslot4"
-    "monslot4repscheme monslot4stickman tueslot4repscheme tueslot4stickman wedslot4repscheme wedslot4stickman thuslot4repscheme thuslot4stickman frislot4repscheme frislot4stickman satslot4repscheme satslot4stickman sunslot4repscheme sunslot4stickman"
-    "monslot5 monslot5 tueslot5 tueslot5 wedslot5 wedslot5 thuslot5 thuslot5 frislot5 frislot5 satslot5 satslot5 sunslot5 sunslot5"
-    "monslot5repscheme monslot5stickman tueslot5repscheme tueslot5stickman wedslot5repscheme wedslot5stickman thuslot5repscheme thuslot5stickman frislot5repscheme frislot5stickman satslot5repscheme satslot5stickman sunslot5repscheme sunslot5stickman"
-    "monslot6 monslot6 tueslot6 tueslot6 wedslot6 wedslot6 thuslot6 thuslot6 frislot6 frislot6 satslot6 satslot6 sunslot6 sunslot6"
-    "monslot6repscheme monslot6stickman tueslot6repscheme tueslot6stickman wedslot6repscheme wedslot6stickman thuslot6repscheme thuslot6stickman frislot6repscheme frislot6stickman satslot6repscheme satslot6stickman sunslot6repscheme sunslot6stickman"
-
+    "monslot1 tueslot1 wedslot1 thuslot1 frislot1 satslot1 sunslot1"							
+    "monslot2 tueslot2 wedslot2 thuslot2 frislot2 satslot2 sunslot2"
+    "monslot2repscheme tueslot2repscheme wedslot2repscheme thuslot2repscheme frislot2repscheme satslot2repscheme sunslot2repscheme"
+    "monslot3 tueslot3 wedslot3 thuslot3 frislot3 satslot3 sunslot3"
+    "monslot3repscheme tueslot3repscheme wedslot3repscheme thuslot3repscheme frislot3repscheme satslot3repscheme sunslot3repscheme"
+    "monslot4 tueslot4 wedslot4 thuslot4 frislot4 satslot4 sunslot4"
+    "monslot4repscheme tueslot4repscheme wedslot4repscheme thuslot4repscheme frislot4repscheme satslot4repscheme sunslot4repscheme"
+    "monslot5 tueslot5 wedslot5 thuslot5 frislot5 satslot5 sunslot5"
+    "monslot5repscheme tueslot5repscheme wedslot5repscheme thuslot5repscheme frislot5repscheme satslot5repscheme sunslot5repscheme"
+    "monslot6 tueslot6 wedslot6 thuslot6 frislot6 satslot6 sunslot6"
+    "monslot6repscheme tueslot6repscheme wedslot6repscheme thuslot6repscheme frislot6repscheme satslot6repscheme sunslot6repscheme"
     ;
     background-color: rgb(228, 137, 53);
     border-radius: 10px;
 }
-    img {
-        border:0;
-    }
 
     #monslot1 {
     grid-area: monslot1;
     color: rgb(228, 137, 53);
     background-color: rgb(41, 20, 2);
-    padding: 2px;
     width: 1fr;
     border-radius: 10px 0px 0px 0px;
     }
@@ -126,47 +125,11 @@ button {
     color:rgb(41, 20, 2);
     background-color:rgb(228, 137, 53)
     }
-    #monslot2stickman {
-    grid-area: monslot2stickman ;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #monslot3stickman  {
-    grid-area: monslot3stickman ;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #monslot4stickman  {
-    grid-area: monslot4stickman ;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #monslot5stickman  {
-    grid-area: monslot5stickman ;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #monslot6stickman  {
-    grid-area: monslot6stickman ;   
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-}
     #tueslot1 {
     grid-area: tueslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
     width: 1fr;
-    padding: 2px;
     }
     #tueslot2 {
     grid-area: tueslot2;
@@ -218,47 +181,11 @@ button {
     color:rgb(41, 20, 2);
     background-color:rgb(228, 137, 53);
 }
-    #tueslot2stickman {
-    grid-area: tueslot2stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-}
-    #tueslot3stickman {
-    grid-area: tueslot3stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-}
-    #tueslot4stickman {
-    grid-area: tueslot4stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #tueslot5stickman {
-    grid-area: tueslot5stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #tueslot6stickman {
-    grid-area: tueslot6stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-}
     #wedslot1 {
     grid-area: wedslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
     width: 1fr;
-    padding: 2px;
     }
     #wedslot2 {
     grid-area: wedslot2;
@@ -310,47 +237,11 @@ button {
     color:rgb(41, 20, 2);
     background-color:rgb(228, 137, 53)
 }
-    #wedslot2stickman {
-    grid-area: wedslot2stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #wedslot3stickman {
-    grid-area: wedslot3stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #wedslot4stickman {
-    grid-area: wedslot4stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #wedslot5stickman {
-    grid-area: wedslot5stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #wedslot6stickman {
-    grid-area: wedslot6stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-}
     #thuslot1 {
     grid-area: thuslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
     width: 1fr;
-    padding: 2px;
     }
     #thuslot2 {
     grid-area: thuslot2;
@@ -402,47 +293,11 @@ button {
     color:rgb(41, 20, 2);
     background-color:rgb(228, 137, 53)
 }
-    #thuslot2stickman {
-    grid-area: thuslot2stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #thuslot3stickman {
-    grid-area: thuslot3stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #thuslot4stickman {
-    grid-area: thuslot4stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #thuslot5stickman {
-    grid-area: thuslot5stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #thuslot6stickman {
-    grid-area: thuslot6stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-}
     #frislot1 {
     grid-area: frislot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
     width: 1fr;
-    padding: 2px;
     }
     #frislot2 {
     grid-area: frislot2;
@@ -494,47 +349,11 @@ button {
     color:rgb(41, 20, 2);
     background-color:rgb(228, 137, 53)
 }
-    #frislot2stickman {
-    grid-area: frislot2stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #frislot3stickman {
-    grid-area: frislot3stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #frislot4stickman {
-    grid-area: frislot4stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #frislot5stickman {
-    grid-area: frislot5stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #frislot6stickman {
-    grid-area: frislot6stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-}
     #satslot1 {
     grid-area: satslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
     width: 1fr;
-    padding: 2px;
     }
     #satslot2 {
     grid-area: satslot2;
@@ -586,47 +405,11 @@ button {
     color:rgb(41, 20, 2);
     background-color:rgb(228, 137, 53)
 }
-    #satslot2stickman {
-    grid-area: satslot2stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #satslot3stickman {
-    grid-area: satslot3stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #satslot4stickman {
-    grid-area: satslot4stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #satslot5stickman {
-    grid-area: satslot5stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #satslot6stickman {
-    grid-area: satslot6stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-}
     #sunslot1 {
     grid-area: sunslot1;
     color: rgb(228, 137, 53);    
     background-color: rgb(41, 20, 2);
     width: 1fr;
-    padding: 2px;
     border-radius: 0px 10px 0px 0px;
     }
     #sunslot2 {
@@ -679,45 +462,9 @@ button {
     color:rgb(41, 20, 2);
     background-color:rgb(228, 137, 53);
 } 
-    #sunslot2stickman {
-    grid-area: sunslot2stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;    
-}
-    #sunslot3stickman {
-    grid-area: sunslot3stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #sunslot4stickman {
-    grid-area: sunslot4stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-    }
-    #sunslot5stickman {
-    grid-area: sunslot5stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-}
-    #sunslot6stickman {
-    grid-area: sunslot6stickman;
-    color:rgb(41, 20, 2);
-    background-color:rgb(228, 137, 53);
-    width: 7vw;
-    height: 9vh;
-}
 
 #timer {
     grid-area: timer;
-    width: 100vw;
     background-color:rgb(41, 20, 2);
     color:rgb(228, 137, 53);
     border-radius: 5px;
@@ -744,81 +491,46 @@ button {
     grid-template-areas: 
     "monslot1 monslot1"
     "monslot2 monslot2repscheme"
-    "monslot2stickman monslot2stickman"
     "monslot3 monslot3repscheme"
-    "monslot3stickman monslot3stickman"
     "monslot4 monslot4repscheme"
-    "monslot4stickman monslot4stickman"
     "monslot5 monslot5repscheme"
-    "monslot5stickman monslot5stickman"
     "monslot6 monslot6repscheme"
-    "monslot6stickman monslot6stickman"
     "tueslot1 tueslot1"
     "tueslot2 tueslot2repscheme"
-    "tueslot2stickman tueslot2stickman"
     "tueslot3 tueslot3repscheme"
-    "tueslot3stickman tueslot3stickman"
     "tueslot4 tueslot4repscheme"
-    "tueslot4stickman tueslot4stickman"
     "tueslot5 tueslot5repscheme"
-    "tueslot5stickman tueslot5stickman"
     "tueslot6 tueslot6repscheme"
-    "tueslot6stickman tueslot6stickman"
     "wedslot1 wedslot1"
     "wedslot2 wedslot2repscheme"
-    "wedslot2stickman wedslot2stickman"
     "wedslot3 wedslot3repscheme"
-    "wedslot3stickman wedslot3stickman"
     "wedslot4 wedslot4repscheme"
-    "wedslot4stickman wedslot4stickman"
     "wedslot5 wedslot5repscheme"
-    "wedslot5stickman wedslot5stickman"
     "wedslot6 wedslot6repscheme"
-    "wedslot6stickman wedslot6stickman"
     "thuslot1 thuslot1"
     "thuslot2 thuslot2repscheme" 
-    "thuslot2stickman thuslot2stickman"
     "thuslot3 thuslot3repscheme"
-    "thuslot3stickman thuslot3stickman"
     "thuslot4 thuslot4repscheme"
-    "thuslot4stickman thuslot4stickman"
     "thuslot5 thuslot5repscheme"
-    "thuslot5stickman thuslot5stickman"
     "thuslot6 thuslot6repscheme"
-    "thuslot6stickman thuslot6stickman"
     "frislot1 frislot1"
     "frislot2 frislot2repscheme"
-    "frislot2stickman frislot2stickman"
     "frislot3 frislot3repscheme"
-    "frislot3stickman frislot3stickman"
     "frislot4 frislot4repscheme"
-    "frislot4stickman frislot4stickman"
     "frislot5 frislot5repscheme"
-    "frislot5stickman frislot5stickman"
     "frislot6 frislot6repscheme"
-    "frislot6stickman frislot6stickman"
     "satslot1 satslot1"
     "satslot2 satslot2repscheme"
-    "satslot2stickman satslot2stickman"
     "satslot3 satslot3repscheme"
-    "satslot3stickman satslot3stickman"
     "satslot4 satslot4repscheme"
-    "satslot4stickman satslot4stickman"
     "satslot5 satslot5repscheme"
-    "satslot5stickman satslot5stickman"
     "satslot6 satslot6repscheme"
-    "satslot6stickman satslot6stickman"
     "sunslot1 sunslot1"
     "sunslot2 sunslot2repscheme"
-    "sunslot2stickman sunslot2stickman"
     "sunslot3 sunslot3repscheme"
-    "sunslot3stickman sunslot3stickman"
     "sunslot4 sunslot4repscheme"
-    "sunslot4stickman sunslot4stickman"
     "sunslot5 sunslot5repscheme"
-    "sunslot5stickman sunslot5stickman"
     "sunslot6 sunslot6repscheme"
-    "sunslot6stickman sunslot6stickman"
     ;
 }
     #monslot1 {
@@ -832,48 +544,6 @@ button {
     }
     #sunslot6repscheme {
     border-radius: 0px 0px 10px 0px;
-    }
-
-
-
-    #monslot2stickman,
-    #monslot3stickman,
-    #monslot4stickman,
-    #monslot5stickman,
-    #monslot6stickman,
-    #tueslot2stickman,
-    #tueslot3stickman,
-    #tueslot4stickman,
-    #tueslot5stickman,
-    #tueslot6stickman,
-    #wedslot2stickman, 
-    #wedslot3stickman,
-    #wedslot4stickman,
-    #wedslot5stickman,
-    #wedslot6stickman,
-    #thuslot2stickman,
-    #thuslot3stickman,
-    #thuslot4stickman,
-    #thuslot5stickman,
-    #thuslot6stickman,
-    #frislot2stickman,
-    #frislot3stickman,
-    #frislot4stickman,
-    #frislot5stickman,
-    #frislot6stickman,
-    #satslot2stickman,
-    #satslot3stickman,
-    #satslot4stickman,
-    #satslot5stickman,
-    #satslot6stickman,    
-    #sunslot2stickman,
-    #sunslot3stickman,
-    #sunslot4stickman,
-    #sunslot5stickman,
-    #sunslot6stickman
-     {
-    width: 100vw;
-    height: 10vh;
     }
 
 }

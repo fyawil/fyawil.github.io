@@ -978,11 +978,6 @@ onChange={this.handleChangeTime}></input>75 mins
 <div id="monslot4repscheme"><p>{`${this.state.workout["Monday"][2][1]}`=="undefined"?"":`${this.state.workout["Monday"][2][1]}`}</p></div>
 <div id="monslot5repscheme"><p>{`${this.state.workout["Monday"][3][1]}`=="undefined"?"":`${this.state.workout["Monday"][3][1]}`}</p></div>
 <div id="monslot6repscheme"><p>{`${this.state.workout["Monday"][4][1]}`=="undefined"?"":`${this.state.workout["Monday"][4][1]}`}</p></div>
-<img id="monslot2stickman" src={this.state.workout["Monday"][0][0] == undefined?`./blank.png`:`./${this.state.workout["Monday"][0][0]}.png`}></img>
-<img id="monslot3stickman" src={this.state.workout["Monday"][1][0] == undefined?`./blank.png`:`./${this.state.workout["Monday"][1][0]}.png`}></img>
-<img id="monslot4stickman" src={this.state.workout["Monday"][2][0] == undefined?`./blank.png`:`./${this.state.workout["Monday"][2][0]}.png`}></img>
-<img id="monslot5stickman" src={this.state.workout["Monday"][3][0] == undefined?`./blank.png`:`./${this.state.workout["Monday"][3][0]}.png`}></img>
-<img id="monslot6stickman" src={this.state.workout["Monday"][4][0] == undefined?`./blank.png`:`./${this.state.workout["Monday"][4][0]}.png`}></img>
 
 <div id="tueslot1"><p>{`${this.state.tueslot}`=="Tuesday"?`${this.state.tueslot}`:"Tuesday"}</p></div>
 <div id="tueslot2"><p>{`${this.state.workout["Tuesday"][0][0]}`=="undefined"?"":`${this.state.workout["Tuesday"][0][0]}`}</p></div>
@@ -995,11 +990,6 @@ onChange={this.handleChangeTime}></input>75 mins
 <div id="tueslot4repscheme"><p>{`${this.state.workout["Tuesday"][2][1]}`=="undefined"?"":`${this.state.workout["Tuesday"][2][1]}`}</p></div>
 <div id="tueslot5repscheme"><p>{`${this.state.workout["Tuesday"][3][1]}`=="undefined"?"":`${this.state.workout["Tuesday"][3][1]}`}</p></div>
 <div id="tueslot6repscheme"><p>{`${this.state.workout["Tuesday"][4][1]}`=="undefined"?"":`${this.state.workout["Tuesday"][4][1]}`}</p></div>
-<img id="tueslot2stickman" src={this.state.workout["Tuesday"][0][0] == undefined?`./blank.png`:`./${this.state.workout["Tuesday"][0][0]}.png`}></img>
-<img id="tueslot3stickman" src={this.state.workout["Tuesday"][1][0] == undefined?`./blank.png`:`./${this.state.workout["Tuesday"][1][0]}.png`}></img>
-<img id="tueslot4stickman" src={this.state.workout["Tuesday"][2][0] == undefined?`./blank.png`:`./${this.state.workout["Tuesday"][2][0]}.png`}></img>
-<img id="tueslot5stickman" src={this.state.workout["Tuesday"][3][0] == undefined?`./blank.png`:`./${this.state.workout["Tuesday"][3][0]}.png`}></img>
-<img id="tueslot6stickman" src={this.state.workout["Tuesday"][4][0] == undefined?`./blank.png`:`./${this.state.workout["Tuesday"][4][0]}.png`}></img>
 
 <div id="wedslot1"><p>{`${this.state.wedslot}`=="Wednesday"?`${this.state.wedslot}`:"Wednesday"}</p></div>
 <div id="wedslot2"><p>{`${this.state.workout["Wednesday"][0][0]}`=="undefined"?"":`${this.state.workout["Wednesday"][0][0]}`}</p></div>
@@ -1012,12 +1002,6 @@ onChange={this.handleChangeTime}></input>75 mins
 <div id="wedslot4repscheme"><p>{`${this.state.workout["Wednesday"][2][1]}`=="undefined"?"":`${this.state.workout["Wednesday"][2][1]}`}</p></div>
 <div id="wedslot5repscheme"><p>{`${this.state.workout["Wednesday"][3][1]}`=="undefined"?"":`${this.state.workout["Wednesday"][3][1]}`}</p></div>
 <div id="wedslot6repscheme"><p>{`${this.state.workout["Wednesday"][4][1]}`=="undefined"?"":`${this.state.workout["Wednesday"][4][1]}`}</p></div>
-<img id="wedslot2stickman" src={this.state.workout["Wednesday"][0][0] == undefined?`./blank.png`:`./${this.state.workout["Wednesday"][0][0]}.png`}></img>
-<img id="wedslot3stickman" src={this.state.workout["Wednesday"][1][0] == undefined?`./blank.png`:`./${this.state.workout["Wednesday"][1][0]}.png`}></img>
-<img id="wedslot4stickman" src={this.state.workout["Wednesday"][2][0] == undefined?`./blank.png`:`./${this.state.workout["Wednesday"][2][0]}.png`}></img>
-<img id="wedslot5stickman" src={this.state.workout["Wednesday"][3][0] == undefined?`./blank.png`:`./${this.state.workout["Wednesday"][3][0]}.png`}></img>
-<img id="wedslot6stickman" src={this.state.workout["Wednesday"][4][0] == undefined?`./blank.png`:`./${this.state.workout["Wednesday"][4][0]}.png`}></img>
-
 
 <div id="thuslot1"><p>{`${this.state.thuslot}`=="Thursday"?`${this.state.thuslot}`:"Thursday"}</p></div>
 <div id="thuslot2"><p>{`${this.state.workout["Thursday"][0][0]}`=="undefined"?"":`${this.state.workout["Thursday"][0][0]}`}</p></div>
@@ -1030,12 +1014,6 @@ onChange={this.handleChangeTime}></input>75 mins
 <div id="thuslot4repscheme"><p>{`${this.state.workout["Thursday"][2][1]}`=="undefined"?"":`${this.state.workout["Thursday"][2][1]}`}</p></div>
 <div id="thuslot5repscheme"><p>{`${this.state.workout["Thursday"][3][1]}`=="undefined"?"":`${this.state.workout["Thursday"][3][1]}`}</p></div>
 <div id="thuslot6repscheme"><p>{`${this.state.workout["Thursday"][4][1]}`=="undefined"?"":`${this.state.workout["Thursday"][4][1]}`}</p></div>
-<img id="thuslot2stickman" src={this.state.workout["Thursday"][0][0] == undefined?`./blank.png`:`./${this.state.workout["Thursday"][0][0]}.png`}></img>
-<img id="thuslot3stickman" src={this.state.workout["Thursday"][1][0] == undefined?`./blank.png`:`./${this.state.workout["Thursday"][1][0]}.png`}></img>
-<img id="thuslot4stickman" src={this.state.workout["Thursday"][2][0] == undefined?`./blank.png`:`./${this.state.workout["Thursday"][2][0]}.png`}></img>
-<img id="thuslot5stickman" src={this.state.workout["Thursday"][3][0] == undefined?`./blank.png`:`./${this.state.workout["Thursday"][3][0]}.png`}></img>
-<img id="thuslot6stickman" src={this.state.workout["Thursday"][4][0] == undefined?`./blank.png`:`./${this.state.workout["Thursday"][4][0]}.png`}></img>
-
 
 <div id="frislot1"><p>{`${this.state.frislot}`=="Friday"?`${this.state.frislot}`:"Friday"}</p></div>
 <div id="frislot2"><p>{`${this.state.workout["Friday"][0][0]}`=="undefined"?"":`${this.state.workout["Friday"][0][0]}`}</p></div>
@@ -1048,12 +1026,6 @@ onChange={this.handleChangeTime}></input>75 mins
 <div id="frislot4repscheme"><p>{`${this.state.workout["Friday"][2][1]}`=="undefined"?"":`${this.state.workout["Friday"][2][1]}`}</p></div>
 <div id="frislot5repscheme"><p>{`${this.state.workout["Friday"][3][1]}`=="undefined"?"":`${this.state.workout["Friday"][3][1]}`}</p></div>
 <div id="frislot6repscheme"><p>{`${this.state.workout["Friday"][4][1]}`=="undefined"?"":`${this.state.workout["Friday"][4][1]}`}</p></div>
-<img id="frislot2stickman" src={this.state.workout["Friday"][0][0] == undefined?`./blank.png`:`./${this.state.workout["Friday"][0][0]}.png`}></img>
-<img id="frislot3stickman" src={this.state.workout["Friday"][1][0] == undefined?`./blank.png`:`./${this.state.workout["Friday"][1][0]}.png`}></img>
-<img id="frislot4stickman" src={this.state.workout["Friday"][2][0] == undefined?`./blank.png`:`./${this.state.workout["Friday"][2][0]}.png`}></img>
-<img id="frislot5stickman" src={this.state.workout["Friday"][3][0] == undefined?`./blank.png`:`./${this.state.workout["Friday"][3][0]}.png`}></img>
-<img id="frislot6stickman" src={this.state.workout["Friday"][4][0] == undefined?`./blank.png`:`./${this.state.workout["Friday"][4][0]}.png`}></img>
-
 
 <div id="satslot1"><p>{`${this.state.satslot}`=="Saturday"?`${this.state.satslot}`:"Saturday"}</p></div>
 <div id="satslot2"><p>{`${this.state.workout["Saturday"][0][0]}`=="undefined"?"":`${this.state.workout["Saturday"][0][0]}`}</p></div>
@@ -1066,12 +1038,6 @@ onChange={this.handleChangeTime}></input>75 mins
 <div id="satslot4repscheme"><p>{`${this.state.workout["Saturday"][2][1]}`=="undefined"?"":`${this.state.workout["Saturday"][2][1]}`}</p></div>
 <div id="satslot5repscheme"><p>{`${this.state.workout["Saturday"][3][1]}`=="undefined"?"":`${this.state.workout["Saturday"][3][1]}`}</p></div>
 <div id="satslot6repscheme"><p>{`${this.state.workout["Saturday"][4][1]}`=="undefined"?"":`${this.state.workout["Saturday"][4][1]}`}</p></div>
-<img id="satslot2stickman" src={this.state.workout["Saturday"][0][0] == undefined?`./blank.png`:`./${this.state.workout["Saturday"][0][0]}.png`}></img>
-<img id="satslot3stickman" src={this.state.workout["Saturday"][1][0] == undefined?`./blank.png`:`./${this.state.workout["Saturday"][1][0]}.png`}></img>
-<img id="satslot4stickman" src={this.state.workout["Saturday"][2][0] == undefined?`./blank.png`:`./${this.state.workout["Saturday"][2][0]}.png`}></img>
-<img id="satslot5stickman" src={this.state.workout["Saturday"][3][0] == undefined?`./blank.png`:`./${this.state.workout["Saturday"][3][0]}.png`}></img>
-<img id="satslot6stickman" src={this.state.workout["Saturday"][4][0] == undefined?`./blank.png`:`./${this.state.workout["Saturday"][4][0]}.png`}></img>
-
 
 <div id="sunslot1"><p>{`${this.state.sunslot}`=="Sunday"?`${this.state.sunslot}`:"Sunday"}</p></div>
 <div id="sunslot2"><p>{`${this.state.workout["Sunday"][0][0]}`=="undefined"?"":`${this.state.workout["Sunday"][0][0]}`}</p></div>
@@ -1084,11 +1050,6 @@ onChange={this.handleChangeTime}></input>75 mins
 <div id="sunslot4repscheme"><p>{`${this.state.workout["Sunday"][2][1]}`=="undefined"?"":`${this.state.workout["Sunday"][2][1]}`}</p></div>
 <div id="sunslot5repscheme"><p>{`${this.state.workout["Sunday"][3][1]}`=="undefined"?"":`${this.state.workout["Sunday"][3][1]}`}</p></div>
 <div id="sunslot6repscheme"><p>{`${this.state.workout["Sunday"][4][1]}`=="undefined"?"":`${this.state.workout["Sunday"][4][1]}`}</p></div>
-<img id="sunslot2stickman" src={this.state.workout["Sunday"][0][0] == undefined?`./blank.png`:`./${this.state.workout["Sunday"][0][0]}.png`}></img>
-<img id="sunslot3stickman" src={this.state.workout["Sunday"][1][0] == undefined?`./blank.png`:`./${this.state.workout["Sunday"][1][0]}.png`}></img>
-<img id="sunslot4stickman" src={this.state.workout["Sunday"][2][0] == undefined?`./blank.png`:`./${this.state.workout["Sunday"][2][0]}.png`}></img>
-<img id="sunslot5stickman" src={this.state.workout["Sunday"][3][0] == undefined?`./blank.png`:`./${this.state.workout["Sunday"][3][0]}.png`}></img>
-<img id="sunslot6stickman" src={this.state.workout["Sunday"][4][0] == undefined?`./blank.png`:`./${this.state.workout["Sunday"][4][0]}.png`}></img>
 
 </div>    
 <a id="timer" href="./timer.html">Timer</a> 
