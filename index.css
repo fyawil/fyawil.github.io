@@ -1,0 +1,101 @@
+body {
+  background-color: rgb(41, 20, 2);
+}
+
+#main_page {
+  display: grid;
+  grid-template-areas: "nav_bar motivation my_story"
+                       "links links links";
+  grid-template-rows: 4fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  gap: 5px;
+  border-radius: 5px;
+  background-color: rgb(41, 20, 2);
+  vertical-align: center;
+}
+
+#nav_bar {
+  grid-area: nav_bar;
+
+  display: grid;
+  grid-template-areas: "projects"
+                       "customer_focus"
+                       "automation"
+                       "value_chain_management";
+  gap: 5px;
+  border-radius: 5px;
+}
+
+#projects {
+  grid-area: projects;
+  background-color: black;
+  color: rgb(228, 137, 53);  
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#customer_focus {
+  grid-area: customer_focus;
+  background-color: black;
+  color: rgb(228, 137, 53);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#automation {
+  grid-area: automation;
+  background-color: black;
+  color: rgb(228, 137, 53);
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 5px;
+}
+#automation:hover > #header3 {
+  display: none;
+}
+#automation:hover > #workout_generator {
+  display: block;
+}
+#header3 {
+  display: block;
+}
+#workout_generator {
+  display: none;
+}
+
+#value_chain_management {
+  grid-area: value_chain_management;
+  background-color: black;
+  color: rgb(228, 137, 53);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#motivation {
+  grid-area: motivation;
+  background-color: black;
+  color: rgb(228, 137, 53);
+  border-radius: 5px;
+}
+
+#my_story {
+  grid-area: my_story;
+  background-color: black;
+  color: rgb(228, 137, 53);
+  border-radius: 5px;
+}
+
+#links {
+  grid-area: links;
+  height: 20vh;
+  background-color: black;
+  color: rgb(228, 137, 53);
+  border-radius: 5px;
+}
+
+
+
