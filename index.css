@@ -1,101 +1,189 @@
 body {
-  background-color: rgb(41, 20, 2);
+  background-color: rgb(228, 137, 53);
 }
 
-#main_page {
-  display: grid;
-  grid-template-areas: "nav_bar motivation my_story"
-                       "links links links";
-  grid-template-rows: 4fr 1fr;
-  grid-template-columns: 1fr 3fr 1fr;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  gap: 5px;
-  border-radius: 5px;
-  background-color: rgb(41, 20, 2);
-  vertical-align: center;
-}
+  #main_page {
+    display: grid;
+    grid-template-areas: "nav_bar motivation my_story"
+                         "links links links";
+    grid-template-rows: 4fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    text-align: center;
+    gap: 5px;
+    border-radius: 5px;
+    background-color: rgb(228, 137, 53)
+  }
 
-#nav_bar {
-  grid-area: nav_bar;
+    #nav_bar {
+      grid-area: nav_bar;
+      display: grid;
+      grid-template-areas: "projects"
+                          "customer_focus"
+                          "automation"
+                          "value_chain_management";
+      border-radius: 5px;
+      gap: 5px
+    }
 
-  display: grid;
-  grid-template-areas: "projects"
-                       "customer_focus"
-                       "automation"
-                       "value_chain_management";
-  gap: 5px;
-  border-radius: 5px;
-}
+      #projects {
+        grid-area: projects;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+      }
 
-#projects {
-  grid-area: projects;
-  background-color: black;
-  color: rgb(228, 137, 53);  
-  border-radius: 5px;
-  padding: 5px;
-}
+      #customer_focus {
+        grid-area: customer_focus;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+      }
 
-#customer_focus {
-  grid-area: customer_focus;
-  background-color: black;
-  color: rgb(228, 137, 53);
-  padding: 5px;
-  border-radius: 5px;
-}
+      #automation {
+        grid-area: automation;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+      }
 
-#automation {
-  grid-area: automation;
-  background-color: black;
-  color: rgb(228, 137, 53);
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  border-radius: 5px;
-}
-#automation:hover > #header3 {
-  display: none;
-}
-#automation:hover > #workout_generator {
-  display: block;
-}
-#header3 {
-  display: block;
-}
-#workout_generator {
-  display: none;
-}
+      #value_chain_management {
+        grid-area: value_chain_management;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+      }
 
-#value_chain_management {
-  grid-area: value_chain_management;
-  background-color: black;
-  color: rgb(228, 137, 53);
-  padding: 5px;
-  border-radius: 5px;
-}
+    #motivation {
+      grid-area: motivation;
+      border-radius: 5px;
+      color:black
+    }
 
-#motivation {
-  grid-area: motivation;
-  background-color: black;
-  color: rgb(228, 137, 53);
-  border-radius: 5px;
-}
+      #tree {
+        grid-area: tree;
+        background-color: rgb(228, 137, 53);
+        width: 30%;
+        height: 75%;
+        justify-content: center;
+        border-radius: 5px;
+      }
 
-#my_story {
-  grid-area: my_story;
-  background-color: black;
-  color: rgb(228, 137, 53);
-  border-radius: 5px;
-}
+    #my_story {
+      grid-area: my_story;
+      display: grid;
+      grid-template-areas:"my_story0"
+                          "my_story1"
+                          "my_story2"
+                          "my_story3"
+                          "my_story4"
+                          "my_story5"
+                          "my_story6"
+                          "my_story7"
+                          "my_story8";
+      border-radius: 5px;
+    }
 
-#links {
-  grid-area: links;
-  height: 20vh;
-  background-color: black;
-  color: rgb(228, 137, 53);
-  border-radius: 5px;
-}
+      #my_story0 {
+        grid-area: my_story0;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        border-color: white;
+      }
+      #my_story1 {
+        grid-area: my_story1;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        height: 100%;
+        width: 100%;
+      }
+      #my_story2 {
+        grid-area: my_story2;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        height: 100%;
+        width: 100%;
+      }
+      #my_story3 {
+        grid-area: my_story3;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        height: 100%;
+        width: 100%;
+      }
+      #my_story4 {
+        grid-area: my_story4;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        height: 100%;
+        width: 100%;
+      } 
+      #my_story5 {
+        grid-area: my_story5;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        height: 100%;
+        width: 100%;
+      }
+      #my_story6 {
+        grid-area: my_story6;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        height: 100%;
+        width: 100%;
+      }    
+      #my_story7 {
+        grid-area: my_story7;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        height: 100%;
+        width: 100%;
+      }  
+      #my_story8 {
+        grid-area: my_story8;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: rgb(228, 137, 53);
+        height: 100%;
+        width: 100%;
+      }
+
+    #links {
+      grid-area: links;
+      background-color: black;
+      color:rgb(228, 137, 53);
+      border-radius: 5px;
+    }
 
 
 
