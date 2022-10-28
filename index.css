@@ -22,15 +22,16 @@ body {
                           "automation"
                           "value_chain_management";
       border-radius: 5px;
-      gap: 5px
+      gap: 5px;
     }
 
       #projects {
         grid-area: projects;
-        background-color: black;
-        color: rgb(228, 137, 53);
+        background-color: rgb(228, 137, 53);
+        color: black;
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         border-radius: 5px;
       }
 
@@ -40,6 +41,7 @@ body {
         color: rgb(228, 137, 53);
         display: flex;
         flex-direction: column;
+        justify-content: center;
         height: 100%;
         width: 100%;
         border-radius: 5px;
@@ -51,6 +53,7 @@ body {
         color: rgb(228, 137, 53);
         display: flex;
         flex-direction: column;
+        justify-content: center;
         height: 100%;
         width: 100%;
         border-radius: 5px;
@@ -62,6 +65,7 @@ body {
         color: rgb(228, 137, 53);
         display: flex;
         flex-direction: column;
+        justify-content: center;
         height: 100%;
         width: 100%;
         border-radius: 5px;
@@ -94,16 +98,16 @@ body {
                           "my_story6"
                           "my_story7"
                           "my_story8";
-      border-radius: 5px;
     }
 
       #my_story0 {
         grid-area: my_story0;
         display: flex;
         flex-direction: column;
-        background-color: black;
-        color: rgb(228, 137, 53);
-        border-color: white;
+        justify-content: flex-end;
+        background-color: rgb(228, 137, 53);
+        color: black;
+        border-radius: 5px 5px 0px 0px;
       }
       #my_story1 {
         grid-area: my_story1;
@@ -176,6 +180,7 @@ body {
         color: rgb(228, 137, 53);
         height: 100%;
         width: 100%;
+        border-radius: 0px 0px 5px 5px;
       }
 
     #links {
