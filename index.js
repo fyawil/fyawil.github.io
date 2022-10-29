@@ -56,7 +56,7 @@ class CustomerFocus extends React.Component {
     render() {
         return (
           <div id="customer_focus" onMouseEnter={this.show} onMouseLeave={this.show}>
-            {this.state.isShown?null:<h2>Market Analysis Tools</h2>}
+            {this.state.isShown?null:<h2>Food & Drink</h2>}
             {this.state.isShown?<p>Coming Soon</p>:null}
           </div>
 );
@@ -85,7 +85,7 @@ class Automation extends React.Component {
     render() {
         return (
           <div id="automation" onMouseEnter={this.show} onMouseLeave={this.show}>
-            {this.state.isShown?null:<h2>Fitness & Health Tools</h2>}
+            {this.state.isShown?null:<h2>Fitness</h2>}
             {this.state.isShown?<div id="workout_generator"><WorkoutGenerator/></div>:null}
           </div>
 );
@@ -130,7 +130,7 @@ class ValueChainManagement extends React.Component {
     render() {
         return (
           <div id="value_chain_management" onMouseEnter={this.show} onMouseLeave={this.show}>
-            {this.state.isShown?null:<h2>Process Optimisation Tools</h2>}
+            {this.state.isShown?null:<h2>Value Chain Management</h2>}
             {this.state.isShown?<p>Coming Soon</p>:null}
           </div>
 );
