@@ -185,102 +185,154 @@ class MyStory extends React.Component {
             <h1>My Story</h1>
           </div>
           <div id="my_story1" value="1" onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "1"?null:<h3 id="my_story_header1">Customer Service - 2018</h3>}
+              {this.state.isShown == "1"?null:<h3 id="my_story_header1">Parents exit Homeland</h3>}
               {this.state.isShown == "1"?
               <p id="my_story_content1">
-                <ul>
-                  <li>Customer Service Adviser with solid work ethic</li>
-                  <li>Securing coverage of the communication channels with various systems</li>
-                  <li>Web page audits and reporting of errors to the client</li>
-                  <li>Implementing a template system that improves quality and speeds service to the customer, shortens the learning curve of new starters and increases service level to the customer during peaks of demand</li>
-                </ul>
-                </p>:
-                null}
+                <strong>Parents exit Somalia (ca. 1990)</strong>
+                <br></br><br></br>
+                My parents left our homeland Somalia due to genocide, before the full-scale civil war broke out
+              </p>:
+              null}
           </div>
           <div id="my_story2" value="2" onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "2"?null:<h3 id="my_story_header2">Business Analysis in DK - 2016</h3>}
+              {this.state.isShown == "2"?null:<h3 id="my_story_header2">Birth</h3>}
               {this.state.isShown == "2"?
               <p id="my_story_content2">
+                <strong>Born in Aalborg, DK (1991)</strong>
                 <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li>Born to Fowzia Abdulle Mohamed and Yusuf Awil Dirir</li>
+                  <li>Born Fuad Yusuf Awil Dirir Faahiye Ismaaciil Isaaq</li>
+                  <li>From Wacays Idarays, from Sacad Yoonis, from Habar Yoonis of the Isaaq clan of Somaliland</li>
+                  <li>Raised up until we departed from the United Kingdom at the age of 12</li>
                 </ul>
-                </p>:
-                null}
+              </p>:
+              null}
           </div>
           <div id="my_story3" value="3" onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "3"?null:<h3 id="my_story_header3">Value Chain Management BA in DK - 2014</h3>}
+              {this.state.isShown == "3"?null:<h3 id="my_story_header3">GCSE's</h3>}
               {this.state.isShown == "3"?
-              <p id="my_story_content3">
-                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>                </p>:
+              <div id="my_story_content3">
+                <p><strong>GCSE's at Langleywood School, UK (2006-2007)</strong></p>
+                <table>
+                  <tr>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                  </tr>
+                  <tr>
+                    <td>Mathematics</td>
+                    <td>A*</td>
+                  </tr>
+                  <tr>
+                    <td>Science</td>
+                    <td>AA</td>
+                  </tr>
+                  <tr>
+                    <td>English/English Literature</td>
+                    <td>AA</td>
+                  </tr>   
+                  <tr>
+                    <td>Business & Communication Systems</td>
+                    <td>AA</td>
+                  </tr>        
+                  <tr>
+                    <td>History</td>
+                    <td>B</td>
+                  </tr>      
+                  <tr>
+                    <td>Geography</td>
+                    <td>B</td>
+                  </tr>      
+                  <tr>
+                    <td>Religious Studies</td>
+                    <td>B</td>
+                  </tr>
+                  <tr>
+                    <td>Physical Education</td>
+                    <td>D</td>
+                  </tr>            
+                </table>
+              </div>:
                 null}
           </div>
           <div id="my_story4" value="4" onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "4"?null:<h3 id="my_story_header4">Logistics in UK - 2011</h3>}
+              {this.state.isShown == "4"?null:<h3 id="my_story_header4">GCE's</h3>}
               {this.state.isShown == "4"?
-              <p id="my_story_content4">
-                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>                </p>:
-                null}
+              <div id="my_story_content4">
+                <p><strong>GCE's at Slough Grammar School, UK (2007-2009)</strong></p>
+                <table >
+                  <tr>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                  </tr>
+                  <tr>
+                    <td>Mathematics</td>
+                    <td>C</td>
+                  </tr>
+                  <tr>
+                    <td>Business Studies</td>
+                    <td>C</td>
+                  </tr>
+                  <tr>
+                    <td>Biology</td>
+                    <td>D</td>
+                  </tr>                
+                </table>
+              </div>:
+              null}
           </div>
           <div id="my_story5" value="5" onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "5"?null:<h3 id="my_story_header5">GCE's in UK - 2009</h3>}
+              {this.state.isShown == "5"?null:<h3 id="my_story_header5">Logistics</h3>}
               {this.state.isShown == "5"?
               <p id="my_story_content5">
+                <strong>Logistics at Royal Mail, UK (2011-2014)</strong>
                 <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>                </p>:
-                null}
+                  <li>Safety and security checks prevented accidents and theft</li>
+                  <li>Intermittently lead inbound and outbound logistics team</li>
+                  <li>Trained new starters</li>
+                  <li>Learned the value of hard work vis-a-vis process optimisation</li>
+                </ul>                
+              </p>:
+              null}
           </div>
           <div id="my_story6" value="6" onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "6"?null:<h3 id="my_story_header6">GCSE's in UK - 2007</h3>}
+              {this.state.isShown == "6"?null:<h3 id="my_story_header6">Value Chain Management BA</h3>}
               {this.state.isShown == "6"?
               <p id="my_story_content6">
+                <strong>Value Chain Management BA at VIA University College, DK (2014-2018)</strong>
                 <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>                </p>:
-                null}
+                  <li>Studied and practised how to manage flow of communication, materials and funds</li>
+                  <li>Achieved the UK equivalent of a 1st (grade average 11.18, on a scale from -3 to 12)</li>
+                  <li>Gained much practical experience assisting companies on issues from raw materials to end user</li>
+                  <li>Strategy, Forecasting, Purchasing, Inventory, Production, Quality, Marketing Management and more</li>
+                </ul>       
+              </p>:
+              null}
           </div>
           <div id="my_story7" value="7" onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "7"?null:<h3 id="my_story_header7">Born Fuad Yusuf Awil - 1991</h3>}
+              {this.state.isShown == "7"?null:<h3 id="my_story_header7">Business Analysis</h3>}
               {this.state.isShown == "7"?
               <p id="my_story_content7">
+                <strong>Business Analysis at H.P. Industrial, DK (2016)</strong>
                 <ul>
-                  <li>Born in Aalborg, Denmark</li>
-                  <li>Born Fuad Yusuf Awil Dirir Faahiye Ismaaciil Isaaq</li>
-                  <li>From Wacays, from Idarays, from Sacad Yoonis, From Yoonis Ismaaciil, From Habar Yoonis of the Isaaq clan of Somaliland</li>
-                  <li>Raised up until we departed from the United Kingdom at the age of 12</li>
-                </ul> 
-                </p>:
-                null}
+                  <li>Visual Management reduced waste in physical processes</li>
+                  <li>Facility Layout Planning slashed total distance travelled by staff members</li>
+                  <li>Inventory Management prevented stockouts and improved service level</li>
+                  <li>Total Productive Maintenance increased OEE</li>
+                </ul>
+              </p>:
+              null}
           </div>
           <div id="my_story8" value="8" onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "8"?null:<h3 id="my_story_header8">Parents exit Somalia - ca. 1990</h3>}
+              {this.state.isShown == "8"?null:<h3 id="my_story_header8">Customer Service</h3>}
               {this.state.isShown == "8"?
               <p id="my_story_content8">
-                My parents left our homeland Somalia due to civil unrest before my birth
+                <strong>Customer Service at Arvato, UK (2019-present)</strong>
+                <ul>
+                  <li>High-performing, senior Customer Service Advisor</li>
+                  <li>Secured coverage of the communication channels with various systems</li>
+                  <li>Conducted User Interface quality audits</li>
+                  <li>Improved quality, and sped up service and training through template system</li>
+                </ul>
                 </p>:
                 null}
           </div>         

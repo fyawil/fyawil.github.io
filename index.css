@@ -11,7 +11,7 @@ body {
     text-align: center;
     gap: 5px;
     border-radius: 5px;
-    background-color: rgb(228, 137, 53)
+    background-color: rgb(228, 137, 53);
   }
 
     #nav_bar {
@@ -27,12 +27,12 @@ body {
 
       #projects {
         grid-area: projects;
-        background-color: rgb(228, 137, 53);
-        color: black;
+        background-color: rgb(41, 20, 2);
+        color: rgb(228, 137, 53);
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        border-radius: 5px;
+        justify-content: center;
+        border-radius: 5px 5px 0px 0px;
       }
 
       #customer_focus {
@@ -44,7 +44,6 @@ body {
         justify-content: center;
         height: 100%;
         width: 100%;
-        border-radius: 5px;
       }
 
       #automation {
@@ -56,7 +55,6 @@ body {
         justify-content: center;
         height: 100%;
         width: 100%;
-        border-radius: 5px;
       }
 
       #value_chain_management {
@@ -68,7 +66,7 @@ body {
         justify-content: center;
         height: 100%;
         width: 100%;
-        border-radius: 5px;
+        border-radius: 0px 0px 5px 5px;
       }
 
     #motivation {
@@ -105,9 +103,9 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        background-color: rgb(228, 137, 53);
-        color: black;
-        border-radius: 5px 5px 0px 0px;
+        background-color: rgb(41, 20, 2);
+        color: rgb(228, 137, 53);
+        border-radius: 5px 5px 0px 0px;      
       }
       #my_story1 {
         grid-area: my_story1;
@@ -135,6 +133,10 @@ body {
         color: rgb(228, 137, 53);
         height: 100%;
         width: 100%;
+      }
+      table {
+        text-align: center;
+        color: rgb(228, 137, 53);
       }
       #my_story4 {
         grid-area: my_story4;
@@ -185,8 +187,8 @@ body {
 
     #links {
       grid-area: links;
-      background-color: black;
-      color:rgb(228, 137, 53);
+      background-color: rgb(41, 20, 2);
+      color:black;
       border-radius: 5px;
     }
 
