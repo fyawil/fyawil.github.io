@@ -349,11 +349,11 @@ class Links extends React.Component {
 
     render() {
         return (
-          <div id="links">
-            <nav>
-              <a href="https://github.com/fyawil" target="blank"><img src="./github.svg" alt="Github" /></a>
-              <a href="https://www.linkedin.com/in/fyawil" target="blank"><img  src="./linkedin.svg" alt="LinkedIn" /></a>
-            </nav>
+          <div>
+            <div id="links">
+             <a href="https://github.com/fyawil" target="blank"><img id="github" src="./github.png" alt="Github" /></a>
+             <a href="https://www.linkedin.com/in/fyawil" target="blank"><img id="linkedin" src="./linkedin.png" alt="LinkedIn" /></a>
+            </div>
           </div>
 );
     }

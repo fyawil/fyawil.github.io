@@ -187,13 +187,28 @@ body {
 
     #links {
       grid-area: links;
+      display: grid;
+      grid-template-areas: "github linkedin";
+      grid-template-columns: auto;
+      justify-content: center;
+      align-content: center;
       background-color: rgb(41, 20, 2);
       color: rgb(228, 137, 53);
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: space-evenly;
     }
+
+      #linkedin {
+        grid-area: linkedin;
+        width: 25%;
+        height: 100%;
+        padding: 0px;
+      }
+      #github {
+        grid-area: github;
+        width: 25%;
+        height: 100%;
+        padding: 0px;
+      }
+
 
 
 
