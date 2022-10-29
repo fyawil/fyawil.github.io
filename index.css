@@ -188,9 +188,13 @@ body {
     #links {
       grid-area: links;
       background-color: rgb(41, 20, 2);
-      color:black;
-      border-radius: 5px;
+      color: rgb(228, 137, 53);
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: space-evenly;
     }
+
 
 
 

@@ -232,7 +232,7 @@ class MyStory extends React.Component {
                   </tr>   
                   <tr>
                     <td>Business & Communication Systems</td>
-                    <td>AA</td>
+                    <td>B</td>
                   </tr>        
                   <tr>
                     <td>History</td>
@@ -259,7 +259,7 @@ class MyStory extends React.Component {
               {this.state.isShown == "4"?
               <div id="my_story_content4">
                 <p><strong>GCE's at Slough Grammar School, UK (2007-2009)</strong></p>
-                <table >
+                <table>
                   <tr>
                     <th>Subject</th>
                     <th>Grade</th>
@@ -350,7 +350,10 @@ class Links extends React.Component {
     render() {
         return (
           <div id="links">
-          <h1>Links</h1>
+            <nav>
+              <a href="https://github.com/fyawil" target="blank"><img src="./github.svg" alt="Github" /></a>
+              <a href="https://www.linkedin.com/in/fyawil" target="blank"><img  src="./linkedin.svg" alt="LinkedIn" /></a>
+            </nav>
           </div>
 );
     }
