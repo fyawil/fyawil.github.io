@@ -194,7 +194,7 @@ class MyStory extends React.Component {
               </p>:
               null}
           </div>
-          <div id="my_story2" value="2" onMouseEnter={this.show} onMouseLeave={this.hide}>
+          <div id="my_story2" value="2" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
               {this.state.isShown == "2"?null:<h3 id="my_story_header2">Birth</h3>}
               {this.state.isShown == "2"?
               <p id="my_story_content2">
@@ -208,7 +208,7 @@ class MyStory extends React.Component {
               </p>:
               null}
           </div>
-          <div id="my_story3" value="3" onMouseEnter={this.show} onMouseLeave={this.hide}>
+          <div id="my_story3" value="3" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
               {this.state.isShown == "3"?null:<h3 id="my_story_header3">GCSE's</h3>}
               {this.state.isShown == "3"?
               <div id="my_story_content3">
@@ -254,7 +254,7 @@ class MyStory extends React.Component {
               </div>:
                 null}
           </div>
-          <div id="my_story4" value="4" onMouseEnter={this.show} onMouseLeave={this.hide}>
+          <div id="my_story4" value="4" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
               {this.state.isShown == "4"?null:<h3 id="my_story_header4">GCE's</h3>}
               {this.state.isShown == "4"?
               <div id="my_story_content4">
@@ -280,7 +280,7 @@ class MyStory extends React.Component {
               </div>:
               null}
           </div>
-          <div id="my_story5" value="5" onMouseEnter={this.show} onMouseLeave={this.hide}>
+          <div id="my_story5" value="5" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
               {this.state.isShown == "5"?null:<h3 id="my_story_header5">Logistics</h3>}
               {this.state.isShown == "5"?
               <p id="my_story_content5">
@@ -294,7 +294,7 @@ class MyStory extends React.Component {
               </p>:
               null}
           </div>
-          <div id="my_story6" value="6" onMouseEnter={this.show} onMouseLeave={this.hide}>
+          <div id="my_story6" value="6" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
               {this.state.isShown == "6"?null:<h3 id="my_story_header6">Value Chain Management BA</h3>}
               {this.state.isShown == "6"?
               <p id="my_story_content6">
@@ -308,7 +308,7 @@ class MyStory extends React.Component {
               </p>:
               null}
           </div>
-          <div id="my_story7" value="7" onMouseEnter={this.show} onMouseLeave={this.hide}>
+          <div id="my_story7" value="7" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
               {this.state.isShown == "7"?null:<h3 id="my_story_header7">Business Analysis</h3>}
               {this.state.isShown == "7"?
               <p id="my_story_content7">
@@ -322,7 +322,7 @@ class MyStory extends React.Component {
               </p>:
               null}
           </div>
-          <div id="my_story8" value="8" onMouseEnter={this.show} onMouseLeave={this.hide}>
+          <div id="my_story8" value="8" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
               {this.state.isShown == "8"?null:<h3 id="my_story_header8">Customer Service</h3>}
               {this.state.isShown == "8"?
               <p id="my_story_content8">
