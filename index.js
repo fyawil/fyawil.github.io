@@ -55,7 +55,7 @@ class CustomerFocus extends React.Component {
 
     render() {
         return (
-          <div id="customer_focus" onMouseEnter={this.show} onMouseLeave={this.show}>
+          <div id="customer_focus" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.show}>
             {this.state.isShown?null:<h2>Food & Drink</h2>}
             {this.state.isShown?<p>Coming Soon</p>:null}
           </div>
@@ -84,7 +84,7 @@ class Automation extends React.Component {
 
     render() {
         return (
-          <div id="automation" onMouseEnter={this.show} onMouseLeave={this.show}>
+          <div id="automation" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.show}>
             {this.state.isShown?null:<h2>Fitness</h2>}
             {this.state.isShown?<div id="workout_generator"><WorkoutGenerator/></div>:null}
           </div>
@@ -129,7 +129,7 @@ class ValueChainManagement extends React.Component {
 
     render() {
         return (
-          <div id="value_chain_management" onMouseEnter={this.show} onMouseLeave={this.show}>
+          <div id="value_chain_management" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.show}>
             {this.state.isShown?null:<h2>Value Chain Management</h2>}
             {this.state.isShown?<p>Coming Soon</p>:null}
           </div>
@@ -184,7 +184,7 @@ class MyStory extends React.Component {
           <div id="my_story0">
             <h1>My Story</h1>
           </div>
-          <div id="my_story1" value="1" onMouseEnter={this.show} onMouseLeave={this.hide}>
+          <div id="my_story1" value="1" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
               {this.state.isShown == "1"?null:<h3 id="my_story_header1">Parents exit Homeland</h3>}
               {this.state.isShown == "1"?
               <p id="my_story_content1">
