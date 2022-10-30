@@ -214,7 +214,7 @@ body {
         padding: 0px;
       }
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: 430px){
   #main_page {
     grid-template-areas: "motivation" 
                          "nav_bar" 
