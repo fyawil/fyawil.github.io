@@ -6,7 +6,7 @@ body {
     display: grid;
     grid-template-areas: "nav_bar motivation my_story"
                          "links links links";
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 4.5fr 0.5fr;
     grid-template-columns: 1fr 3fr 1fr;
     text-align: center;
     gap: 5px;
@@ -194,22 +194,46 @@ body {
       align-content: center;
       background-color: rgb(41, 20, 2);
       color: rgb(228, 137, 53);
+      border-radius: 0px 0px 5px 5px;
     }
 
       #linkedin {
         grid-area: linkedin;
-        width: 25%;
+        width: 20%;
         height: 100%;
         padding: 0px;
       }
       #github {
         grid-area: github;
-        width: 25%;
+        width: 20%;
         height: 100%;
         padding: 0px;
       }
 
+@media screen and (max-width: 414px){
+  #main_page {
+    grid-template-areas: "motivation" 
+                         "nav_bar" 
+                         "my_story"
+                         "links";  
+    grid-template-rows: 30vh 70vh 100vh 20vh;
+    grid-template-columns: 100%;
+  }
 
+    #motivation {
+      font-size: small;
+    }
+    #tree {
+      width: 20%;
+      height: 45%;
+    }
+    #my_story {
+      height: 95vh;
+    }
+    #my_story > div {
+      width: 95vw;
+    }
+}
 
 
 
