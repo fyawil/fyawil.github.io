@@ -52,14 +52,18 @@ class Timer extends React.Component {
     countDown() {
 
       this.setState({      
-        seconds: this.state.work
+        seconds: (this.state.work+this.state.rest) * this.state.rounds
       });
 
-    setInterval(() => {
-      this.setState({      
-        seconds: this.state.seconds - 1 <= 0? 0: this.state.seconds - 1
-      });
-
+    this.myTimer = setInterval(() => {
+      if(this.state.seconds !==0){
+        this.setState({      
+          seconds: this.state.seconds - 1
+        });
+      }
+      else {
+        clearInterval(this.myTimer)
+      }
     }, 1000)
 
     }
@@ -89,7 +93,7 @@ class Timer extends React.Component {
 
             <div>
               <button onClick={this.countDown}>Start</button>
-              <button>Stop</button>
+              <button>Pause/Play</button>
               <button>Reset</button>
               <h1>{this.state.seconds}</h1>
             </div>
