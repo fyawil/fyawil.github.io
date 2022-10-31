@@ -185,7 +185,7 @@ class MyStory extends React.Component {
             <h1>My Story</h1>
           </div>
           <div id="my_story1" value="1" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "1"?null:<h3 id="my_story_header1">Parents exit Homeland</h3>}
+              {this.state.isShown == "1"?null:<h3 onClick={this.show} id="my_story_header1">Parents exit Homeland</h3>}
               {this.state.isShown == "1"?
               <p id="my_story_content1">
                 <strong>Parents exit Somalia (ca. 1990)</strong>
@@ -195,7 +195,7 @@ class MyStory extends React.Component {
               null}
           </div>
           <div id="my_story2" value="2" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "2"?null:<h3 id="my_story_header2">Birth</h3>}
+              {this.state.isShown == "2"?null:<h3 onClick={this.show} id="my_story_header2">Birth</h3>}
               {this.state.isShown == "2"?
               <p id="my_story_content2">
                 <strong>Born in Aalborg, DK (1991)</strong>
@@ -209,7 +209,7 @@ class MyStory extends React.Component {
               null}
           </div>
           <div id="my_story3" value="3" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "3"?null:<h3 id="my_story_header3">GCSE's</h3>}
+              {this.state.isShown == "3"?null:<h3 onClick={this.show} id="my_story_header3">GCSE's</h3>}
               {this.state.isShown == "3"?
               <div id="my_story_content3">
                 <p><strong>GCSE's at Langleywood School, UK (2006-2007)</strong></p>
@@ -255,7 +255,7 @@ class MyStory extends React.Component {
                 null}
           </div>
           <div id="my_story4" value="4" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "4"?null:<h3 id="my_story_header4">GCE's</h3>}
+              {this.state.isShown == "4"?null:<h3 onClick={this.show} id="my_story_header4">GCE's</h3>}
               {this.state.isShown == "4"?
               <div id="my_story_content4">
                 <p><strong>GCE's at Slough Grammar School, UK (2007-2009)</strong></p>
@@ -281,7 +281,7 @@ class MyStory extends React.Component {
               null}
           </div>
           <div id="my_story5" value="5" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "5"?null:<h3 id="my_story_header5">Logistics</h3>}
+              {this.state.isShown == "5"?null:<h3 onClick={this.show} id="my_story_header5">Logistics</h3>}
               {this.state.isShown == "5"?
               <p id="my_story_content5">
                 <strong>Logistics at Royal Mail, UK (2011-2014)</strong>
@@ -295,7 +295,7 @@ class MyStory extends React.Component {
               null}
           </div>
           <div id="my_story6" value="6" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "6"?null:<h3 id="my_story_header6">Value Chain Management BA</h3>}
+              {this.state.isShown == "6"?null:<h3 onClick={this.show} id="my_story_header6">Value Chain Management BA</h3>}
               {this.state.isShown == "6"?
               <p id="my_story_content6">
                 <strong>Value Chain Management BA at VIA University College, DK (2014-2018)</strong>
@@ -309,7 +309,7 @@ class MyStory extends React.Component {
               null}
           </div>
           <div id="my_story7" value="7" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "7"?null:<h3 id="my_story_header7">Business Analysis</h3>}
+              {this.state.isShown == "7"?null:<h3 onClick={this.show} id="my_story_header7">Business Analysis</h3>}
               {this.state.isShown == "7"?
               <p id="my_story_content7">
                 <strong>Business Analysis at H.P. Industrial, DK (2016)</strong>
@@ -323,7 +323,7 @@ class MyStory extends React.Component {
               null}
           </div>
           <div id="my_story8" value="8" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "8"?null:<h3 id="my_story_header8">Customer Service</h3>}
+              {this.state.isShown == "8"?null:<h3 onClick={this.show} id="my_story_header8">Customer Service</h3>}
               {this.state.isShown == "8"?
               <p id="my_story_content8">
                 <strong>Customer Service at Arvato, UK (2019-present)</strong>
