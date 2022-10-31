@@ -100,9 +100,8 @@ class WorkoutGenerator extends React.Component {
     render() {
         return (
           <div id="workout_generator">
-            <ul>
-              <li><a href="./workout_generator/workout_generator.html"><h3>Workout Generator</h3></a></li>
-            </ul>
+            <a href="./workout_generator/workout_generator.html"><h3>Workout Generator</h3></a>
+            <a href="./timer/timer.html"><h3>Timer</h3></a>
           </div>
 );
     }
