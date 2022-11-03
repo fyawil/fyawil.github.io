@@ -1,0 +1,212 @@
+html {
+    height: calc(100vh - (100vh - 100%));
+    width: calc(100vw - (100vw - 100%));
+}
+
+    #timer {
+        display: grid;
+        grid-template-areas: 
+                            "rds"
+                            "work"
+                            "rest"
+                            "countdown";
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 20% 20% 40%;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(228, 137, 53)
+    }
+
+        #rds {
+            grid-area: rds;
+            display: grid;
+            grid-template-areas: 
+            "rds_title rds_title rds_title"
+            "rds_minus_10 work_rds rds_plus_10"
+            "rds_minus_1 work_rds rds_plus_1"
+            ;
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 20% 40% 40%;
+        }
+            #rds_title {
+                grid-area: rds_title;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                border-radius: 5px 5px 0px 0px;
+                align-self:center;
+            }
+            #rds_minus_10 {
+                grid-area: rds_minus_10;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #rds_plus_10 {
+                grid-area: rds_plus_10;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #rds_minus_1 {
+                grid-area: rds_minus_1;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #rds_plus_1 {
+                grid-area: rds_plus_1;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #work_rds {
+                grid-area: work_rds;
+                align-self:center;
+            }
+
+
+        #work {
+            grid-area: work;
+            display: grid;
+            grid-template-areas: 
+            "work_title work_title work_title"
+            "work_mins_minus_1  work_mins work_mins_plus_1"
+            "work_secs_minus_10 work_secs work_secs_plus_10"
+            ;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 20% 40% 40%;
+        }
+            #work_title {
+                grid-area: work_title;
+                align-self:center;
+                background-color: rgb(41, 20, 2);
+                border-radius: 5px 5px 0px 0px;
+                color: rgb(228, 137, 53)
+            }
+            #work_mins_minus_1 {
+                grid-area: work_mins_minus_1;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #work_mins_plus_1 {
+                grid-area: work_mins_plus_1;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #work_secs_minus_10 {
+                grid-area: work_secs_minus_10;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #work_secs_plus_10 {
+                grid-area: work_secs_plus_10;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #work_mins {
+                grid-area: work_mins;
+                align-self: center;
+            }
+            #work_secs {
+                grid-area: work_secs;
+                align-self: center;
+            }
+        #rest {
+            grid-area: rest;
+            display: grid;
+            grid-template-areas: 
+            "rest_title rest_title rest_title"
+            "rest_mins_minus_1 rest_mins rest_mins_plus_1"
+            "rest_secs_minus_10 rest_secs rest_secs_plus_10"
+            ;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 20% 40% 40%;
+        }
+            #rest_title {
+                grid-area: rest_title;
+                align-self:center;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                border-radius: 5px 5px 0px 0px;
+            }
+            #rest_mins_minus_1 {
+                grid-area: rest_mins_minus_1;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #rest_mins_plus_1 {
+                grid-area: rest_mins_plus_1;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #rest_secs_minus_10 {
+                grid-area: rest_secs_minus_10;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #rest_secs_plus_10 {
+                grid-area: rest_secs_plus_10;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #rest_mins {
+                grid-area: rest_mins;
+                align-self: center;
+            }
+            #rest_secs {
+                grid-area: rest_secs;
+                align-self: center;
+            }
+
+        #countdown {
+            grid-area: countdown;
+            display: grid;
+            grid-template-areas: 
+            "start pause reset"
+            "mins_left colon secs_left"
+            ;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 25% 75%;
+        }
+            #start {
+                grid-area: start;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #pause {
+                grid-area: pause;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #reset {
+                grid-area: reset;
+                background-color: rgb(41, 20, 2);
+                color: rgb(228, 137, 53);
+                font-weight: bold;
+            }
+            #mins_left {
+                grid-area: mins_left;
+                align-self: center;
+                font-size: xx-large;
+            }
+            #secs_left {
+                grid-area: secs_left;
+                align-self: center;
+                font-size: xx-large;
+            }
+            #colon {
+                grid-area: colon;
+                align-self: center;
+                font-size: xx-large;
+            }
