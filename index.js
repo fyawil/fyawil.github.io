@@ -203,7 +203,7 @@ class MyStory extends React.Component {
                   <li>Born to Fowzia Abdulle Mohamed and Yusuf Awil Dirir</li>
                   <li>Born Fuad Yusuf Awil Dirir Faahiye Ismaaciil Isaaq</li>
                   <li>From Wacays Idarays, from Sacad Yoonis, from Habar Yoonis of the Isaaq clan of Somaliland</li>
-                  <li>Raised up until we departed from the United Kingdom at the age of 12</li>
+                  <li>Raised in DK until we departed for the UK when I was 12</li>
                 </ul>
               </p>:
               null}
