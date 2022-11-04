@@ -6,7 +6,10 @@ class Timer extends React.Component {
         rest: 0,
         rounds: 0,
         isStarted: false,
-        seconds: 0
+        seconds: 0,
+        isWork: false,
+        workSecsLeft: 0,
+        restSecsLeft: 0
       }
  this.decrementRounds = this.decrementRounds.bind(this);
  this.incrementRounds = this.incrementRounds.bind(this);
@@ -56,12 +59,18 @@ class Timer extends React.Component {
     countDown() {
         this.setState({      
         seconds: (this.state.work+this.state.rest) * this.state.rounds,
-        isStarted: true
+        isStarted: true,
+        isWork: true,
+        workSecsLeft: this.state.work,
+        restSecsLeft: this.state.rest
       });
       this.myTimer = setInterval(() => {
         if(this.state.seconds !== 0) { this.setState({      
-          seconds: this.state.seconds-1
-          });
+          seconds: this.state.seconds-1,
+          isWork: this.state.workSecsLeft == 0? false: this.state.restSecsLeft == 0? true: this.state.isWork,
+          workSecsLeft: this.state.isWork? this.state.workSecsLeft - 1: this.state.work,
+          restSecsLeft: !this.state.isWork? this.state.restSecsLeft - 1:this.state.rest       
+        });
         }
         else {
           clearInterval(this.myTimer);
@@ -99,13 +108,15 @@ class Timer extends React.Component {
         rest: 0,
         rounds: 0,
         isStarted: false,
-        seconds: 0
+        seconds: 0,
+        isWork: false,
+        workSecsLeft: 0,
+        restSecsLeft: 0
          });
     }
 
-    
-
     render() {
+
         return (
           <div id="timer">
             <div id="rds">
@@ -144,9 +155,10 @@ class Timer extends React.Component {
               <button id="start" onClick={!this.state.isStarted? this.countDown:this.play}>Start</button>
               <button id="pause" onClick={this.pause}>Pause</button>
               <button id="reset" onClick={this.reset}>Reset</button>
-              <h1 id="mins_left">{(this.state.seconds - this.state.seconds%60)/60}</h1>
+              <h3 id="is_work">{`${this.state.isWork?"Work!!!":"Rest..."}`}</h3>
+              <h1 id="mins_left">{this.state.isWork?Math.floor(this.state.workSecsLeft/60):Math.floor(this.state.restSecsLeft/60)}</h1>
               <h1 id="colon">:</h1>             
-              <h1 id="secs_left">{this.state.seconds%60}</h1>
+              <h1 id="secs_left">{this.state.isWork?this.state.workSecsLeft%60:this.state.restSecsLeft%60}</h1>
             </div>
           </div>
 );

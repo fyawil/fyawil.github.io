@@ -74,7 +74,7 @@ html {
             "work_mins_minus_1  work_mins work_mins_plus_1"
             "work_secs_minus_10 work_secs work_secs_plus_10"
             ;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 33.33% 33.34% 33.33%;
             grid-template-rows: 20% 40% 40%;
         }
             #work_title {
@@ -124,7 +124,7 @@ html {
             "rest_mins_minus_1 rest_mins rest_mins_plus_1"
             "rest_secs_minus_10 rest_secs rest_secs_plus_10"
             ;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 33.33% 33.34% 33.33%;
             grid-template-rows: 20% 40% 40%;
         }
             #rest_title {
@@ -172,10 +172,11 @@ html {
             display: grid;
             grid-template-areas: 
             "start pause reset"
+            "is_work is_work is_work"
             "mins_left colon secs_left"
             ;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 25% 75%;
+            grid-template-columns: 33.33% 33.34% 33.33%;
+            grid-template-rows: 25% 15% 60%;
         }
             #start {
                 grid-area: start;
@@ -194,6 +195,9 @@ html {
                 background-color: rgb(41, 20, 2);
                 color: rgb(228, 137, 53);
                 font-weight: bold;
+            }
+            #is_work {
+                grid-area: is_work;
             }
             #mins_left {
                 grid-area: mins_left;
