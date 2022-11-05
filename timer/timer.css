@@ -1,6 +1,7 @@
 html {
     height: calc(100vh - (100vh - 100%));
     width: calc(100vw - (100vw - 100%));
+    background-color: rgb(228, 137, 53);
 }
 
     #timer {
@@ -15,7 +16,12 @@ html {
         align-content: center;
         justify-content: center;
         text-align: center;
+        height: 97.5vh;
         background-color: rgb(228, 137, 53)
+    }
+
+    button {
+        border: 2px solid rgb(228, 137, 53)
     }
 
         #rds {
@@ -26,7 +32,7 @@ html {
             "rds_minus_10 work_rds rds_plus_10"
             "rds_minus_1 work_rds rds_plus_1"
             ;
-            grid-template-columns: 25% 50% 25%;
+            grid-template-columns: 33.33% 33.34% 33.33%;
             grid-template-rows: 20% 40% 40%;
         }
             #rds_title {

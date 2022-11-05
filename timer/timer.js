@@ -55,6 +55,14 @@ class Timer extends React.Component {
         rest: this.state.rest + (+event.target.value)
       });
     }
+    beep() {
+      var beep = new Audio("./beep.mp3");  
+      beep.play();
+  }
+    beepBeep() {
+    var beepBeep = new Audio("./beepbeep.mp3");  
+    beepBeep.play();
+}
 
     countDown() {
         this.setState({      
@@ -71,30 +79,43 @@ class Timer extends React.Component {
           workSecsLeft: this.state.isWork? this.state.workSecsLeft - 1: this.state.work,
           restSecsLeft: !this.state.isWork? this.state.restSecsLeft - 1:this.state.rest       
         });
+
         }
         else {
-          clearInterval(this.myTimer);
           this.setState({      
-            isStarted: false
+            isStarted: false,
+            restSecsLeft: 0
              });
+          clearInterval(this.myTimer);
+          this.beepBeep()
         }
-      }, 1000)
+            if(this.state.workSecsLeft == 0 || this.state.restSecsLeft == 0 && this.state.isStarted){this.beep()}
+          }
+
+      , 1000)
     }
 
     play() {
       clearInterval(this.myTimer);
       this.myTimer = setInterval(() => {
         if(this.state.seconds !== 0) { this.setState({      
-          seconds: this.state.seconds-1
-          });
+          seconds: this.state.seconds-1,
+          isWork: this.state.workSecsLeft == 0? false: this.state.restSecsLeft == 0? true: this.state.isWork,
+          workSecsLeft: this.state.isWork? this.state.workSecsLeft - 1: this.state.work,
+          restSecsLeft: !this.state.isWork? this.state.restSecsLeft - 1:this.state.rest       
+        });
+
         }
         else {
-          clearInterval(this.myTimer);
           this.setState({      
-            isStarted: false
+            isStarted: false,
+            restSecsLeft: 0
              });
+          clearInterval(this.myTimer);
+          this.beepBeep()
         }
-      }, 1000)
+            if(this.state.workSecsLeft == 0 || this.state.restSecsLeft == 0){this.beep()}
+          }, 1000)
   }
 
     pause() {
