@@ -138,9 +138,26 @@ class Timer extends React.Component {
 
     render() {
 
+      const active = {
+        gridTemplateRows: '0% 0% 0% 100%',
+        fontSize: 'xx-large'
+      }
+  
+     const inactive = {
+        gridTemplateRows: '20% 20% 20% 40%'
+      }
+
+     const show = {
+        zIndex: '0'
+     }
+
+     const hide = {
+      display: 'none'
+   }
+  
         return (
-          <div id="timer">
-            <div id="rds">
+          <div id="timer" style={this.state.isStarted?active:inactive}>
+            <div id="rds" style={this.state.isStarted?hide:show}>
               <h3 id="rds_title">Rounds</h3>
               <button value="1" id="rds_minus_1" onClick={this.decrementRounds}>-1</button>
               <button value="10" id="rds_minus_10" onClick={this.decrementRounds}>-10</button>
@@ -149,8 +166,8 @@ class Timer extends React.Component {
               <button value="1" id="rds_plus_1" onClick={this.incrementRounds}>+1</button>
             </div>
 
-            <div id="work">
-              <h3 id="work_title">Work</h3>
+            <div id="work" style={this.state.isStarted?hide:show}>
+              <h3 id="work_title" >Work</h3>
               <button value="60" id="work_mins_minus_1" onClick={this.decrementWork}>-1min</button>
               <h1 id="work_mins">{(this.state.work-this.state.work%60)/60}</h1>
               <button value="60" id="work_mins_plus_1" onClick={this.incrementWork}>+1min</button>
@@ -160,8 +177,8 @@ class Timer extends React.Component {
               <button value="10" id="work_secs_plus_10" onClick={this.incrementWork}>+10secs</button>
             </div>
 
-            <div id="rest">
-            <h3 id="rest_title">Rest</h3>
+            <div id="rest" style={this.state.isStarted?hide:show}>
+            <h3 id="rest_title" >Rest</h3>
               <button value="60" id="rest_mins_minus_1" onClick={this.decrementRest}>-1min</button>
               <h1 id="rest_mins">{(this.state.rest-this.state.rest%60)/60}</h1>
               <button value="60" id="rest_mins_plus_1" onClick={this.incrementRest}>+1min</button>
