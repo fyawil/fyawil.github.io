@@ -896,6 +896,7 @@ break;
     render() {
         return (
           <div id="mainpage">
+            <title>Workout Generator</title>
           <div id="generator">
           <div id="strengthquestion">
             <h1>Focus</h1>

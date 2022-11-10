@@ -157,6 +157,7 @@ class Timer extends React.Component {
   
         return (
           <div id="timer" style={this.state.isStarted?active:inactive}>
+            <title>Timer</title>
             <div id="rds" style={this.state.isStarted?hide:show}>
               <h3 id="rds_title">Rounds</h3>
               <button value="1" id="rds_minus_1" onClick={this.decrementRounds}>-1</button>

@@ -130,7 +130,7 @@ class ValueChainManagement extends React.Component {
         return (
           <div id="value_chain_management" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.show}>
             {this.state.isShown?null:<h2>Business</h2>}
-            {this.state.isShown?<a href="./amaalarts/amaalarts.html"><h3>Amaal Arts</h3></a>:null}
+            {this.state.isShown?<a href="./amalarts/amalarts.html"><h3>Amal Arts</h3></a>:null}
           </div>
 );
     }
