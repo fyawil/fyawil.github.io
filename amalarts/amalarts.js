@@ -23,7 +23,10 @@ class Pieces extends React.Component {
     this.state = {
       isPc1Shown: false,
       isPc2Shown: false,
-      isPc3Shown: false
+      isPc3Shown: false,
+      pc1: 1,
+      pc2: 2,
+      pc3: 1
     }
 
     this.hideShowPc1 = this.hideShowPc1.bind(this);
@@ -60,17 +63,20 @@ display: "none"
         return (
           <div>
             <div id="pieces">
-              <div id="piece1" style={{width:`${this.state.isPc1Shown?"300%":"100%"}`, height:`${this.state.isPc1Shown?"90%":"70%"}`}} onClick={this.hideShowPc1}><div id="image1">Image 1</div>
+              <div id="piece1" style={{width:`${this.state.isPc1Shown?"300%":"100%"}`, height:`${this.state.isPc1Shown?"90%":"70%"}`}} onClick={this.hideShowPc1}>
+              <img id="image1" src={`./${this.state.pc1}.jpg`} alt="Image 1" />
               <p id="description1" style={this.state.isPc1Shown?show:hide}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               </p>
               </div>
-              <div id="piece2" style={{width:`${this.state.isPc2Shown?"300%":"100%"}`, height:`${this.state.isPc2Shown?"90%":"70%"}`}} onClick={this.hideShowPc2}><div id="image2">Image 2</div>
+              <div id="piece2" style={{width:`${this.state.isPc2Shown?"300%":"100%"}`, height:`${this.state.isPc2Shown?"90%":"70%"}`}} onClick={this.hideShowPc2}>
+              <img id="image2" src={`./${this.state.pc2}.jpg`} alt="Image 2" />
               <p id="description2" style={this.state.isPc2Shown?show:hide}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               </div>
-              <div id="piece3" style={{width:`${this.state.isPc3Shown?"300%":"100%"}`, height:`${this.state.isPc3Shown?"90%":"70%"}`}} onClick={this.hideShowPc3}><div id="image3">Image 3</div>
+              <div id="piece3" style={{width:`${this.state.isPc3Shown?"300%":"100%"}`, height:`${this.state.isPc3Shown?"90%":"70%"}`}} onClick={this.hideShowPc3}>
+              <img id="image3" src={`./${this.state.pc3}.jpg`} alt="Image 3" />
               <p id="description3" style={this.state.isPc3Shown?show:hide}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
