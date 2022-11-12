@@ -1,24 +1,28 @@
 body {
   text-align: center;
+  background-color:#d5bb9e;
 }
 
 #quote {
   height: 10%;
+  color: #192b08;
 }
 
 #header {
   height: 10%;
+  color: #192b08;
 }
 
 #tagline {
   height: 10%;
+  color: #192b08;
 }
 
 
 #pieces {
   display:flex;
   flex-direction: row;
-  height: 50%;
+  height: 45%;
   gap: 5px;
 }
   #piece1 {
@@ -27,7 +31,7 @@ body {
     width: 100%;
     height: 70%;
     transition: 1.5s;
-    background-color:rgb(228, 137, 53);
+    background-color: #F9F0F0;
   }
     #image1 {
       width: 100%;
@@ -42,7 +46,7 @@ body {
       flex-shrink: 70%;
       padding: auto;
       padding: 10% 5% 10% 5%;
-      color: rgb(41, 20, 2)
+      color: #192b08;
     }
   #piece2 {
     display:flex;
@@ -50,7 +54,7 @@ body {
     width: 100%;
     height: 70%;
     transition: 1.5s;
-    background-color:rgb(228, 137, 53);
+    background-color: #E5BABE;
   }
     #image2 {
       width: 100%;
@@ -65,7 +69,7 @@ body {
       flex-shrink: 70%;
       padding: auto;
       padding: 10% 5% 10% 5%;
-      color: rgb(41, 20, 2);
+      color: #192b08;
     }
   #piece3 {
     display:flex;
@@ -73,7 +77,7 @@ body {
     width: 100%;
     height: 70%;
     transition: 1.5s;
-    background-color:rgb(228, 137, 53);
+    background-color: #D1858C;
   }
     #image3 {
       width: 100%;
@@ -87,7 +91,7 @@ body {
       flex-grow: 0%;
       flex-shrink: 70%;
       padding: 10% 5% 10% 5%;
-      color: rgb(41, 20, 2);
+      color: #192b08;
     }
 
 #links {
@@ -99,7 +103,8 @@ body {
   width: 100%;
   justify-content: center;
   align-content: center;
-  background-color: rgb(228, 137, 53);
+  background-color: #AB7A7A;
+  color: #192b08;
   padding-right: 5px;
 }
 #email {
