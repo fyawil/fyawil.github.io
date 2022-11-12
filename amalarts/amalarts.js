@@ -120,8 +120,8 @@ class Links extends React.Component {
         return (
           <div>
               <div id="links">
-                <a href="mailto:fawil@live.co.uk" target="_blank" ><img id="email" src="./email.png" alt="Email" /></a>
-                <a href="tel:+4400000000000" target="_blank" ><img id="tel" src="./tel.png" alt="Telephone" /></a>
+                <a href="mailto:fawil@live.co.uk" target="_blank"><img id="email" src="./email.png" alt="Email" /></a>
+                <a href="tel:+4400000000000" target="_blank"><img id="tel" src="./tel.png" alt="Telephone" /></a>
               </div>
           </div>
 );

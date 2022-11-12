@@ -102,7 +102,6 @@ body {
   background-color: #AB7A7A;
   padding-right: 5px;
   display: flex;
-  flex-direction: row;
 }
 #email {
   height: 60%;
