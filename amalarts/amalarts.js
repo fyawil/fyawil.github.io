@@ -9,7 +9,7 @@ class AmalArts extends React.Component {
               <title>Amal Arts</title>
               <h3 id="quote"><em>"Happy little accidents" - Bob Ross</em></h3>
               <h1 id="header">Amal Arts</h1>
-              <p id="tagline"><em>Where the World's web views Wonders</em></p>
+              <p id="tagline"><em><strong>Where the World's web views Wonders</strong></em></p>
               <Pieces />
               <Links />
             </div>
@@ -51,6 +51,21 @@ class Pieces extends React.Component {
        });
   }
 
+  pieces = {
+    1: {
+      name: "Flower of Fire",
+      description: 
+      "Forged in fire, the flower brings out the feelings of growth, passion and persistence. It is a wonder, from death comes life",
+      price: "19.99"
+    },
+    2: {
+      name: "Sunset & Summer Scenes",
+      description: 
+      "The setting of the sun signifies serenity, soothing and separation from the toils of the day. Steeped in gratitude, one goes to sleep",
+      price: "24.99"
+    }
+  }
+
     render() {
 
       const hide = {
@@ -66,19 +81,28 @@ display: "none"
               <div id="piece1" style={{width:`${this.state.isPc1Shown?"300%":"100%"}`, height:`${this.state.isPc1Shown?"90%":"70%"}`}} onClick={this.hideShowPc1}>
               <img id="image1" src={`./${this.state.pc1}.jpg`} alt="Image 1" />
               <p id="description1" style={this.state.isPc1Shown?show:hide}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                {this.pieces[this.state.pc1].description}
+                <br></br>
+                <br></br>
+                {this.pieces[this.state.pc1].price}
               </p>
               </div>
               <div id="piece2" style={{width:`${this.state.isPc2Shown?"300%":"100%"}`, height:`${this.state.isPc2Shown?"90%":"70%"}`}} onClick={this.hideShowPc2}>
               <img id="image2" src={`./${this.state.pc2}.jpg`} alt="Image 2" />
               <p id="description2" style={this.state.isPc2Shown?show:hide}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                {this.pieces[this.state.pc2].description}  
+                <br></br>
+                <br></br>
+                {this.pieces[this.state.pc2].price}            
               </p>
               </div>
               <div id="piece3" style={{width:`${this.state.isPc3Shown?"300%":"100%"}`, height:`${this.state.isPc3Shown?"90%":"70%"}`}} onClick={this.hideShowPc3}>
               <img id="image3" src={`./${this.state.pc3}.jpg`} alt="Image 3" />
               <p id="description3" style={this.state.isPc3Shown?show:hide}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                {this.pieces[this.state.pc3].description}    
+                <br></br>
+                <br></br>
+                {this.pieces[this.state.pc3].price}          
               </p>
               </div>
             </div>
@@ -96,7 +120,8 @@ class Links extends React.Component {
         return (
           <div>
               <div id="links">
-                  <img id="email" src="./email.png" alt="Email" />
+                <a href="mailto:fawil@live.co.uk" target="_blank" ><img id="email" src="./email.png" alt="Email" /></a>
+                <a href="tel:+4400000000000" target="_blank" ><img id="tel" src="./tel.png" alt="Telephone" /></a>
               </div>
           </div>
 );
