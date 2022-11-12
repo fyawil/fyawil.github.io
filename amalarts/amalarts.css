@@ -45,6 +45,8 @@ body {
       flex-grow: 0%;
       flex-shrink: 70%;
       color: #1e3803;
+      font-weight: bold;
+      font-style: italic;
     }
   #piece2 {
     display:flex;
@@ -66,6 +68,8 @@ body {
       flex-grow: 0%;
       flex-shrink: 70%;
       color: #1e3803;
+      font-weight: bold;
+      font-style: italic;
     }
   #piece3 {
     display:flex;
@@ -88,6 +92,8 @@ body {
       flex-shrink: 70%;
       color: #1e3803;
       height: 50%;
+      font-weight: bold;
+      font-style: italic;
     }
 
 #links {
