@@ -55,7 +55,7 @@ class CustomerFocus extends React.Component {
 
     render() {
         return (
-          <div id="customer_focus" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.show}>
+          <div id="customer_focus" onClick={this.show}>
             {this.state.isShown?null:<h2>Food & Drink</h2>}
             {this.state.isShown?<p>Coming Soon</p>:null}
           </div>
@@ -84,7 +84,7 @@ class Automation extends React.Component {
 
     render() {
         return (
-          <div id="automation" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.show}>
+          <div id="automation" onClick={this.show}>
             {this.state.isShown?null:<h2>Fitness</h2>}
             {this.state.isShown?<div id="workout_generator"><WorkoutGenerator/></div>:null}
           </div>
@@ -128,7 +128,7 @@ class ValueChainManagement extends React.Component {
 
     render() {
         return (
-          <div id="value_chain_management" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.show}>
+          <div id="value_chain_management" onClick={this.show}>
             {this.state.isShown?null:<h2>Business</h2>}
             {this.state.isShown?<a href="./amalarts/amalarts.html"><h3>Amal Arts</h3></a>:null}
           </div>
@@ -183,20 +183,20 @@ class MyStory extends React.Component {
           <div id="my_story0">
             <h1>My Story</h1>
           </div>
-          <div id="my_story1" value="1" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "1"?null:<h3 onClick={this.show} id="my_story_header1">Parents exit Homeland</h3>}
+          <div id="my_story1">
+              {this.state.isShown == "1"?null:<h3 value="1" onClick={this.show} id="my_story_header1">Parents exit Homeland</h3>}
               {this.state.isShown == "1"?
-              <p id="my_story_content1">
+              <p onClick={this.hide} id="my_story_content1">
                 <strong>Parents exit Somalia (ca. 1990)</strong>
                 <br></br><br></br>
                 My parents left our homeland Somalia due to genocide, before the full-scale civil war broke out
               </p>:
               null}
           </div>
-          <div id="my_story2" value="2" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "2"?null:<h3 onClick={this.show} id="my_story_header2">Birth</h3>}
+          <div id="my_story2">
+              {this.state.isShown == "2"?null:<h3 value="2" onClick={this.show} id="my_story_header2">Birth</h3>}
               {this.state.isShown == "2"?
-              <p id="my_story_content2">
+              <p onClick={this.hide} id="my_story_content2">
                 <strong>Born in Aalborg, DK (1991)</strong>
                 <ul>
                   <li>Born to Fowzia Abdulle Mohamed and Yusuf Awil Dirir</li>
@@ -207,10 +207,10 @@ class MyStory extends React.Component {
               </p>:
               null}
           </div>
-          <div id="my_story3" value="3" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "3"?null:<h3 onClick={this.show} id="my_story_header3">GCSE's</h3>}
+          <div id="my_story3">
+              {this.state.isShown == "3"?null:<h3 value="3" onClick={this.show} id="my_story_header3">GCSE's</h3>}
               {this.state.isShown == "3"?
-              <div id="my_story_content3">
+              <div onClick={this.hide} id="my_story_content3">
                 <p><strong>GCSE's at Langleywood School, UK (2006-2007)</strong></p>
                 <table>
                   <tr>
@@ -253,10 +253,10 @@ class MyStory extends React.Component {
               </div>:
                 null}
           </div>
-          <div id="my_story4" value="4" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "4"?null:<h3 onClick={this.show} id="my_story_header4">GCE's</h3>}
+          <div id="my_story4">
+              {this.state.isShown == "4"?null:<h3 value="4" onClick={this.show} id="my_story_header4">GCE's</h3>}
               {this.state.isShown == "4"?
-              <div id="my_story_content4">
+              <div onClick={this.hide} id="my_story_content4">
                 <p><strong>GCE's at Slough Grammar School, UK (2007-2009)</strong></p>
                 <table>
                   <tr>
@@ -279,10 +279,10 @@ class MyStory extends React.Component {
               </div>:
               null}
           </div>
-          <div id="my_story5" value="5" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "5"?null:<h3 onClick={this.show} id="my_story_header5">Logistics</h3>}
+          <div id="my_story5">
+              {this.state.isShown == "5"?null:<h3 value="5" onClick={this.show} id="my_story_header5">Logistics</h3>}
               {this.state.isShown == "5"?
-              <p id="my_story_content5">
+              <p onClick={this.hide} id="my_story_content5">
                 <strong>Logistics at Royal Mail, UK (2011-2014)</strong>
                 <ul>
                   <li>Safety and security checks prevented accidents and theft</li>
@@ -293,10 +293,10 @@ class MyStory extends React.Component {
               </p>:
               null}
           </div>
-          <div id="my_story6" value="6" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "6"?null:<h3 onClick={this.show} id="my_story_header6">Value Chain Management BA</h3>}
+          <div id="my_story6">
+              {this.state.isShown == "6"?null:<h3 value="6" onClick={this.show} id="my_story_header6">Value Chain Management BA</h3>}
               {this.state.isShown == "6"?
-              <p id="my_story_content6">
+              <p onClick={this.hide} id="my_story_content6">
                 <strong>Value Chain Management BA at VIA University College, DK (2014-2018)</strong>
                 <ul>
                   <li>Studied and practised how to manage flow of communication, materials and funds</li>
@@ -307,10 +307,10 @@ class MyStory extends React.Component {
               </p>:
               null}
           </div>
-          <div id="my_story7" value="7" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "7"?null:<h3 onClick={this.show} id="my_story_header7">Business Analysis</h3>}
+          <div id="my_story7" >
+              {this.state.isShown == "7"?null:<h3 value="7" onClick={this.show} id="my_story_header7">Business Analysis</h3>}
               {this.state.isShown == "7"?
-              <p id="my_story_content7">
+              <p onClick={this.hide} id="my_story_content7">
                 <strong>Business Analysis at H.P. Industrial, DK (2016)</strong>
                 <ul>
                   <li>Visual Management reduced waste in physical processes</li>
@@ -321,10 +321,10 @@ class MyStory extends React.Component {
               </p>:
               null}
           </div>
-          <div id="my_story8" value="8" onClick={this.show} onMouseEnter={this.show} onMouseLeave={this.hide}>
-              {this.state.isShown == "8"?null:<h3 onClick={this.show} id="my_story_header8">Customer Service</h3>}
+          <div id="my_story8">
+              {this.state.isShown == "8"?null:<h3 value="8" onClick={this.show} id="my_story_header8">Customer Service</h3>}
               {this.state.isShown == "8"?
-              <p id="my_story_content8">
+              <p onClick={this.hide} id="my_story_content8">
                 <strong>Customer Service at Arvato, UK (2019-present)</strong>
                 <ul>
                   <li>High-performing, senior Customer Service Advisor</li>
@@ -334,6 +334,7 @@ class MyStory extends React.Component {
                 </ul>
                 </p>:
                 null}
+
           </div>         
 </div>
 );
