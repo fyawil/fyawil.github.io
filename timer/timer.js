@@ -64,7 +64,22 @@ class Timer extends React.Component {
     beepBeep.play();
 }
 
+    reset() {
+      clearInterval(this.myTimer);
+      this.setState({      
+        work: 0,
+        rest: 0,
+        rounds: 0,
+        isStarted: false,
+        seconds: 0,
+        isWork: false,
+        workSecsLeft: 0,
+        restSecsLeft: 0
+         });
+    }
+
     countDown() {
+      if(this.state.work > 0 && this.state.rest > 0 && this.state.rounds > 0){
         this.setState({      
         seconds: (this.state.work+this.state.rest) * this.state.rounds,
         isStarted: true,
@@ -92,7 +107,13 @@ class Timer extends React.Component {
             if(this.state.workSecsLeft == 0 || this.state.restSecsLeft == 0 && this.state.isStarted){this.beep()}
           }
 
-      , 1000)
+      , 1000)        
+      }
+      else {
+      alert("Work, Rest and Rounds must all be above 0...")        
+      }
+
+
     }
 
     play() {
@@ -122,19 +143,7 @@ class Timer extends React.Component {
         clearInterval(this.myTimer);
     }
 
-    reset() {
-      clearInterval(this.myTimer);
-      this.setState({      
-        work: 0,
-        rest: 0,
-        rounds: 0,
-        isStarted: false,
-        seconds: 0,
-        isWork: false,
-        workSecsLeft: 0,
-        restSecsLeft: 0
-         });
-    }
+
 
     render() {
 
