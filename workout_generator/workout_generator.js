@@ -145,62 +145,66 @@ document.getElementById("sun").checked
       Strength: {
         Hard:{
           Push: {
-            0:["Bench",	"Incline Bench", "Push Up"],
-            1:["Overhead Press"	,	"Rear Delt Fly"	,	"HSPU"	,	"Pike Push Up"],
-            2:["French Press"	,	"Skull Crusher"	,	"Dip"],
-            3:["Bench",	"Incline Bench", "Push Up"],
-            4:["Overhead Press"	,	"Rear Delt Fly"	,	"HSPU"	,	"Pike Push Up"]
+            0:	["Bench Press",	"Incline Bench Press"	,	"Push Up"],
+            1:	["Overhead Press"	,	"Rear Delt Fly"],				
+            2:	["Skull Crusher", "Dip"],								
+            3:	["Pause Overhead Press"],								
+            4:	["Pause Push Up"]								            
           },
           Pull: {
-            0:["Pull Up"	,	"Chin Up"],
-            1:["Bent Over Row"	,	"Ring Row"],
-            2:["Bicep Curl"	,	"Preacher Curl"],
-            3:["Pull Up"	,	"Chin Up"],
-            4:["Bent Over Row"	,	"Ring Row"]
+            0:	["Weighted Pull Up",	"Weighted Chin Up",	"Pull Up",	"Chin Up"],
+            1:	["Bent Over Row",	"Front Lever"],							
+            2:	["Bicep Curl",	"Preacher Curl"],							
+            3:	["Pause Pull Up",	"Pause Chin Up"],							
+            4:	["Chin Up Hold"]											
+            
           },
           Legs: {
-            0:["Squat"	,	"Pause Squat"],
-            1:["Dead Lift"	, "Lunge"],
-            2:["Squat"	,	"Pause Squat"],
-            3:["Dead Lift"	, "Lunge"],
-            4:["Squat"	,	"Pause Squat"]
+            0:	["Back Squat"],				
+            1:	["Deadlift",	"Lunge"],
+            2:	["Pause Squat"],				
+            3:	["Front Squat"],				
+            4:	["ATG Squat"]				            
           },
           Abs: {
-            0:["Leg Raise", "Crunch"],
-            1:["Deadbug"],
-            2:["Leg Raise", "Crunch"],
-            3:["Deadbug"],
-            4:["Leg Raise", "Deadbug", "Crunch"]
+            0:	["Leg Raise",	"Crunch",	"Dead Bug"],
+            1:	["Plank",	"Superman Hold"],				
+            2:	["Russian Twist"],								
+            3:	["Front Lever Hold"],								
+            4:	["V Up"]								
+            
           }
             },
             Easy:{
               Push: {
-                0:["Bench",	"Incline Bench", "Push Up"],
-                1:["Overhead Press"	,	"Lateral Raise"	,	"Pike Push Up"],
-                2:["Tricep Extensions"	,	"Bench Dip"],
-                3:["Bench",	"Incline Bench", "Push Up"],
-                4:["Overhead Press"	,	"Lateral Raise"	,	"Pike Push Up"]
+                0:	["Push Up",	"Incline Bench Press"],
+                1:	["Overhead Press"	,	"Pike Push Up"],				
+                2:	["Bench Dip"],								
+                3:	["Handstand Hold"],								
+                4:	["Knee Push Up"]								            
               },
               Pull: {
-                0:["Australian Pull Up"	,	"Australian Chin Up"],
-                1:["Bench Row"],
-                2:["Bicep Curl"	,	"Close Grip Chin Up Hold"],
-                3:["Australian Pull Up"	,	"Australian Chin Up"],
-                4:["Bench Row"],
+                0:	["Pull Up",	"Chin Up"],
+                1:	["Aussie Pull Up",	"Aussie Chin Up"],							
+                2:	["Bicep Curl"],							
+                3:	["Pull Up Hold"],							
+                4:	["Chin Up Hold"]											
+                
               },
               Legs: {
-                0:["Squat"	,	"Pause Squat"],
-                1:["Bridge"	, "Lunge"],
-                2:["Squat"	,	"Pause Squat"],
-                3:["Bridge"	, "Lunge"],
-                4:["Squat"	,	"Pause Squat"]
+                0:	["Back Squat"],				
+                1:	["Lunge"],
+                2:	["Pause Squat"],				
+                3:	["Jump Squat"],				
+                4:	["ATG Squat"]				            
               },
               Abs: {
-                0:["Leg Raise", "Deadbug", "Crunch"],
-                1:["Leg Raise", "Deadbug", "Crunch"],
-                2:["Leg Raise", "Deadbug", "Crunch"],
-                3:["Leg Raise", "Deadbug", "Crunch"],
-                4:["Leg Raise", "Deadbug", "Crunch"]
+                0:	["Knee Raise",	"Crunch"],
+                1:	["Plank"],				
+                2:	["Russian Twist"],								
+                3:	["Dead Bug"],								
+                4:	["Superman Hold"]								
+                
               }
                 }
       }
@@ -221,32 +225,130 @@ if(this.state.isStrength=="Strength"){
     
       case "is30mins": 
       template.push([
-        strengthExercises[this.state.isStrength][this.state.isHard][(i*2)<Object.keys(strengthMovements).length?strengthMovements[(i*2)]:strengthMovements[(i*2)%Object.keys(strengthMovements).length]]["0"][0],
-        strengthExercises[this.state.isStrength][this.state.isHard][((i*2)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*2)+1]:strengthMovements[((i*2)+1)%Object.keys(strengthMovements).length]]["1"][0],
+        strengthExercises[this.state.isStrength][this.state.isHard][(i*2)<Object.keys(strengthMovements).length?strengthMovements[(i*2)]:strengthMovements[(i*2)%Object.keys(strengthMovements).length]][
+          "0"][
+            i<strengthExercises[this.state.isStrength][this.state.isHard][(i*2)<Object.keys(strengthMovements).length?strengthMovements[(i*2)]:strengthMovements[(i*2)%Object.keys(strengthMovements).length]][
+              "0"].length?
+            i:
+            i%strengthExercises[this.state.isStrength][this.state.isHard][(i*2)<Object.keys(strengthMovements).length?strengthMovements[(i*2)]:strengthMovements[(i*2)%Object.keys(strengthMovements).length]][
+              "0"].length
+          ],
+        strengthExercises[this.state.isStrength][this.state.isHard][((i*2)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*2)+1]:strengthMovements[((i*2)+1)%Object.keys(strengthMovements).length]][
+          "1"][
+            (i+1)<strengthExercises[this.state.isStrength][this.state.isHard][((i*2)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*2)+1]:strengthMovements[((i*2)+1)%Object.keys(strengthMovements).length]][
+              "1"].length?
+            (i+1):
+            (i+1)%strengthExercises[this.state.isStrength][this.state.isHard][((i*2)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*2)+1]:strengthMovements[((i*2)+1)%Object.keys(strengthMovements).length]][
+              "1"].length
+          ],
         "","",""]);
       break;
       case "is45mins":
       template.push([
-        strengthExercises[this.state.isStrength][this.state.isHard][(i*3)<Object.keys(strengthMovements).length?strengthMovements[(i*3)]:strengthMovements[(i*3)%Object.keys(strengthMovements).length]]["0"][0],
-        strengthExercises[this.state.isStrength][this.state.isHard][((i*3)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*3)+1]:strengthMovements[((i*3)+1)%Object.keys(strengthMovements).length]]["1"][0],
-        strengthExercises[this.state.isStrength][this.state.isHard][((i*3)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*3)+2]:strengthMovements[((i*3)+2)%Object.keys(strengthMovements).length]]["2"][0],
+        strengthExercises[this.state.isStrength][this.state.isHard][(i*3)<Object.keys(strengthMovements).length?strengthMovements[(i*3)]:strengthMovements[(i*3)%Object.keys(strengthMovements).length]][
+          "0"][
+            i<strengthExercises[this.state.isStrength][this.state.isHard][(i*3)<Object.keys(strengthMovements).length?strengthMovements[(i*3)]:strengthMovements[(i*3)%Object.keys(strengthMovements).length]][
+              "0"].length?
+            i:
+            i%strengthExercises[this.state.isStrength][this.state.isHard][(i*3)<Object.keys(strengthMovements).length?strengthMovements[(i*3)]:strengthMovements[(i*3)%Object.keys(strengthMovements).length]][
+              "0"]
+          ],
+        strengthExercises[this.state.isStrength][this.state.isHard][((i*3)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*3)+1]:strengthMovements[((i*3)+1)%Object.keys(strengthMovements).length]][
+          "1"][
+            (i+1)<strengthExercises[this.state.isStrength][this.state.isHard][((i*3)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*3)+1]:strengthMovements[((i*3)+1)%Object.keys(strengthMovements).length]][
+              "1"].length?
+            (i+1):
+            (i+1)%strengthExercises[this.state.isStrength][this.state.isHard][((i*3)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*3)+1]:strengthMovements[((i*3)+1)%Object.keys(strengthMovements).length]][
+              "1"].length
+          ],
+        strengthExercises[this.state.isStrength][this.state.isHard][((i*3)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*3)+2]:strengthMovements[((i*3)+2)%Object.keys(strengthMovements).length]][
+          "2"][
+            (i+2)<strengthExercises[this.state.isStrength][this.state.isHard][((i*3)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*3)+2]:strengthMovements[((i*3)+2)%Object.keys(strengthMovements).length]][
+              "2"].length?
+            (i+2):
+            (i+2)%strengthExercises[this.state.isStrength][this.state.isHard][((i*3)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*3)+2]:strengthMovements[((i*3)+2)%Object.keys(strengthMovements).length]][
+              "2"].length
+          ],
         "",""]);
       break;
       case "is60mins":  
       template.push([
-        strengthExercises[this.state.isStrength][this.state.isHard][(i*4)<Object.keys(strengthMovements).length?strengthMovements[(i*4)]:strengthMovements[(i*4)%Object.keys(strengthMovements).length]]["0"][0],
-        strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+1]:strengthMovements[((i*4)+1)%Object.keys(strengthMovements).length]]["1"][0],
-        strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+2]:strengthMovements[((i*4)+2)%Object.keys(strengthMovements).length]]["2"][0],
-        strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+3)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+3]:strengthMovements[((i*4)+3)%Object.keys(strengthMovements).length]]["3"][0],
+        strengthExercises[this.state.isStrength][this.state.isHard][(i*4)<Object.keys(strengthMovements).length?strengthMovements[(i*4)]:strengthMovements[(i*4)%Object.keys(strengthMovements).length]][
+          "0"][
+            i<strengthExercises[this.state.isStrength][this.state.isHard][(i*4)<Object.keys(strengthMovements).length?strengthMovements[(i*4)]:strengthMovements[(i*4)%Object.keys(strengthMovements).length]][
+              "0"].length?
+            i:
+            i%strengthExercises[this.state.isStrength][this.state.isHard][(i*4)<Object.keys(strengthMovements).length?strengthMovements[(i*4)]:strengthMovements[(i*4)%Object.keys(strengthMovements).length]][
+              "0"].length
+          ],
+        strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+1]:strengthMovements[((i*4)+1)%Object.keys(strengthMovements).length]][
+          "1"][
+            (i+1)<strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+1]:strengthMovements[((i*4)+1)%Object.keys(strengthMovements).length]][
+              "1"].length?
+            (i+1):
+            (i+1)%strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+1]:strengthMovements[((i*4)+1)%Object.keys(strengthMovements).length]][
+              "1"].length
+          ],
+        strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+2]:strengthMovements[((i*4)+2)%Object.keys(strengthMovements).length]][
+          "2"][
+            (i+2)<strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+2]:strengthMovements[((i*4)+2)%Object.keys(strengthMovements).length]][
+              "2"].length?
+            (i+2):
+            (i+2)%strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+2]:strengthMovements[((i*4)+2)%Object.keys(strengthMovements).length]][
+              "2"].length
+          ],
+        strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+3)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+3]:strengthMovements[((i*4)+3)%Object.keys(strengthMovements).length]][
+          "3"][
+            (i+3)<strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+3)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+3]:strengthMovements[((i*4)+3)%Object.keys(strengthMovements).length]][
+              "3"].length?
+            (i+3):
+            (i+3)%strengthExercises[this.state.isStrength][this.state.isHard][((i*4)+3)<Object.keys(strengthMovements).length?strengthMovements[(i*4)+3]:strengthMovements[((i*4)+3)%Object.keys(strengthMovements).length]][
+              "3"].length
+          ],
         ""]);
       break;
       case "is75mins":  
       template.push([
-        strengthExercises[this.state.isStrength][this.state.isHard][(i*5)<Object.keys(strengthMovements).length?strengthMovements[(i*5)]:strengthMovements[(i*5)%Object.keys(strengthMovements).length]]["0"][0],
-        strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+1]:strengthMovements[((i*5)+1)%Object.keys(strengthMovements).length]]["1"][0],
-        strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+2]:strengthMovements[((i*5)+2)%Object.keys(strengthMovements).length]]["2"][0],
-        strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+3)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+3]:strengthMovements[((i*5)+3)%Object.keys(strengthMovements).length]]["3"][0], 
-        strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+4)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+4]:strengthMovements[((i*5)+4)%Object.keys(strengthMovements).length]]["4"][0]
+        strengthExercises[this.state.isStrength][this.state.isHard][(i*5)<Object.keys(strengthMovements).length?strengthMovements[(i*5)]:strengthMovements[(i*5)%Object.keys(strengthMovements).length]][
+          "0"][
+            i<strengthExercises[this.state.isStrength][this.state.isHard][(i*5)<Object.keys(strengthMovements).length?strengthMovements[(i*5)]:strengthMovements[(i*5)%Object.keys(strengthMovements).length]][
+              "0"].length?
+            i:
+            i%strengthExercises[this.state.isStrength][this.state.isHard][(i*5)<Object.keys(strengthMovements).length?strengthMovements[(i*5)]:strengthMovements[(i*5)%Object.keys(strengthMovements).length]][
+              "0"].length
+          ],
+        strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+1]:strengthMovements[((i*5)+1)%Object.keys(strengthMovements).length]][
+          "1"][
+            (i+1)<strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+1]:strengthMovements[((i*5)+1)%Object.keys(strengthMovements).length]][
+              "1"].length?
+            (i+1):
+            (i+1)%strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+1)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+1]:strengthMovements[((i*5)+1)%Object.keys(strengthMovements).length]][
+              "1"].length
+          ],
+        strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+2]:strengthMovements[((i*5)+2)%Object.keys(strengthMovements).length]][
+          "2"][
+            (i+2)<strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+2]:strengthMovements[((i*5)+2)%Object.keys(strengthMovements).length]][
+              "2"].length?
+            (i+2):
+            (i+2)%strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+2)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+2]:strengthMovements[((i*5)+2)%Object.keys(strengthMovements).length]][
+              "2"].length
+          ],
+        strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+3)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+3]:strengthMovements[((i*5)+3)%Object.keys(strengthMovements).length]][
+          "3"][
+            (i+3)<strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+3)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+3]:strengthMovements[((i*5)+3)%Object.keys(strengthMovements).length]][
+              "3"].length?
+            (i+3):
+            (i+3)%strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+3)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+3]:strengthMovements[((i*5)+3)%Object.keys(strengthMovements).length]][
+              "3"].length
+          ], 
+        strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+4)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+4]:strengthMovements[((i*5)+4)%Object.keys(strengthMovements).length]][
+          "4"][
+            (i+4)<strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+4)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+4]:strengthMovements[((i*5)+4)%Object.keys(strengthMovements).length]][
+              "4"].length?
+            (i+4):
+            (i+4)%strengthExercises[this.state.isStrength][this.state.isHard][((i*5)+4)<Object.keys(strengthMovements).length?strengthMovements[(i*5)+4]:strengthMovements[((i*5)+4)%Object.keys(strengthMovements).length]][
+              "4"].length
+          ]
       ]);
       break;
       }} 
