@@ -10,6 +10,7 @@ body {
                          "schedulecontainer schedulecontainer";
     text-align: center;
     gap: 5px;
+    height: 100%;
 }
 
 #generator {

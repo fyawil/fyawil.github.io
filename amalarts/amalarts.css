@@ -5,17 +5,17 @@ body {
 
 #quote {
   height: 10%;
-  color: #1e3803;
+  color: black;
 }
 
 #header {
   height: 10%;
-  color: #1e3803;
+  color: black;
 }
 
 #tagline {
   height: 10%;
-  color: #1e3803;
+  color: black;
 }
 
 
@@ -25,13 +25,13 @@ body {
   height: 45%;
   gap: 5px;
 }
+
   #piece1 {
     display:flex;
     flex-direction: row;
     width: 100%;
     height: 70%;
     transition: 1.5s;
-    background-color: #F9F0F0;
   }
     #image1 {
       width: 100%;
@@ -94,6 +94,17 @@ body {
       height: 50%;
       font-weight: bold;
       font-style: italic;
+    }
+  
+  #nav_pcs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .nav_pcs_button {
+      color: #D1858C;
+      font-weight: bolder;
+      background-color: black;
     }
 
 #links {
