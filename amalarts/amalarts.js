@@ -57,7 +57,7 @@ class Pieces extends React.Component {
     1: {
       name: "Flower of Fire",
       description: 
-      "Forged in fire, the flower brings out the feelings of growth, passion and persistence. It is a wonder, from death comes life",
+      "Forged in fire, the flower brings out the feelings of growth, passion and persistence. It is a wonder...from death comes life",
       price: "19.99"
     },
     2: {
@@ -105,6 +105,8 @@ display: "none"
                 {`£${this.pieces[this.state.pc1].price}`} 
               </p>
               </div>
+
+              {window.innerWidth > 414 &&
               <div id="piece2" style={{width:`${this.state.isPc2Shown?"300%":"100%"}`, height:`${this.state.isPc2Shown?"90%":"70%"}`}} onClick={this.hideShowPc2}>
               <img id="image2" src={`./${this.state.pc2}.jpg`} alt="Image 2" />
               <p id="description2" style={this.state.isPc2Shown?show:hide}>
@@ -114,7 +116,9 @@ display: "none"
                 {`£${this.pieces[this.state.pc2].price}`}            
               </p>
               </div>
-              <div id="piece3" style={{width:`${this.state.isPc3Shown?"300%":"100%"}`, height:`${this.state.isPc3Shown?"90%":"70%"}`}} onClick={this.hideShowPc3}>
+              }
+
+              {window.innerWidth > 414 && <div id="piece3" style={{width:`${this.state.isPc3Shown?"300%":"100%"}`, height:`${this.state.isPc3Shown?"90%":"70%"}`}} onClick={this.hideShowPc3}>
               <img id="image3" src={`./${this.state.pc3}.jpg`} alt="Image 3" />
               <p id="description3" style={this.state.isPc3Shown?show:hide}>
                 {this.pieces[this.state.pc3].description}    
@@ -123,10 +127,11 @@ display: "none"
                 {`£${this.pieces[this.state.pc3].price}`}      
               </p>
               </div>
+              }
             </div>
             <div id="nav_pcs">
-              <div id="prev"><button className="nav_pcs_button" onClick={this.navPcsLeft}>{"<"}</button><h3>Previous</h3></div>
-              <div id="next"><button className="nav_pcs_button" onClick={this.navPcsRight}>{">"}</button><h3>Next</h3></div>  
+              <div id="prev"><button className="nav_pcs_button" onClick={this.navPcsLeft}>{"<"}</button><strong className="nav_labels"> Previous</strong></div>
+              <div id="next"><strong className="nav_labels">Next </strong><button className="nav_pcs_button" onClick={this.navPcsRight}>{">"}</button></div>  
             </div>         
           </div>
 );
