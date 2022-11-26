@@ -1,6 +1,10 @@
 body {
   background-color: rgb(228, 137, 53);
 }
+a:visited, a {
+  color: rgb(228, 137, 53);
+  text-decoration: none;
+}
 
   #main_page {
     display: grid;
