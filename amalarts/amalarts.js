@@ -86,7 +86,7 @@ class Pieces extends React.Component {
     render() {
 
       const hide = {
-display: "none"
+        display: "none"
       }
       const show = {
         display: "block"
@@ -95,7 +95,19 @@ display: "none"
         return (
           <div>
             <div id="pieces">
+            {window.innerWidth <= 414 &&
+              <div id="piece1" onClick={this.hideShowPc1}>
+              <img id="image1" style={this.state.isPc1Shown?hide:show} src={`./${this.state.pc1}.jpg`} alt="Image 1" />
+              <p id="description1" style={this.state.isPc1Shown?show:hide}>
+                {this.pieces[this.state.pc1].description}
+                <br></br>
+                <br></br>
+                {`£${this.pieces[this.state.pc1].price}`} 
+              </p>
+              </div>
+              }
 
+              {window.innerWidth > 414 &&
               <div id="piece1" style={{width:`${this.state.isPc1Shown?"300%":"100%"}`, height:`${this.state.isPc1Shown?"90%":"70%"}`}} onClick={this.hideShowPc1}>
               <img id="image1" src={`./${this.state.pc1}.jpg`} alt="Image 1" />
               <p id="description1" style={this.state.isPc1Shown?show:hide}>
@@ -105,6 +117,7 @@ display: "none"
                 {`£${this.pieces[this.state.pc1].price}`} 
               </p>
               </div>
+              }
 
               {window.innerWidth > 414 &&
               <div id="piece2" style={{width:`${this.state.isPc2Shown?"300%":"100%"}`, height:`${this.state.isPc2Shown?"90%":"70%"}`}} onClick={this.hideShowPc2}>
@@ -132,7 +145,7 @@ display: "none"
             <div id="nav_pcs">
               <div id="prev"><button className="nav_pcs_button" onClick={this.navPcsLeft}>{"<"}</button><strong className="nav_labels"> Previous</strong></div>
               <div id="next"><strong className="nav_labels">Next </strong><button className="nav_pcs_button" onClick={this.navPcsRight}>{">"}</button></div>  
-            </div>         
+            </div>       
           </div>
 );
     }
