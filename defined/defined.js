@@ -48,7 +48,7 @@ class VoiceOfTheCustomer extends React.Component {
     return (
     <div>
       <input type="text" placeholder="What does the customer want?" onChange={this.handleChangePara} onKeyDown={this.handleKeyDown}></input>
-      <Roots rootOfQuality={this.state.parameters} />
+      <Roots rootOfQuality={this.state.parameters} para={this.state.para} />
     </div>
     )
 }
@@ -61,7 +61,7 @@ class Roots extends React.Component {
     super(props);
 
     this.state = {
-      elaboration: "",
+      elabo: "",
       elaborations: []
     }
 
@@ -78,14 +78,27 @@ class Roots extends React.Component {
 
   handleKeyDown(event) {
     if (event.key == 'Enter') {
-      this.addElabo();
+      this.addElabo(event.target.id == "firstLevelOneFactor"?
+                    this.props.rootOfQuality[0]:
+                    event.target.id == "secondLevelOneFactor"?
+                    this.props.rootOfQuality[1]:
+                    event.target.id == "thirdLevelOneFactor"?
+                    this.props.rootOfQuality[2]:
+                    event.target.id == "fourthLevelOneFactor"?
+                    this.props.rootOfQuality[3]:
+                    event.target.id == "fifthLevelOneFactor"?
+                    this.props.rootOfQuality[4]:
+                    "Factor does not exist...");  
+      this.setState({
+                elabo: ""
+                    })
     }
   }
 
-  addElabo() {
+  addElabo(levelOneFactor) {
     if(this.state.elabo != this.state.elaborations[this.state.elaborations.length - 1]){
     this.setState({
-      elaborations: [...this.state.elaborations, this.state.elabo]
+      elaborations: [...this.state.elaborations, [levelOneFactor, this.state.elabo]]
     })      
     }
 
@@ -101,8 +114,10 @@ class Roots extends React.Component {
           {this.props.rootOfQuality.length >= 1 && 
           <div>
             <h2>{this.props.rootOfQuality[0]}</h2> 
-            <input type="text" placeholder={`How could '${this.props.rootOfQuality[0]}' be achieved?`} 
+            <input type="text" id="firstLevelOneFactor" 
+            placeholder={`How could '${this.props.rootOfQuality[0]}' be achieved?`} 
             onChange={this.handleChangeElabo} onKeyDown={this.handleKeyDown}></input> 
+            <h3>{}</h3>
           </div>
           }
         </div>
@@ -110,7 +125,8 @@ class Roots extends React.Component {
           {this.props.rootOfQuality.length >= 2 && 
           <div>
             <h2>{this.props.rootOfQuality[1]}</h2> 
-            <input type="text" placeholder={`How could '${this.props.rootOfQuality[1]}' be achieved?`} 
+            <input type="text" id="secondLevelOneFactor" 
+            placeholder={`How could '${this.props.rootOfQuality[1]}' be achieved?`} 
             onChange={this.handleChangeElabo} onKeyDown={this.handleKeyDown}></input> 
           </div>
           }
@@ -119,7 +135,8 @@ class Roots extends React.Component {
           {this.props.rootOfQuality.length >= 3 && 
           <div>
             <h2>{this.props.rootOfQuality[2]}</h2> 
-            <input type="text" placeholder={`How could '${this.props.rootOfQuality[2]}' be achieved?`} 
+            <input type="text" id="thirdLevelOneFactor" 
+            placeholder={`How could '${this.props.rootOfQuality[2]}' be achieved?`} 
             onChange={this.handleChangeElabo} onKeyDown={this.handleKeyDown}></input> 
           </div>
           }
@@ -128,7 +145,8 @@ class Roots extends React.Component {
           {this.props.rootOfQuality.length >= 4 && 
           <div>
             <h2>{this.props.rootOfQuality[3]}</h2> 
-            <input type="text" placeholder={`How could '${this.props.rootOfQuality[3]}' be achieved?`} 
+            <input type="text" id="fourthLevelOneFactor"
+            placeholder={`How could '${this.props.rootOfQuality[3]}' be achieved?`} 
             onChange={this.handleChangeElabo} onKeyDown={this.handleKeyDown}></input> 
           </div>
           }
@@ -137,7 +155,8 @@ class Roots extends React.Component {
           {this.props.rootOfQuality.length >= 5 && 
           <div>
             <h2>{this.props.rootOfQuality[4]}</h2> 
-            <input type="text" placeholder={`How could '${this.props.rootOfQuality[4]}' be achieved?`} 
+            <input type="text" id="fifthLevelOneFactor"
+            placeholder={`How could '${this.props.rootOfQuality[4]}' be achieved?`} 
             onChange={this.handleChangeElabo} onKeyDown={this.handleKeyDown}></input> 
           </div>
           }
@@ -145,7 +164,7 @@ class Roots extends React.Component {
       </div>
 
       <div>
-      <Branches elaborations= {this.state.elaborations}/>
+      <Branches elaborations= {this.state.elaborations} rootOfQuality= {this.props.rootOfQuality}/>
       </div>
 
       </div>
@@ -160,9 +179,35 @@ class Branches extends React.Component {
 
 
   render(){
+
+    let firstFactorElabos = [...this.props.elaborations]
+                            .filter(elabo => elabo[0] == this.props.rootOfQuality[0])
+                            .map(elabo => elabo[1])
+                            .join(" ")
+    let secondFactorElabos = [...this.props.elaborations]
+                            .filter(elabo => elabo[0] == this.props.rootOfQuality[1])
+                            .map(elabo => elabo[1])
+                            .join(" ")
+    let thirdFactorElabos = [...this.props.elaborations]
+                            .filter(elabo => elabo[0] == this.props.rootOfQuality[2])
+                            .map(elabo => elabo[1])
+                            .join(" ");
+    let fourthFactorElabos = [...this.props.elaborations]
+                            .filter(elabo => elabo[0] == this.props.rootOfQuality[3])
+                            .map(elabo => elabo[1])
+                            .join(" ")
+    let fifthFactorElabos = [...this.props.elaborations]
+                            .filter(elabo => elabo[0] == this.props.rootOfQuality[4])
+                            .map(elabo => elabo[1])
+                            .join(" ")
+
     return (
       <div>
-        <h3>{this.props.elaborations.join(" ")}</h3>
+        <h3>{firstFactorElabos}</h3>
+        <h3>{secondFactorElabos}</h3>
+        <h3>{thirdFactorElabos}</h3>
+        <h3>{fourthFactorElabos}</h3>
+        <h3>{fifthFactorElabos}</h3>
       </div>
     )
   }
