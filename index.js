@@ -100,8 +100,8 @@ class WorkoutGenerator extends React.Component {
     render() {
         return (
           <div id="workout_generator">
-            <a href="./workout_generator/workout_generator.html"><h3>Workout Generator</h3></a>
-            <a href="./timer/timer.html"><h3>Timer</h3></a>
+            <a href="./workout_generator.html"><h3>Workout Generator</h3></a>
+            <a href="./timer.html"><h3>Timer</h3></a>
           </div>
 );
     }
@@ -132,8 +132,8 @@ class ValueChainManagement extends React.Component {
             {this.state.isShown?null:<h2>Business</h2>}
             {this.state.isShown?
             <div>
-            <a href="./amalarts/amalarts.html"><h3>Amal Arts</h3></a>
-            <a href="./defined/defined.html"><h3>Defined</h3></a>
+            <a href="./amalarts.html"><h3>Amal Arts</h3></a>
+            <a href="./defined.html"><h3>Defined</h3></a>
             </div>
             :null}
           </div>
