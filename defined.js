@@ -5,50 +5,50 @@ class Defined extends React.Component {
 
 render(){
         return (
-            <div>
-              <h1>Defined</h1>
-              <VoiceOfTheCustomer />
+            <div id="main">
+              <h1 id="header">Defined</h1>
+              <Level1Definition/>
             </div>
 );
     }
   }
 
-class VoiceOfTheCustomer extends React.Component {
+class Level1Definition extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      para: "",
-      parameters: []
+      level1QualityPara: "",
+      level1QualityParameters: []
     };
 
-    this.handleChangePara = this.handleChangePara.bind(this);
+    this.handleChangeLevel1QualityPara = this.handleChangeLevel1QualityPara.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this)
-    this.addPara = this.addPara.bind(this);
+    this.addLevel1QualityPara = this.addLevel1QualityPara.bind(this);
   }
 
-  handleChangePara(event) {
+  handleChangeLevel1QualityPara(event) {
     this.setState({
-      para: event.target.value
+      level1QualityPara: event.target.value
     })
   }
 
   handleKeyDown(event) {
     if (event.key == 'Enter') {
-      this.addPara();
+      this.addLevel1QualityPara();
     }
   }
 
-  addPara() {
+  addLevel1QualityPara() {
     this.setState({
-      parameters: [...this.state.parameters, this.state.para]
+      level1QualityParameters: [...this.state.level1QualityParameters, this.state.level1QualityPara]
     })
   }
   
   render(){
     return (
-    <div>
-      <input type="text" placeholder="What does the customer want?" onChange={this.handleChangePara} onKeyDown={this.handleKeyDown}></input>
-      <Roots rootOfQuality={this.state.parameters} para={this.state.para} />
+    <div id="level1def">
+      <input id="level1definer" type="text" placeholder="What does the customer want?" onChange={this.handleChangeLevel1QualityPara} onKeyDown={this.handleKeyDown}></input>
+      <Level2Definition level1QualityParameters={this.state.level1QualityParameters} level1QualityPara={this.state.level1QualityPara} />
     </div>
     )
 }
@@ -56,49 +56,49 @@ class VoiceOfTheCustomer extends React.Component {
 
 }
 
-class Roots extends React.Component {
+class Level2Definition extends React.Component {
   constructor(props){
     super(props);
 
     this.state = {
-      elabo: "",
-      elaborations: []
+      level2QualityPara: "",
+      level2QualityParameters: []
     }
 
-    this.handleChangeElabo = this.handleChangeElabo.bind(this);
+    this.handleChangeLevel2QualityPara = this.handleChangeLevel2QualityPara.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this)
-    this.addElabo = this.addElabo.bind(this);
+    this.addlevel2QualityPara = this.addlevel2QualityPara.bind(this);
   }
 
-  handleChangeElabo(event) {
+  handleChangeLevel2QualityPara(event) {
     this.setState({
-      elabo: event.target.value
+      level2QualityPara: event.target.value
     })
   }
 
   handleKeyDown(event) {
     if (event.key == 'Enter') {
-      this.addElabo(event.target.id == "firstLevelOneFactor"?
-                    this.props.rootOfQuality[0]:
-                    event.target.id == "secondLevelOneFactor"?
-                    this.props.rootOfQuality[1]:
-                    event.target.id == "thirdLevelOneFactor"?
-                    this.props.rootOfQuality[2]:
-                    event.target.id == "fourthLevelOneFactor"?
-                    this.props.rootOfQuality[3]:
-                    event.target.id == "fifthLevelOneFactor"?
-                    this.props.rootOfQuality[4]:
-                    "Factor does not exist...");  
+      this.addlevel2QualityPara(event.target.id == "firstLevel1QualityParameterDefiner"?
+                    this.props.level1QualityParameters[0]:
+                    event.target.id == "secondLevel1QualityParameterDefiner"?
+                    this.props.level1QualityParameters[1]:
+                    event.target.id == "thirdLevel1QualityParameterDefiner"?
+                    this.props.level1QualityParameters[2]:
+                    event.target.id == "fourthLevel1QualityParameterDefiner"?
+                    this.props.level1QualityParameters[3]:
+                    event.target.id == "fifthLevel1QualityParameterDefiner"?
+                    this.props.level1QualityParameters[4]:
+                    "Quality parameter does not exist...");  
       this.setState({
-                elabo: ""
+                level2QualityPara: ""
                     })
     }
   }
 
-  addElabo(levelOneFactor) {
-    if(this.state.elabo != this.state.elaborations[this.state.elaborations.length - 1]){
+  addlevel2QualityPara(level1QualityPara) {
+    if(this.state.level2QualityPara != this.state.level2QualityParameters[this.state.level2QualityParameters.length - 1]){
     this.setState({
-      elaborations: [...this.state.elaborations, [levelOneFactor, this.state.elabo]]
+      level2QualityParameters: [...this.state.level2QualityParameters, [level1QualityPara, this.state.level2QualityPara]]
     })      
     }
 
@@ -107,64 +107,63 @@ class Roots extends React.Component {
 
   render(){
     return (
-      <div>
+      <div id="level2def">
 
       <div>
         <div>
-          {this.props.rootOfQuality.length >= 1 && 
+          {this.props.level1QualityParameters.length >= 1 && 
           <div>
-            <h2>{this.props.rootOfQuality[0]}</h2> 
-            <input type="text" id="firstLevelOneFactor" 
-            placeholder={`How could '${this.props.rootOfQuality[0]}' be achieved?`} 
-            onChange={this.handleChangeElabo} onKeyDown={this.handleKeyDown}></input> 
-            <h3>{}</h3>
+            <h2 id="firstLevel1QualityParameter">{this.props.level1QualityParameters[0]}</h2> 
+            <input type="text" id="firstLevel1QualityParameterDefiner" 
+            placeholder={`How could '${this.props.level1QualityParameters[0]}' be achieved?`} 
+            onChange={this.handleChangeLevel2QualityPara} onKeyDown={this.handleKeyDown}></input> 
           </div>
           }
         </div>
         <div>
-          {this.props.rootOfQuality.length >= 2 && 
+          {this.props.level1QualityParameters.length >= 2 && 
           <div>
-            <h2>{this.props.rootOfQuality[1]}</h2> 
-            <input type="text" id="secondLevelOneFactor" 
-            placeholder={`How could '${this.props.rootOfQuality[1]}' be achieved?`} 
-            onChange={this.handleChangeElabo} onKeyDown={this.handleKeyDown}></input> 
+            <h2 id="secondLevel1QualityParameter">{this.props.level1QualityParameters[1]}</h2> 
+            <input type="text" id="secondLevel1QualityParameterDefiner" 
+            placeholder={`How could '${this.props.level1QualityParameters[1]}' be achieved?`} 
+            onChange={this.handleChangeLevel2QualityPara} onKeyDown={this.handleKeyDown}></input> 
           </div>
           }
         </div>
         <div>
-          {this.props.rootOfQuality.length >= 3 && 
+          {this.props.level1QualityParameters.length >= 3 && 
           <div>
-            <h2>{this.props.rootOfQuality[2]}</h2> 
-            <input type="text" id="thirdLevelOneFactor" 
-            placeholder={`How could '${this.props.rootOfQuality[2]}' be achieved?`} 
-            onChange={this.handleChangeElabo} onKeyDown={this.handleKeyDown}></input> 
+            <h2 id="thirdLevel1QualityParameter">{this.props.level1QualityParameters[2]}</h2> 
+            <input type="text" id="thirdLevel1QualityParameterDefiner" 
+            placeholder={`How could '${this.props.level1QualityParameters[2]}' be achieved?`} 
+            onChange={this.handleChangeLevel2QualityPara} onKeyDown={this.handleKeyDown}></input> 
           </div>
           }
         </div>
         <div>
-          {this.props.rootOfQuality.length >= 4 && 
+          {this.props.level1QualityParameters.length >= 4 && 
           <div>
-            <h2>{this.props.rootOfQuality[3]}</h2> 
-            <input type="text" id="fourthLevelOneFactor"
-            placeholder={`How could '${this.props.rootOfQuality[3]}' be achieved?`} 
-            onChange={this.handleChangeElabo} onKeyDown={this.handleKeyDown}></input> 
+            <h2 id="fourthLevel1QualityParameter">{this.props.level1QualityParameters[3]}</h2> 
+            <input type="text" id="fourthLevel1QualityParameterDefiner"
+            placeholder={`How could '${this.props.level1QualityParameters[3]}' be achieved?`} 
+            onChange={this.handleChangeLevel2QualityPara} onKeyDown={this.handleKeyDown}></input> 
           </div>
           }
         </div>
         <div>
-          {this.props.rootOfQuality.length >= 5 && 
+          {this.props.level1QualityParameters.length >= 5 && 
           <div>
-            <h2>{this.props.rootOfQuality[4]}</h2> 
-            <input type="text" id="fifthLevelOneFactor"
-            placeholder={`How could '${this.props.rootOfQuality[4]}' be achieved?`} 
-            onChange={this.handleChangeElabo} onKeyDown={this.handleKeyDown}></input> 
+            <h2 id="fifthLevel1QualityParameter">{this.props.level1QualityParameters[4]}</h2> 
+            <input type="text" id="fifthLevel1QualityParameterDefiner"
+            placeholder={`How could '${this.props.level1QualityParameters[4]}' be achieved?`} 
+            onChange={this.handleChangeLevel2QualityPara} onKeyDown={this.handleKeyDown}></input> 
           </div>
           }
         </div>
       </div>
 
       <div>
-      <Branches elaborations= {this.state.elaborations} rootOfQuality= {this.props.rootOfQuality}/>
+      <Level2Parameters level2QualityParameters= {this.state.level2QualityParameters} level1QualityParameters= {this.props.level1QualityParameters}/>
       </div>
 
       </div>
@@ -172,7 +171,7 @@ class Roots extends React.Component {
   }
 }
 
-class Branches extends React.Component {
+class Level2Parameters extends React.Component {
   constructor(props){
     super(props)
   }
@@ -180,34 +179,47 @@ class Branches extends React.Component {
 
   render(){
 
-    let firstFactorElabos = [...this.props.elaborations]
-                            .filter(elabo => elabo[0] == this.props.rootOfQuality[0])
-                            .map(elabo => elabo[1])
+    let firstLevel1QualityParametersLevel2Parameters = [...this.props.level2QualityParameters]
+                            .filter(level2QualityPara => level2QualityPara[0] == this.props.level1QualityParameters[0])
+                            .map(level2QualityPara => level2QualityPara[1])
                             .join(" ")
-    let secondFactorElabos = [...this.props.elaborations]
-                            .filter(elabo => elabo[0] == this.props.rootOfQuality[1])
-                            .map(elabo => elabo[1])
+    let secondLevel2QualityParametersLevel2Parameters = [...this.props.level2QualityParameters]
+                            .filter(level2QualityPara => level2QualityPara[0] == this.props.level1QualityParameters[1])
+                            .map(level2QualityPara => level2QualityPara[1])
                             .join(" ")
-    let thirdFactorElabos = [...this.props.elaborations]
-                            .filter(elabo => elabo[0] == this.props.rootOfQuality[2])
-                            .map(elabo => elabo[1])
+    let thirdLevel1QualityParametersLevel2Parameters = [...this.props.level2QualityParameters]
+                            .filter(level2QualityPara => level2QualityPara[0] == this.props.level1QualityParameters[2])
+                            .map(level2QualityPara => level2QualityPara[1])
                             .join(" ");
-    let fourthFactorElabos = [...this.props.elaborations]
-                            .filter(elabo => elabo[0] == this.props.rootOfQuality[3])
-                            .map(elabo => elabo[1])
+    let fourthLevel1QualityParametersLevel2Parameters = [...this.props.level2QualityParameters]
+                            .filter(level2QualityPara => level2QualityPara[0] == this.props.level1QualityParameters[3])
+                            .map(level2QualityPara => level2QualityPara[1])
                             .join(" ")
-    let fifthFactorElabos = [...this.props.elaborations]
-                            .filter(elabo => elabo[0] == this.props.rootOfQuality[4])
-                            .map(elabo => elabo[1])
+    let fifthLevel1QualityParametersLevel2Parameters = [...this.props.level2QualityParameters]
+                            .filter(level2QualityPara => level2QualityPara[0] == this.props.level1QualityParameters[4])
+                            .map(level2QualityPara => level2QualityPara[1])
                             .join(" ")
 
     return (
-      <div>
-        <h3>{firstFactorElabos}</h3>
-        <h3>{secondFactorElabos}</h3>
-        <h3>{thirdFactorElabos}</h3>
-        <h3>{fourthFactorElabos}</h3>
-        <h3>{fifthFactorElabos}</h3>
+      <div id="level2paras">
+        <h3 id="firstLevel1QualityParametersLevel2Parameters">{firstLevel1QualityParametersLevel2Parameters}</h3>
+        <h3 id="secondLevel2QualityParametersLevel2Parameters">{secondLevel2QualityParametersLevel2Parameters}</h3>
+        <h3 id="thirdLevel1QualityParametersLevel2Parameters">{thirdLevel1QualityParametersLevel2Parameters}</h3>
+        <h3 id="fourthLevel1QualityParametersLevel2Parameters">{fourthLevel1QualityParametersLevel2Parameters}</h3>
+        <h3 id="fifthLevel1QualityParametersLevel2Parameters">{fifthLevel1QualityParametersLevel2Parameters}</h3>
+        <Level3Parameters/>
+      </div>
+    )
+  }
+}
+
+class Level3Parameters extends React.Component {
+  constructor(props){
+    super(props)
+  }
+  render(){
+    return (
+      <div id="level3paras">
       </div>
     )
   }
