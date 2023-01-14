@@ -1,119 +1,50 @@
 body {
+    background-color: rgb(20, 22, 139); 
     height: 97.5%;
     width: 97.5%;
-    background-color: rgb(20, 22, 139);    
-}
-#main {
-    display: grid;
-    grid-template-areas: 
-    "header . . . ."
-    "level1def level1def level1def level1def level1def";
-    grid-template-rows: 10% 90%;
-    text-align: center;
-
     color: white;
 }
-
-#header {
-    grid-area: header;
+input {
+    border-radius: 5px;    
 }
 
-#level1def {
-    grid-area: level1def;
-    display: grid;
+#levels {
+    grid-area: levels;
     grid-template-areas: 
     "level1definer"
-    "level2def";
+    "level1andlevel2andlevel3";
+    grid-template-rows: 20% 80%;
 }
 
 #level1definer {
     grid-area: level1definer;
+    text-align: center;
 }
-input {
+#level1definer > input {
+    width: 60%;
     height: 30px;
-    width: 240px;
 }
 
-#level2def {
-    grid-area: level2def;
+
+#level1andlevel2andlevel3 {
+    grid-area: level1andlevel2andlevel3;
     display: grid;
-    grid-template-areas: 
-    "firstLevel1QualityParameter level2paras"
-    "firstLevel1QualityParameterDefiner level2paras"
-    "secondLevel1QualityParameter level2paras"
-    "secondLevel1QualityParameterDefiner level2paras"
-    "thirdLevel1QualityParameter level2paras"
-    "thirdLevel1QualityParameterDefiner level2paras"
-    "fourthLevel1QualityParameter level2paras"
-    "fourthLevel1QualityParameterDefiner level2paras"
-    "fifthLevel1QualityParameter level2paras"
-    "fifthLevel1QualityParameterDefiner level2paras";
+    grid-template-areas: "level1paras level2andlevel3";
     grid-template-columns: 33% 67%;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+#level1paras {
+    grid-area: level1paras;
 }
 
-#firstLevel1QualityParameter {
-    grid-area: firstLevel1QualityParameter;
+#level2andlevel3 {
+    grid-area: level2andlevel3;
+    display: grid;
+    grid-template-areas: "level2paras level3paras";
+    grid-template-columns: 50% 50%;
 }
-#firstLevel1QualityParameterDefiner {
-    grid-area: firstLevel1QualityParameterDefiner;
-}
-
-#secondLevel1QualityParameter {
-    grid-area: firstLevel1QualityParameter;
-}
-#secondLevel1QualityParameterDefiner {
-    grid-area: firstLevel1QualityParameterDefiner;
-}
-
-#thirdLevel1QualityParameter {
-    grid-area: firstLevel1QualityParameter;
-}
-#thirdLevel1QualityParameterDefiner {
-    grid-area: firstLevel1QualityParameterDefiner;
-}
-
-#fourthLevel1QualityParameter {
-    grid-area: firstLevel1QualityParameter;
-}
-#fourthLevel1QualityParameterDefiner {
-    grid-area: firstLevel1QualityParameterDefiner;
-}
-
-#fifthLevel1QualityParameter {
-    grid-area: firstLevel1QualityParameter;
-}
-#fifthLevel1QualityParameterDefiner {
-    grid-area: firstLevel1QualityParameterDefiner;
-}
-
 #level2paras {
     grid-area: level2paras;
-    display: grid;
-    grid-template-areas: 
-    "firstLevel1QualityParametersLevel2Parameters level3paras"
-    "secondLevel2QualityParametersLevel2Parameters level3paras"
-    "thirdLevel1QualityParametersLevel2Parameters level3paras"
-    "fourthLevel1QualityParametersLevel2Parameters level3paras"
-    "fifthLevel1QualityParametersLevel2Parameters level3paras";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    ;
 }
-
-#firstLevel1QualityParametersLevel2Parameters {
-    grid-area: firstLevel1QualityParametersLevel2Parameters;
+#level3paras {
+    grid-area: level3paras;
 }
-#secondLevel2QualityParametersLevel2Parameters {
-    grid-area: secondLevel2QualityParametersLevel2Parameters;
-}
-#thirdLevel1QualityParametersLevel2Parameters {
-    grid-area: thirdLevel1QualityParametersLevel2Parameters;
-}
-#fourthLevel1QualityParametersLevel2Parameters {
-    grid-area: fourthLevel1QualityParametersLevel2Parameters;
-}
-#fifthLevel1QualityParametersLevel2Parameters {
-    grid-area: fifthLevel1QualityParametersLevel2Parameters;
-}
-
