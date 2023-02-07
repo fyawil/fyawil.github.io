@@ -5,7 +5,20 @@ body {
     color: white;
 }
 input {
-    border-radius: 5px;    
+    border-radius: 5px;
+}
+#level1definer > input {
+    width: 60%;
+    height: 30px;
+}
+
+hr {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    text-align: center;
+    border: 0px;
+    border-radius: 2px;
 }
 
 #levels {
@@ -14,16 +27,14 @@ input {
     "level1definer"
     "level1andlevel2andlevel3";
     grid-template-rows: 20% 80%;
+    gap: 5px;
 }
 
 #level1definer {
     grid-area: level1definer;
     text-align: center;
 }
-#level1definer > input {
-    width: 60%;
-    height: 30px;
-}
+
 
 
 #level1andlevel2andlevel3 {
@@ -47,4 +58,30 @@ input {
 }
 #level3paras {
     grid-area: level3paras;
+}
+
+@media screen and (max-width: 414px) {
+    body {
+        height: auto
+    }
+    #levels {
+        grid-template-areas: 
+        "level1definer"
+        "level1andlevel2andlevel3";
+        grid-template-rows: 20% auto;
+    }
+    #level1andlevel2andlevel3 {
+        grid-template-areas: 
+        "level1paras"
+        "level2andlevel3";
+        grid-template-columns: 100%;
+    }
+    #level2andlevel3 {
+        grid-area: level2andlevel3;
+        display: grid;
+        grid-template-areas: 
+        "level2paras"
+        "level3paras";
+        grid-template-columns: 100%;
+    }
 }

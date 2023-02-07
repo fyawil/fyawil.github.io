@@ -90,12 +90,14 @@ render(){
   return (
     <div id="level1andlevel2andlevel3">
       <div id="level1paras">
+        {window.innerWidth <= 414? <hr></hr>: null}
         {this.props.level1paras
       .map(
         para => 
         <React.Fragment>
           <h2>{para}</h2>
-          <input type="text" onChange={this.handleChange} onKeyDown={this.handleKeyDown}></input>
+          <input type="text" placeholder={"What is " + para + "?"} 
+            onChange={this.handleChange} onKeyDown={this.handleKeyDown}></input>
         </React.Fragment>     
       )}
       </div>
@@ -138,12 +140,14 @@ render(){
   return (
     <div id="level2andlevel3">
       <div id="level2paras">
+        {window.innerWidth <= 414? <hr></hr>: null}
         {this.props.level2paras
       .map(
         para => 
         <React.Fragment>
           <h2>{para}</h2>
-          <input type="text" onChange={this.handleChange} onKeyDown={this.handleKeyDown}></input>
+          <input type="text" placeholder={"What is " + para + "?"}
+            onChange={this.handleChange} onKeyDown={this.handleKeyDown}></input>
         </React.Fragment>     
       )}
       </div>
@@ -161,6 +165,7 @@ class Level3Parameters extends React.Component{
 render(){
   return (
     <div>
+      {window.innerWidth <= 414? <hr></hr>: null}
       {this.props.level3paras.map(para => <React.Fragment><h2>{para}</h2></React.Fragment>)}
     </div>
   )
