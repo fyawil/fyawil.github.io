@@ -56,8 +56,12 @@ class CustomerFocus extends React.Component {
     render() {
         return (
           <div id="customer_focus" onClick={this.show}>
-            {this.state.isShown?null:<h2>Food & Drink</h2>}
-            {this.state.isShown?<p>Coming Soon</p>:null}
+            {this.state.isShown?null:<h2>Games</h2>}
+            {this.state.isShown?
+            <div>
+            <a href="./tictactoe.html"><h3>Tic Tac Toe</h3></a>
+            </div>
+            :null}
           </div>
 );
     }
