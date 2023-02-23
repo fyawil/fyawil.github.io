@@ -170,14 +170,9 @@ class TicTacToe extends React.Component {
 
   render() {
     return (
-        <div>
+        <div id="game">
 
-          <div className="status">
-          {/* <p>Next player: X</p> */}
-          {this.state.currentGrid == [[" "," "," "],[" "," "," "],[" "," "," "]] ?
-          <p>Next player: X</p>: <p>{this.state.statusMessage}</p>}
-          </div>
-
+          <div className="status">{this.state.statusMessage}</div>
           <div id="grid">
             <div id="top-left-square" className="square" value="0"
             onClick={this.state.currentGrid[0][0] == " " && this.state.isGameOn? this.incrementTurn: null}>{this.state.currentGrid[0][0]}</div>

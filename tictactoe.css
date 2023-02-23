@@ -1,37 +1,58 @@
+body {
+  background-color: black;
+}
+
+#game {
+  display:grid;
+  grid-template-areas: 
+  "status"
+  "grid"
+  "reset";
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 10vh 75vh 10vh;
+  gap: 5px;
+}
+
 .status {
-    text-align: center;
-    font-size: x-large;
-    padding: 0vh;
-    background-color: #dc8100;
-    margin: 10vh;
-    border-radius: 5px;
-    color: white;
+  grid-area: status;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
+  background-color: rgb(228, 137, 53);
+  border-radius: 5px;
+  color: black;
+  padding: 3vh;
   }
   
   .reset {
+    grid-area: reset;
     text-align: center;
     font-size: x-large;
-    padding: 0vh;
-    background-color: #dc8100;
-    margin: 10vh;
+    font-weight: bolder;
+    background-color: rgb(228, 137, 53);
     border-radius: 5px;
-    color: white;
+    color: black;
+    padding: 3vh;
   }
   
   #grid {
+    grid-area: grid;
     display: grid;
     grid-template-areas:
     "top-left-square top-mid-square top-right-square"
     "mid-left-square mid-mid-square mid-right-square"
     "bottom-left-square bottom-mid-square bottom-right-square";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     gap: 5px;
-    height: 60vh;
     text-align: center;
-    color: white;
+    color: black;
+    font-weight: bolder;
   }
   
   .square {
-    background-color: #dc8100;
+    background-color: rgb(228, 137, 53);
     padding: 9vh;
   }
   
