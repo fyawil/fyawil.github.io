@@ -1,0 +1,12 @@
+* {
+    background-color: beige;
+    font-family: cursive;
+}
+
+.todos {
+    display: inline-block;
+}
+.deletes {
+    display: inline-block;
+    text-align: right;
+}

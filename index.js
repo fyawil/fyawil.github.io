@@ -136,6 +136,7 @@ class ValueChainManagement extends React.Component {
             {this.state.isShown?
             <div>
             <a href="./defined.html"><h3>Defined</h3></a>
+            <a href="./todo.html"><h3>Do</h3></a>
             </div>
             :null}
           </div>
