@@ -1,6 +1,9 @@
 * {
-    background-color: beige;
-    font-family: cursive;
+    background-color: rgb(253, 211, 74);
+}
+
+input {
+    background-color: rgb(241, 212, 116);
 }
 
 .todos {
