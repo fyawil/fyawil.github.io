@@ -4,81 +4,101 @@ class UntilTheLast extends React.Component {
 
     this.state = {
       currentBoard: [
-        ["w", "w", "w"],
+        ["W", "W", "W"],
         ["", "", ""],
-        ["b", "b", "b"],
+        ["B", "B", "B"],
       ],
       attackingSoldier: null,
       attackedPosition: null,
-      nextPlayer: "b",
+      nextPlayer: "B",
     };
 
     this.selectSoldier = this.selectSoldier.bind(this);
   }
 
   selectSoldier(event) {
-    var rowIndex = event.target.getAttribute("value")[0]
-    var colIndex = event.target.getAttribute("value")[2]
+    var rowIndex = event.target.getAttribute("value")[0];
+    var colIndex = event.target.getAttribute("value")[2];
 
-    if(this.state.nextPlayer == this.state.currentBoard[rowIndex][colIndex]){
+    if (this.state.nextPlayer == this.state.currentBoard[rowIndex][colIndex]) {
       this.setState({
-        attackingSoldier: event.target.getAttribute("value")
-      });      
+        attackingSoldier: event.target.getAttribute("value"),
+      });
     }
-    if (this.state.currentBoard[rowIndex][colIndex] != this.state.nextPlayer &&
-        this.state.nextPlayer == this.state.currentBoard[this.state.attackingSoldier[0]][this.state.attackingSoldier[2]]
-      ){
+    if (
+      this.state.currentBoard[rowIndex][colIndex] != this.state.nextPlayer &&
+      this.state.nextPlayer ==
+        this.state.currentBoard[this.state.attackingSoldier[0]][
+          this.state.attackingSoldier[2]
+        ] &&
+      Math.abs(
+        +event.target.getAttribute("value")[0] - +this.state.attackingSoldier[0]
+      ) < 2 &&
+      Math.abs(
+        +event.target.getAttribute("value")[2] - +this.state.attackingSoldier[2]
+      ) < 2
+    ) {
       this.setState({
-        attackedPosition: event.target.getAttribute("value")
-      }); 
-      let newBoard = [...this.state.currentBoard]
-      newBoard[this.state.attackedPosition[0]][this.state.attackedPosition[2]] = this.state.nextPlayer;
-      newBoard[this.state.attackingSoldier[0]][this.state.attackingSoldier[2]] = "";
-      this.setState({
-        currentBoard: [...newBoard]
+        attackedPosition: event.target.getAttribute("value"),
       });
 
-      this.setState(state => ({
+      this.setState((state) => ({
+        currentBoard: state.currentBoard.map((array, i) =>
+          i == state.attackingSoldier[0]
+            ? array.map((el, j) => (j == state.attackingSoldier[2] ? "" : el))
+            : array
+        ),
+      }));
+
+      this.setState((state) => ({
+        currentBoard: state.currentBoard.map((array, i) =>
+          i == state.attackedPosition[0]
+            ? array.map((el, j) =>
+                j == state.attackedPosition[2] ? state.nextPlayer : el
+              )
+            : array
+        ),
+      }));
+
+      this.setState((state) => ({
         attackingSoldier: null,
         attackedPosition: null,
-        nextPlayer: state.nextPlayer == "b"? "w": "b"
-      })); 
+        nextPlayer: state.nextPlayer == "B" ? "W" : "B",
+      }));
     }
   }
 
   render() {
     return (
       <div>
-        <h1>Kill All Enemies</h1>
+        <h1>Until The Last</h1>
         <h2>Next Player: {this.state.nextPlayer}</h2>
-        <h2>Attacking Soldier: {this.state.attackingSoldier}</h2>
-        <h2>Attacked Position: {this.state.attackedPosition}</h2>
         <div id="current-board">
-          <div value={[0, 0]} onClick={this.selectSoldier} className="square">
+          <div value={[0, 0]} style={{color: this.state.attackingSoldier == [0, 0]? "red": "white"}} onClick={this.selectSoldier} className="square">
             {this.state.currentBoard[0][0]}
           </div>
-          <div value={[0, 1]} onClick={this.selectSoldier} className="square">
+          <div value={[0, 1]} style={{color: this.state.attackingSoldier == [0, 1]? "red": "white"}} onClick={this.selectSoldier} className="square">
             {this.state.currentBoard[0][1]}
           </div>
-          <div value={[0, 2]} onClick={this.selectSoldier} className="square">
+          <div value={[0, 2]} style={{color: this.state.attackingSoldier == [0, 2]? "red": "white"}} onClick={this.selectSoldier} className="square">
             {this.state.currentBoard[0][2]}
           </div>
-          <div value={[1, 0]} onClick={this.selectSoldier} className="square">
+          <div value={[1, 0]} style={{color: this.state.attackingSoldier == [1, 0]? "red": "white"}} onClick={this.selectSoldier} className="square">
             {this.state.currentBoard[1][0]}
           </div>
-          <div value={[1, 1]} onClick={this.selectSoldier} className="square">
+          <div value={[1, 1]} style={{color: this.state.attackingSoldier == [1, 1]? "red": "white"}} onClick={this.selectSoldier} className="square">
             {this.state.currentBoard[1][1]}
           </div>
-          <div value={[1, 2]} onClick={this.selectSoldier} className="square">
+          <div value={[1, 2]} style={{color: this.state.attackingSoldier == [1, 2]? "red": "white"}} onClick={this.selectSoldier} className="square">
             {this.state.currentBoard[1][2]}
           </div>
-          <div value={[2, 0]} onClick={this.selectSoldier} className="square">
+          <div value={[2, 0]} style={{color: this.state.attackingSoldier == [2, 0]? "red": "white"}} onClick={this.selectSoldier} className="square">
             {this.state.currentBoard[2][0]}
           </div>
-          <div value={[2, 1]} onClick={this.selectSoldier} className="square">
+          <div value={[2, 1]} style={{color: this.state.attackingSoldier == [2, 1]? "red": "white"}} onClick={this.selectSoldier} className="square">
             {this.state.currentBoard[2][1]}
           </div>
-          <div value={[2, 2]} onClick={this.selectSoldier} className="square">
+          <div value={[2, 2]} style={{color: this.state.attackingSoldier == [2, 2]? "red": "white"}} onClick={this.selectSoldier} className="square">
             {this.state.currentBoard[2][2]}
           </div>
         </div>
