@@ -41,6 +41,11 @@ handleKeyDown(event){
       level1paras: [...this.state.level1paras, this.state.level1def]
     })
   }
+  if(event.key == "Next" && !this.state.level1paras.includes(this.state.level1def.trim()) && this.state.level1def != ""){
+    this.setState({
+      level1paras: [...this.state.level1paras, this.state.level1def]
+    })
+  }
 }
 
 render(){
@@ -79,6 +84,11 @@ handleChange(event){
 // This adds level2def to level2paras if user presses enter and the input is not already included in level2paras or empty
 handleKeyDown(event){
   if(event.key == "Enter" && !this.state.level2paras.includes(this.state.level2def.trim()) && this.state.level2def != ""){
+    this.setState({
+      level2paras: [...this.state.level2paras, this.state.level2def]
+    })
+  }
+  if(event.key == "Next" && !this.state.level2paras.includes(this.state.level2def.trim()) && this.state.level2def != ""){
     this.setState({
       level2paras: [...this.state.level2paras, this.state.level2def]
     })
@@ -130,6 +140,11 @@ handleChange(event){
 // This adds level2def to level2paras if user presses enter and the input is not already included in level2paras or empty
 handleKeyDown(event){
   if(event.key == "Enter" && !this.state.level3paras.includes(this.state.level3def.trim()) && this.state.level3def != ""){
+    this.setState({
+      level3paras: [...this.state.level3paras, this.state.level3def]
+    })
+  }
+  if(event.key == "Next" && !this.state.level3paras.includes(this.state.level3def.trim()) && this.state.level3def != ""){
     this.setState({
       level3paras: [...this.state.level3paras, this.state.level3def]
     })
