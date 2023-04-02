@@ -25,6 +25,7 @@ class Level1Definer extends React.Component{
     };
     this.handleChange = this.handleChange.bind(this)
     this.handleKeyDown = this.handleKeyDown.bind(this)
+    this.addLevel1Para = this.addLevel1Para.bind(this)
 }
 
 // This updates level1def state any time the level1definer input field is changed
@@ -42,12 +43,20 @@ handleKeyDown(event){
     })
   }
 }
+addLevel1Para(){
+  if(!this.state.level1paras.includes(this.state.level1def.trim()) && this.state.level1def != ""){
+    this.setState({
+      level1paras: [...this.state.level1paras, this.state.level1def]
+    })
+  }
+}
 
 render(){
   return (
     <div id="levels">
       <div id="level1definer">
         <input type="text" placeholder="What does the user need?" onChange={this.handleChange} onKeyDown={this.handleKeyDown}></input>
+        <button onClick={this.addLevel1Para}>Add</button>
       </div>
       {/*level1paras are passed to Level2Definer*/}
       <Level2Definer id="level1andlevel2andlevel3" level1paras={this.state.level1paras}/>
@@ -67,6 +76,7 @@ class Level2Definer extends React.Component{
 
     this.handleChange = this.handleChange.bind(this)
     this.handleKeyDown = this.handleKeyDown.bind(this)
+    this.addLevel2Para = this.addLevel2Para.bind(this)
 }
 
 // This updates level2def state any time the level2definer input field is changed
@@ -83,19 +93,21 @@ handleKeyDown(event){
       level2paras: [...this.state.level2paras, this.state.level2def]
     })
   }
-  if(event.key == "Tab" && !this.state.level2paras.includes(this.state.level2def.trim()) && this.state.level2def != ""){
+}
+addLevel2Para(){
+  if(!this.state.level2paras.includes(this.state.level2def.trim()) && this.state.level2def != ""){
     this.setState({
       level2paras: [...this.state.level2paras, this.state.level2def]
     })
   }
 }
 
+
 render(){
 
   return (
     <div id="level1andlevel2andlevel3">
       <div id="level1paras">
-        {window.innerWidth <= 414? <hr></hr>: null}
         {this.props.level1paras
       .map(
         para => 
@@ -103,6 +115,7 @@ render(){
           <h2>{para}</h2>
           <input type="text" placeholder={"What is " + para + "?"} 
             onChange={this.handleChange} onKeyDown={this.handleKeyDown}></input>
+          <button onClick={this.addLevel2Para}>Add</button>
         </React.Fragment>     
       )}
       </div>
@@ -121,8 +134,9 @@ class Level3Definer extends React.Component{
       level3paras: []
     }
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleKeyDown = this.handleKeyDown.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.addLevel3Para = this.addLevel3Para.bind(this);
 }
 
 // This updates level3def state any time the level3definer input field is changed
@@ -140,12 +154,18 @@ handleKeyDown(event){
     })
   }
 }
+addLevel3Para(){
+  if(!this.state.level3paras.includes(this.state.level3def.trim()) && this.state.level3def != ""){
+    this.setState({
+      level3paras: [...this.state.level3paras, this.state.level3def]
+    })
+  }
+}
 
 render(){
   return (
     <div id="level2andlevel3">
       <div id="level2paras">
-        {window.innerWidth <= 414? <hr></hr>: null}
         {this.props.level2paras
       .map(
         para => 
@@ -153,6 +173,7 @@ render(){
           <h2>{para}</h2>
           <input type="text" placeholder={"What is " + para + "?"}
             onChange={this.handleChange} onKeyDown={this.handleKeyDown}></input>
+            <button onClick={this.addLevel3Para}>Add</button>
         </React.Fragment>     
       )}
       </div>
@@ -170,7 +191,6 @@ class Level3Parameters extends React.Component{
 render(){
   return (
     <div>
-      {window.innerWidth <= 414? <hr></hr>: null}
       {this.props.level3paras.map(para => <React.Fragment><h2>{para}</h2></React.Fragment>)}
     </div>
   )
