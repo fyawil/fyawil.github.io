@@ -43,8 +43,8 @@ class ToDo extends React.Component {
             <ul>{this.state.toDos.map(
                 toDo => 
                 <div>
-                    <li className="todos">{toDo}</li>
-                    <div className="deletes" value={toDo} onClick={this.deleteToDo}>&nbsp;CLEAR</div>
+                    <li className="todos">{toDo}&nbsp;&nbsp;&nbsp;</li>
+                    <div className="deletes" value={toDo} onClick={this.deleteToDo}>CLEAR</div>
                 </div>)}
             </ul>
         </div>
