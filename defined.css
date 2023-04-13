@@ -12,15 +12,6 @@ input {
     height: 30px;
 }
 
-hr {
-    width: 80%;
-    height: 2px;
-    background-color: white;
-    text-align: center;
-    border: 0px;
-    border-radius: 2px;
-}
-
 #levels {
     grid-area: levels;
     grid-template-areas: 
@@ -35,7 +26,18 @@ hr {
     text-align: center;
 }
 
+button {
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(20, 22, 139);
+    border-radius: 5px;
+    width: 20%;
+    text-align: center;
+}
 
+#parameters-header {
+    text-align: center;
+}
 
 #level1andlevel2andlevel3 {
     grid-area: level1andlevel2andlevel3;
@@ -58,6 +60,20 @@ hr {
 }
 #level3paras {
     grid-area: level3paras;
+}
+
+hr {
+    display: none;
+    width: 50%;
+    border-color: white;
+}
+
+img {
+    width: 15px;
+}
+
+.inline-children {
+    display: inline-block;
 }
 
 @media screen and (max-width: 414px) {
@@ -83,5 +99,8 @@ hr {
         "level2paras"
         "level3paras";
         grid-template-columns: 100%;
+    }
+    hr {
+        display: block;
     }
 }
