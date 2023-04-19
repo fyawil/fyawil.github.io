@@ -265,6 +265,7 @@ class Level3Parameters extends React.Component {
   render() {
     return (
       <div>
+        <button onClick={window.print}>Print</button>
         {this.props.level3paras.length == 0 ? null : <div><br></br><br></br><hr></hr></div>}
         {this.props.level3paras.length == 0 ? null : (
           <h2 id="parameters-header">Quality Definition:</h2>
